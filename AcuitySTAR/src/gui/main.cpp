@@ -5,6 +5,8 @@
 
 #include "gui/mainwindow.h"
 #include "database/TestCSVReader.h"
+
+#include "tests/tests.h"
 using namespace std;
 
 int main(int argc, char *argv[]) {
