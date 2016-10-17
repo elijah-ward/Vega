@@ -9,6 +9,7 @@
 #include <QPrintDialog>
 #include <QPrinter>
 #include <QString>
+#include <QErrorMessage>
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
@@ -141,9 +142,20 @@ void MainWindow::on_actionLoad_file_triggered() {
 QString MainWindow::load_file() {
     QString filePath = QFileDialog::getOpenFileName(this, "Open File", QDir::currentPath(),
                                                     tr("CSV (*.csv);; All files (*.*)"));
+    //Get the file extension of the filePath
+    QString extension;
+
+    extension = filePath.right(3);
+
 
     if (!filePath.isEmpty()) {
-        return filePath;
+
+        if (extension.compare("csv")){
+            return filePath;
+        }
+        else{
+        }
+
     } else {
         return "";
     }
