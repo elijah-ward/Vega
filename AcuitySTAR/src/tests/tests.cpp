@@ -105,3 +105,18 @@ void TestUpload::uploadFundFileFail(){
     MainWindow w;
     QVERIFY(!(w.load_fund(path)));
 }
+
+/******************************************************************************
+ *
+ * Alex testing random
+ *
+ *****************************************************************************/
+
+void TestUpload::teachPrintButtonEnabled()
+{
+    QString path = "../Project Information/Sample Data/Teaching_sample.csv";
+    MainWindow w;
+    w.load_teach(path);
+    QVERIFY(ui->teachPrintButton->setEnabled(true));
+}
+

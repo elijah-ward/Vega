@@ -19,6 +19,9 @@ private slots:
     void uploadPubFileFail();
     void uploadPresFileFail();
     void uploadFundFileFail();
+
+    // this is our shit
+    void teachPrintButtonEnabled();
 };
 
 #endif
