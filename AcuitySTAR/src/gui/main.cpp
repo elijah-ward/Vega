@@ -14,7 +14,7 @@ int main(int argc, char *argv[]) {
 
     QApplication app(argc, argv);
     if (test) {
-        TestTeachUpload *test_obj = new TestTeachUpload();
+        TestUpload *test_obj = new TestUpload();
         QTest::qExec(test_obj);
     }
 

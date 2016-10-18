@@ -26,14 +26,11 @@ class MainWindow : public QMainWindow {
     Q_OBJECT
 
     // Solis-Reyes added this line so you can call the functions of MainWindow in the test class
-    //
-    friend class TestTeachUpload;
+    friend class TestUpload;
 
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-
-
 
 private slots:
     QString load_file();

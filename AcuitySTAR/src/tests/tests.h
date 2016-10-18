@@ -3,11 +3,14 @@
 #include <QtTest/QtTest>
 #include "gui/mainwindow.h"
 
-class TestTeachUpload: public QObject
+class TestUpload: public QObject
 {
     Q_OBJECT
 private slots:
-    void uploadCSV();
+    void uploadTeachCSV();
+    void uploadPubCSV();
+    void uploadPresCSV();
+    void uploadFundCSV();
 };
 
 #endif
