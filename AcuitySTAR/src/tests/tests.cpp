@@ -1,7 +1,14 @@
 #include "tests/tests.h"
+#include "gui/mainwindow.h"
+#include <string>
 
-void TestQString::toUpper()
+using namespace std;
+
+void TestTeachUpload::uploadCSV()
 {
-    QString str = "Hello";
-    QVERIFY(str.toUpper() == "HELLO");
+    // This is general template of that each test case for uploading CSVs will be
+
+    QString path = "../Project Information/Sample Data/Teaching_sample.csv";
+    MainWindow w;
+    QVERIFY(w.load_teach(path));
 }

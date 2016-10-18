@@ -12,14 +12,14 @@ using namespace std;
 int main(int argc, char *argv[]) {
     int test = 1;   /* test on */
 
+    QApplication app(argc, argv);
     if (test) {
-        TestQString *test_obj = new TestQString();
+        TestTeachUpload *test_obj = new TestTeachUpload();
         QTest::qExec(test_obj);
     }
 
-    QApplication app(argc, argv);
-    MainWindow w;
-    w.show();
+    //MainWindow w;
+    //w.show();
 
     return app.exec();
 }

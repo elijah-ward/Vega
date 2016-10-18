@@ -4,6 +4,7 @@
 #include <string>
 #include <QMainWindow>
 #include <vector>
+#include "tests/tests.h"
 
 
 class RecordsManager;
@@ -23,6 +24,10 @@ namespace Ui {
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
+
+    // Solis-Reyes added this line so you can call the functions of MainWindow in the test class
+    //
+    friend class TestTeachUpload;
 
 public:
     explicit MainWindow(QWidget *parent = 0);

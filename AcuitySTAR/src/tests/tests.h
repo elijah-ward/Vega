@@ -1,8 +1,13 @@
+#ifndef TEST_H_
+#define TEST_H_
 #include <QtTest/QtTest>
+#include "gui/mainwindow.h"
 
-class TestQString: public QObject
+class TestTeachUpload: public QObject
 {
     Q_OBJECT
 private slots:
-    void toUpper();
+    void uploadCSV();
 };
+
+#endif
