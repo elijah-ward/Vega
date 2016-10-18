@@ -53,25 +53,25 @@ void TestUpload::uploadTeachCSVFail()
 {
     QString path = "../Project Information/Sample Data/GrantsClinicalFunding_sample.csv";
     MainWindow w;
-    QVERIFY(w.load_teach(path));
+    QVERIFY(!(w.load_teach(path)));
 }
 
 void TestUpload::uploadPubCSVFail(){
     QString path = "../Project Information/Sample Data/GrantsClinicalFunding_sample.csv";
     MainWindow w;
-    QVERIFY(w.load_pub(path));
+    QVERIFY(!(w.load_pub(path)));
 }
 
 void TestUpload::uploadPresCSVFail(){
     QString path = "../Project Information/Sample Data/GrantsClinicalFunding_sample.csv";
     MainWindow w;
-    QVERIFY(w.load_pres(path));
+    QVERIFY(!(w.load_pres(path)));
 }
 
 void TestUpload::uploadFundCSVFail(){
     QString path = "../Project Information/Sample Data/Teaching_sample.csv";
     MainWindow w;
-    QVERIFY(w.load_fund(path));
+    QVERIFY(!(w.load_fund(path)));
 }
 
 /******************************************************************************
@@ -85,23 +85,23 @@ void TestUpload::uploadTeachFileFail()
 {
     QString path = "../README.md";
     MainWindow w;
-    QVERIFY(w.load_teach(path));
+    QVERIFY(!(w.load_teach(path)));
 }
 
 void TestUpload::uploadPubFileFail(){
     QString path = "../README.md";
     MainWindow w;
-    QVERIFY(w.load_pub(path));
+    QVERIFY(!(w.load_pub(path)));
 }
 
 void TestUpload::uploadPresFileFail(){
     QString path = "../README.md";
     MainWindow w;
-    QVERIFY(w.load_pres(path));
+    QVERIFY(!(w.load_pres(path)));
 }
 
 void TestUpload::uploadFundFileFail(){
     QString path = "../README.md";
     MainWindow w;
-    QVERIFY(w.load_fund(path));
+    QVERIFY(!(w.load_fund(path)));
 }
