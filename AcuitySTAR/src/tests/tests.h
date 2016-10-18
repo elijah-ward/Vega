@@ -11,6 +11,14 @@ private slots:
     void uploadPubCSV();
     void uploadPresCSV();
     void uploadFundCSV();
+    void uploadTeachCSVFail();
+    void uploadPubCSVFail();
+    void uploadPresCSVFail();
+    void uploadFundCSVFail();
+	void uploadTeachFileFail();
+    void uploadPubFileFail();
+    void uploadPresFileFail();
+    void uploadFundFileFail();
 };
 
 #endif
