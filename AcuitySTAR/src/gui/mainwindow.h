@@ -33,6 +33,15 @@ public:
     ~MainWindow();
 
 private slots:
+
+    /******************************
+     * INSERT VEGA FUNCTIONS HERE *
+     ******************************/
+
+    bool checkTeachButton();
+
+    /******************************/
+
     QString load_file();
 
     void on_pres_load_file_clicked();

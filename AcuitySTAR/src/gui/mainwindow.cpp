@@ -1568,5 +1568,11 @@ void MainWindow::on_pres_filter_to_textChanged() { refresh(PRESENTATIONS);}
 void MainWindow::on_fund_filter_from_textChanged() { refresh(FUNDING);}
 void MainWindow::on_fund_filter_to_textChanged() { refresh(FUNDING);}
 
+/**************************************
+ * TEAM VEGA FUNCTIONS FOR TEST CASES *
+ **************************************/
 
+bool MainWindow::checkTeachButton(){
+    return ui->teachPrintButton->isEnabled();
+}
 

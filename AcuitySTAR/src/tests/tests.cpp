@@ -1,5 +1,6 @@
 #include "tests/tests.h"
 #include "gui/mainwindow.h"
+#include "ui_mainwindow.h"
 #include <string>
 
 using namespace std;
@@ -16,7 +17,7 @@ using namespace std;
  * Functions below are for uploading files that are supposed to PASS
  *
  *****************************************************************************/
-
+/*
 void TestUpload::uploadTeachCSV()
 {
     QString path = "../Project Information/Sample Data/Teaching_sample.csv";
@@ -40,7 +41,7 @@ void TestUpload::uploadFundCSV(){
     QString path = "../Project Information/Sample Data/GrantsClinicalFunding_sample.csv";
     MainWindow w;
     QVERIFY(w.load_fund(path));
-}
+}*/
 
 /******************************************************************************
  *
@@ -48,7 +49,7 @@ void TestUpload::uploadFundCSV(){
  * These functions upload .csv files
  *
  *****************************************************************************/
-
+/*
 void TestUpload::uploadTeachCSVFail()
 {
     QString path = "../Project Information/Sample Data/GrantsClinicalFunding_sample.csv";
@@ -73,14 +74,14 @@ void TestUpload::uploadFundCSVFail(){
     MainWindow w;
     QVERIFY(!(w.load_fund(path)));
 }
-
+*/
 /******************************************************************************
  *
  * Functions below are for uploading files that are supposed to FAIL
  * These functions upload random files
  *
  *****************************************************************************/
-
+/*
 void TestUpload::uploadTeachFileFail()
 {
     QString path = "../README.md";
@@ -105,6 +106,7 @@ void TestUpload::uploadFundFileFail(){
     MainWindow w;
     QVERIFY(!(w.load_fund(path)));
 }
+*/
 
 /******************************************************************************
  *
@@ -117,6 +119,6 @@ void TestUpload::teachPrintButtonEnabled()
     QString path = "../Project Information/Sample Data/Teaching_sample.csv";
     MainWindow w;
     w.load_teach(path);
-    QVERIFY(ui->teachPrintButton->setEnabled(true));
+    QVERIFY(w.checkTeachButton());
 }
 
