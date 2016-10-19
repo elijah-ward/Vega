@@ -230,7 +230,6 @@ void TestUpload::presExportButtonEnabled()
 
 /******************************************************************************
  *
-<<<<<<< HEAD
  * File Ribbon multiple files upload and uploading non-CSV file
  *
  *****************************************************************************/
@@ -273,6 +272,28 @@ void TestUpload::presExportButtonEnabledFail()
     QVERIFY(!(w.checkPresExportButton()));
 }
 
+void TestUpload::checkTeachHover(){
+    MainWindow w;
+    QString string1 = w.returnTeachHover();
+    QCOMPARE(string1, QString("Teaching"));
+}
+
+void TestUpload::checkPubHover(){
+	MainWindow w;
+    QString string1 = w.returnPubHover();
+    QCOMPARE(string1, QString("Publications"));
+}
+
+void TestUpload::checkPresHover(){
+	MainWindow w;
+    QString string1 = w.returnPresHover();
+    QCOMPARE(string1, QString("Presentations"));
+}
+
+void TestUpload::checkGranAndClinHover(){
+	MainWindow w;
+    QString string1 = w.returnGranAndClinHover();
+    QCOMPARE(string1, QString("Grants and Clinical Funding"));
 */
 
 /******************************************************************************
@@ -467,4 +488,5 @@ void TestUpload::randomOneLetterExtLoadFile()
      QString path = "../gui/CustomSort.h";
      MainWindow w;
      QCOMPARE((w.checkFile(0, path)), 1);
+
 }
