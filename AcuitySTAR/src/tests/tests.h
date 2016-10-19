@@ -54,6 +54,11 @@ private slots:
     void fundExportButtonPress();
     void pubExportButtonPress();
     void presExportButtonPress();
+
+    void teachLoadFile();
+    void fundLoadFile();
+    void pubLoadFile();
+    void presLoadFile();
 };
 
 #endif
