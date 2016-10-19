@@ -1572,6 +1572,10 @@ void MainWindow::on_fund_filter_to_textChanged() { refresh(FUNDING);}
  * TEAM VEGA FUNCTIONS FOR TEST CASES *
  **************************************/
 
+/**************************************
+ * TEAM VEGA PRINT FUNCTIONS FOR TEST CASES *
+ **************************************/
+
 bool MainWindow::checkTeachPrintButton(){
     return ui->teachPrintButton->isEnabled();
 }
@@ -1588,5 +1592,24 @@ bool MainWindow::checkPresPrintButton(){
     return ui->presPrintButton->isEnabled();
 }
 
+/**************************************
+ * TEAM VEGA PDF EXPORT FUNCTIONS FOR TEST CASES *
+ **************************************/
+
+bool MainWindow::checkTeachExportButton(){
+    return ui->teachExportButton->isEnabled();
+}
+
+bool MainWindow::checkFundExportButton(){
+    return ui->fundExportButton->isEnabled();
+}
+
+bool MainWindow::checkPubExportButton(){
+    return ui->pubExportButton->isEnabled();
+}
+
+bool MainWindow::checkPresExportButton(){
+    return ui->presExportButton->isEnabled();
+}
 
 

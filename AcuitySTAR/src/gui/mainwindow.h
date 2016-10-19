@@ -43,6 +43,11 @@ private slots:
     bool checkPresPrintButton();
     bool checkPubPrintButton();
 
+    bool checkTeachExportButton();
+    bool checkFundExportButton();
+    bool checkPresExportButton();
+    bool checkPubExportButton();
+
     /******************************/
 
     QString load_file();

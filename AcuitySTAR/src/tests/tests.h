@@ -27,10 +27,21 @@ private slots:
     void fundPrintButtonEnabled();
     void pubPrintButtonEnabled();
     void presPrintButtonEnabled();
+
     void teachPrintButtonEnabledFail();
     void fundPrintButtonEnabledFail();
     void pubPrintButtonEnabledFail();
     void presPrintButtonEnabledFail();
+
+    void teachExportButtonEnabled();
+    void fundExportButtonEnabled();
+    void pubExportButtonEnabled();
+    void presExportButtonEnabled();
+
+    void teachExportButtonEnabledFail();
+    void fundExportButtonEnabledFail();
+    void pubExportButtonEnabledFail();
+    void presExportButtonEnabledFail();
 };
 
 #endif
