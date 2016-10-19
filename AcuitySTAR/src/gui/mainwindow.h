@@ -38,6 +38,13 @@ private slots:
      * INSERT VEGA FUNCTIONS HERE *
      ******************************/
 
+
+    bool checkTeachPrintButton();
+    bool checkFundPrintButton();
+    bool checkPresPrintButton();
+    bool checkPubPrintButton();
+    QString returnTeachHover();
+
 //    bool checkTeachPrintButton();
 //    bool checkFundPrintButton();
 //    bool checkPresPrintButton();
@@ -67,7 +74,7 @@ private slots:
     void on_pres_new_sort_clicked();
     void on_fund_new_sort_clicked();
 
-    void on_actionLoad_file_triggered();
+    bool on_actionLoad_file_triggered();
 
     void on_FromDate_dateChanged(const QDate &date);
     void on_ToDate_dateChanged(const QDate &date);

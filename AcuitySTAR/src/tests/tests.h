@@ -33,6 +33,9 @@ private slots:
     void fundPrintButtonEnabledFail();
     void pubPrintButtonEnabledFail();
     void presPrintButtonEnabledFail();
+    */
+
+    void multipleFileUploadTest();
 
     void teachExportButtonEnabled();
     void fundExportButtonEnabled();
@@ -43,7 +46,6 @@ private slots:
     void fundExportButtonEnabledFail();
     void pubExportButtonEnabledFail();
     void presExportButtonEnabledFail();
-    */
 
 //    void teachPrintButtonPress();
 //    void fundPrintButtonPress();

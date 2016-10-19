@@ -230,9 +230,15 @@ void TestUpload::presExportButtonEnabled()
 
 /******************************************************************************
  *
- * Export button disabled TC's
+<<<<<<< HEAD
+ * File Ribbon multiple files upload and uploading non-CSV file
  *
  *****************************************************************************/
+
+void TestUpload::multipleFileUploadTest(){
+    MainWindow w;
+    QVERIFY(w.on_actionLoad_file_triggered());
+}
 
 /*
 void TestUpload::teachExportButtonEnabledFail()
@@ -462,4 +468,3 @@ void TestUpload::randomOneLetterExtLoadFile()
      MainWindow w;
      QCOMPARE((w.checkFile(0, path)), 1);
 }
-
