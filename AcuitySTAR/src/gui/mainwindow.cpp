@@ -1664,8 +1664,3 @@ int MainWindow::checkPubPieBarButton() {
 int MainWindow::checkPresPieBarButton() {
     return ui->pres_graph_stackedWidget->currentIndex();
 }
-
-
-
-
-

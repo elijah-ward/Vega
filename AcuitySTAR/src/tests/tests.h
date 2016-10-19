@@ -55,30 +55,33 @@ private slots:
 //    void pubExportButtonPress();
 //    void presExportButtonPress();
 
-    void checkTeachPieButton();
-    void checkPresPieButton();
-    void checkFundPieButton();
-    void checkPubPieButton();
+//    void checkTeachPieButton();
+//    void checkPresPieButton();
+//    void checkFundPieButton();
+//    void checkPubPieButton();
 
-    void checkTeachBarButton();
-    void checkPresBarButton();
-    void checkFundBarButton();
-    void checkPubBarButton();
+//    void checkTeachBarButton();
+//    void checkPresBarButton();
+//    void checkFundBarButton();
+//    void checkPubBarButton();
 
-    void teachPrintButtonPress();
-    void fundPrintButtonPress();
-    void pubPrintButtonPress();
-    void presPrintButtonPress();
+//    void teachPrintButtonPress();
+//    void fundPrintButtonPress();
+//    void pubPrintButtonPress();
+//    void presPrintButtonPress();
 
-    void teachExportButtonPress();
-    void fundExportButtonPress();
-    void pubExportButtonPress();
-    void presExportButtonPress();
+//    void teachExportButtonPress();
+//    void fundExportButtonPress();
+//    void pubExportButtonPress();
+//    void presExportButtonPress();
 
-    void teachLoadFile();
-    void fundLoadFile();
-    void pubLoadFile();
-    void presLoadFile();
+//    void teachLoadFile();
+//    void fundLoadFile();
+//    void pubLoadFile();
+//    void presLoadFile();
+
+    void randomTwoLetterExtLoadFile();
+    void randomOneLetterExtLoadFile();
 };
 
 #endif
