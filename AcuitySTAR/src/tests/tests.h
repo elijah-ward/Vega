@@ -7,23 +7,21 @@ class TestUpload: public QObject
 {
     Q_OBJECT
 private slots:
-    
     void uploadTeachCSV();
     void uploadPubCSV();
     void uploadPresCSV();
     void uploadFundCSV();
+
     void uploadTeachCSVFail();
     void uploadPubCSVFail();
     void uploadPresCSVFail();
     void uploadFundCSVFail();
-	void uploadTeachFileFail();
+
+    void uploadTeachFileFail();
     void uploadPubFileFail();
     void uploadPresFileFail();
     void uploadFundFileFail();
-    
 
-    // this is our shit
-    
     void teachPrintButtonEnabled();
     void fundPrintButtonEnabled();
     void pubPrintButtonEnabled();
@@ -33,7 +31,6 @@ private slots:
     void fundPrintButtonEnabledFail();
     void pubPrintButtonEnabledFail();
     void presPrintButtonEnabledFail();
-    
 
     void multipleFileUploadTest1();
     void multipleFileUploadTest2();
@@ -47,12 +44,11 @@ private slots:
     void fundExportButtonEnabledFail();
     void pubExportButtonEnabledFail();
     void presExportButtonEnabledFail();
-	
+
     void checkTeachHover();
     void checkPubHover();
     void checkPresHover();
     void checkGranAndClinHover();
-	
 
     void teachPrintButtonPress();
     void fundPrintButtonPress();

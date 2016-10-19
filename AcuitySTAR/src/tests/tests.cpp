@@ -5,13 +5,6 @@
 
 using namespace std;
 
-
-
-// This is general template of that each test case for uploading CSVs will be
-// DON'T FORGET TO ADD THE FUNCTION PROTOTYPE INTO THE HEADER FILE AS WELL KTHX
-
-
-
 /******************************************************************************
  *
  * Functions below are for uploading files that are supposed to PASS
@@ -145,6 +138,7 @@ void TestUpload::presPrintButtonEnabled()
     w.load_pres(path);
     QVERIFY(w.checkPresPrintButton());
 }
+
 
 /******************************************************************************
  *
@@ -447,13 +441,11 @@ void TestUpload::teachLoadFile()
      QCOMPARE(path, w.load_file());
 }
 
-
 void TestUpload::fundLoadFile()
 {
      QString path = "../Project Information/Sample Data/GrantsClinicalFunding_sample.csv";
      MainWindow w;
      QCOMPARE(path, w.load_file());
-
 }
 
 void TestUpload::pubLoadFile()
@@ -504,5 +496,4 @@ void TestUpload::randomOneLetterExtLoadFile()
      QString path = "../gui/CustomSort.h";
      MainWindow w;
      QCOMPARE((w.checkFile(0, path)), 1);
-
 }

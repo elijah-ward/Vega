@@ -227,7 +227,7 @@ p, li { white-space: pre-wrap; }
        <item row="7" column="1">
         <widget class="QTabWidget" name="categoryTab">
          <property name="toolTip">
-          <string>Export to pdf</string>
+          <string/>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(255, 255, 255);</string>
@@ -236,12 +236,15 @@ p, li { white-space: pre-wrap; }
           <enum>QTabWidget::Rounded</enum>
          </property>
          <property name="currentIndex">
-          <number>1</number>
+          <number>3</number>
          </property>
          <property name="usesScrollButtons">
           <bool>false</bool>
          </property>
          <widget class="QWidget" name="tabTeach">
+          <property name="toolTip">
+           <string>Teaching</string>
+          </property>
           <attribute name="title">
            <string>Teaching</string>
           </attribute>
@@ -1363,6 +1366,9 @@ p, li { white-space: pre-wrap; }
           </layout>
          </widget>
          <widget class="QWidget" name="tabPres">
+          <property name="toolTip">
+           <string>tabPres</string>
+          </property>
           <attribute name="title">
            <string>Presentations</string>
           </attribute>
@@ -1907,6 +1913,9 @@ p, li { white-space: pre-wrap; }
           </layout>
          </widget>
          <widget class="QWidget" name="tabFund">
+          <property name="toolTip">
+           <string>Grants and Clinical Funding</string>
+          </property>
           <attribute name="title">
            <string>Grants and Clinical Funding</string>
           </attribute>
