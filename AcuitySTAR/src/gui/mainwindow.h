@@ -26,7 +26,7 @@ class MainWindow : public QMainWindow {
     Q_OBJECT
 
     // Solis-Reyes added this line so you can call the functions of MainWindow in the test class
-    friend class TestUpload;
+    friend class TestSuite;
 
 public:
     explicit MainWindow(QWidget *parent = 0);

@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
         QDir testLogDir;
         testLogDir.mkdir("testlogs");
         testCmd << " " << "-o " << "testlogs/qtTestLog.txt";
-        TestUpload *test_obj = new TestUpload();
+        TestSuite *test_obj = new TestSuite();
         QTest::qExec(test_obj);
     }
 

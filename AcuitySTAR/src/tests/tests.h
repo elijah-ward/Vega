@@ -3,7 +3,7 @@
 #include <QtTest/QtTest>
 #include "gui/mainwindow.h"
 
-class TestUpload: public QObject
+class TestSuite: public QObject
 {
     Q_OBJECT
 private slots:
