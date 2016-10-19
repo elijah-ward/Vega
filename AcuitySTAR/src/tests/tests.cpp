@@ -266,7 +266,7 @@ void TestUpload::presExportButtonEnabledFail()
     w.load_pres(path);
     QVERIFY(!(w.checkPresExportButton()));
 }
-<<<<<<< Updated upstream
+
 */
 
 /******************************************************************************
