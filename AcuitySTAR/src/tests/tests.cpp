@@ -230,9 +230,15 @@ void TestUpload::presExportButtonEnabled()
 
 /******************************************************************************
  *
- * Export button disabled TC's
+<<<<<<< HEAD
+ * File Ribbon multiple files upload and uploading non-CSV file
  *
  *****************************************************************************/
+
+void TestUpload::multipleFileUploadTest(){
+    MainWindow w;
+    QVERIFY(w.on_actionLoad_file_triggered());
+}
 
 /*
 void TestUpload::teachExportButtonEnabledFail()
@@ -343,108 +349,122 @@ void TestUpload::presExportButtonEnabledFail()
  *
  *****************************************************************************/
 
-void TestUpload::checkTeachPieButton(){
-    QString path = "../Project Information/Sample Data/Teaching_sample.csv";
-    MainWindow w;
-    w.load_teach(path);
-    w.on_teach_pie_button_toggled();
-    QCOMPARE(w.checkTeachPieBarButton(), 0);
-}
+//void TestUpload::checkTeachPieButton(){
+//    QString path = "../Project Information/Sample Data/Teaching_sample.csv";
+//    MainWindow w;
+//    w.load_teach(path);
+//    w.on_teach_pie_button_toggled();
+//    QCOMPARE(w.checkTeachPieBarButton(), 0);
+//}
 
-void TestUpload::checkFundPieButton(){
-    QString path = "../Project Information/Sample Data/GrantsClinicalFunding_sample.csv";
-    MainWindow w;
-    w.load_fund(path);
-    w.on_fund_pie_button_toggled();
-    QCOMPARE(w.checkFundPieBarButton(), 0);
-}
+//void TestUpload::checkFundPieButton(){
+//    QString path = "../Project Information/Sample Data/GrantsClinicalFunding_sample.csv";
+//    MainWindow w;
+//    w.load_fund(path);
+//    w.on_fund_pie_button_toggled();
+//    QCOMPARE(w.checkFundPieBarButton(), 0);
+//}
 
-void TestUpload::checkPubPieButton(){
-    QString path = "../Project Information/Sample Data/Publications_sample.csv";
-    MainWindow w;
-    w.load_pub(path);
-    w.on_pub_pie_button_toggled();
-    QCOMPARE(w.checkPubPieBarButton(), 0);
-}
+//void TestUpload::checkPubPieButton(){
+//    QString path = "../Project Information/Sample Data/Publications_sample.csv";
+//    MainWindow w;
+//    w.load_pub(path);
+//    w.on_pub_pie_button_toggled();
+//    QCOMPARE(w.checkPubPieBarButton(), 0);
+//}
 
-void TestUpload::checkPresPieButton(){
-    QString path = "../Project Information/Sample Data/Presentations_sample.csv";
-    MainWindow w;
-    w.load_pres(path);
-    w.on_pres_pie_button_toggled();
-    QCOMPARE(w.checkPresPieBarButton(), 0);
-}
+//void TestUpload::checkPresPieButton(){
+//    QString path = "../Project Information/Sample Data/Presentations_sample.csv";
+//    MainWindow w;
+//    w.load_pres(path);
+//    w.on_pres_pie_button_toggled();
+//    QCOMPARE(w.checkPresPieBarButton(), 0);
+//}
 
-/******************************************************************************
- *
- * Bar graph test cases
- *
- *****************************************************************************/
+///******************************************************************************
+// *
+// * Bar graph test cases
+// *
+// *****************************************************************************/
 
-void TestUpload::checkTeachBarButton(){
-    QString path = "../Project Information/Sample Data/Teaching_sample.csv";
-    MainWindow w;
-    w.load_teach(path);
-    w.on_teach_bar_button_toggled();
-    QCOMPARE(w.checkTeachPieBarButton(), 1);
-}
+//void TestUpload::checkTeachBarButton(){
+//    QString path = "../Project Information/Sample Data/Teaching_sample.csv";
+//    MainWindow w;
+//    w.load_teach(path);
+//    w.on_teach_bar_button_toggled();
+//    QCOMPARE(w.checkTeachPieBarButton(), 1);
+//}
 
-void TestUpload::checkFundBarButton(){
-    QString path = "../Project Information/Sample Data/GrantsClinicalFunding_sample.csv";
-    MainWindow w;
-    w.load_fund(path);
-    w.on_fund_bar_button_toggled();
-    QCOMPARE(w.checkFundPieBarButton(), 1);
-}
+//void TestUpload::checkFundBarButton(){
+//    QString path = "../Project Information/Sample Data/GrantsClinicalFunding_sample.csv";
+//    MainWindow w;
+//    w.load_fund(path);
+//    w.on_fund_bar_button_toggled();
+//    QCOMPARE(w.checkFundPieBarButton(), 1);
+//}
 
-void TestUpload::checkPubBarButton(){
-    QString path = "../Project Information/Sample Data/Publications_sample.csv";
-    MainWindow w;
-    w.load_pub(path);
-    w.on_pub_bar_button_toggled();
-    QCOMPARE(w.checkPubPieBarButton(), 1);
-}
+//void TestUpload::checkPubBarButton(){
+//    QString path = "../Project Information/Sample Data/Publications_sample.csv";
+//    MainWindow w;
+//    w.load_pub(path);
+//    w.on_pub_bar_button_toggled();
+//    QCOMPARE(w.checkPubPieBarButton(), 1);
+//}
 
-void TestUpload::checkPresBarButton(){
-    QString path = "../Project Information/Sample Data/Presentations_sample.csv";
-    MainWindow w;
-    w.load_pres(path);
-    w.on_pres_bar_button_toggled();
-    QCOMPARE(w.checkPresPieBarButton(), 1);
-}
-/******************************************************************************
- *
- * Load files test
- *
- *****************************************************************************/
+//void TestUpload::checkPresBarButton(){
+//    QString path = "../Project Information/Sample Data/Presentations_sample.csv";
+//    MainWindow w;
+//    w.load_pres(path);
+//    w.on_pres_bar_button_toggled();
+//    QCOMPARE(w.checkPresPieBarButton(), 1);
+//}
 
-void TestUpload::teachLoadFile()
+///******************************************************************************
+// *
+// * Load files test
+// *
+// *****************************************************************************/
+
+//void TestUpload::teachLoadFile()
+//{
+//     QString path = "../Project Information/Sample Data/Teaching_sample.csv";
+//     MainWindow w;
+//     QCOMPARE(path, QString(w.load_file()));
+//}
+
+
+//void TestUpload::fundLoadFile()
+//{
+//     QString path = "../Project Information/Sample Data/GrantsClinicalFunding_sample.csv";
+//     MainWindow w;
+//     QCOMPARE(path, QString(w.load_file()));
+
+//}
+
+//void TestUpload::pubLoadFile()
+//{
+//     QString path = "../Project Information/Sample Data/Publications_sample.csv";
+//     MainWindow w;
+//     QCOMPARE(path, QString(w.load_file()));
+//}
+
+//void TestUpload::presLoadFile()
+//{
+//     QString path = "../Project Information/Sample Data/Presentations_sample.csv";
+//     MainWindow w;
+//     QCOMPARE(path, QString(w.load_file()));
+//}
+
+void TestUpload::randomTwoLetterExtLoadFile()
 {
-     QString path = "../Project Information/Sample Data/Teaching_sample.csv";
+     QString path = "../README.md";
      MainWindow w;
-     QCOMPARE(path, QString(w.load_file()));
+     QCOMPARE((w.checkFile(0, path)), 1);
 }
 
-
-void TestUpload::fundLoadFile()
+void TestUpload::randomOneLetterExtLoadFile()
 {
-     QString path = "../Project Information/Sample Data/GrantsClinicalFunding_sample.csv";
+     QString path = "../gui/CustomSort.h";
      MainWindow w;
-     QCOMPARE(path, QString(w.load_file()));
-
+     QCOMPARE((w.checkFile(0, path)), 1);
 }
-
-void TestUpload::pubLoadFile()
-{
-     QString path = "../Project Information/Sample Data/Publications_sample.csv";
-     MainWindow w;
-     QCOMPARE(path, QString(w.load_file()));
-}
-
-void TestUpload::presLoadFile()
-{
-     QString path = "../Project Information/Sample Data/Presentations_sample.csv";
-     MainWindow w;
-     QCOMPARE(path, QString(w.load_file()));
-}
-
