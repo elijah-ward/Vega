@@ -23,6 +23,7 @@ private slots:
     */
 
     // this is our shit
+    /*
     void teachPrintButtonEnabled();
     void fundPrintButtonEnabled();
     void pubPrintButtonEnabled();
@@ -42,6 +43,17 @@ private slots:
     void fundExportButtonEnabledFail();
     void pubExportButtonEnabledFail();
     void presExportButtonEnabledFail();
+    */
+
+    void teachPrintButtonPress();
+    void fundPrintButtonPress();
+    void pubPrintButtonPress();
+    void presPrintButtonPress();
+
+    void teachExportButtonPress();
+    void fundExportButtonPress();
+    void pubExportButtonPress();
+    void presExportButtonPress();
 };
 
 #endif

@@ -104,21 +104,23 @@ private slots:
     void on_fund_filter_from_textChanged();
     void on_fund_filter_to_textChanged();
 
-    void on_teachPrintButton_clicked();
+    // the following methods used to have void returns, changed by Andy and Alex to bools for test purposes
+    bool on_teachPrintButton_clicked();
 
-    void on_fundPrintButton_clicked();
+    bool on_fundPrintButton_clicked();
 
-    void on_presPrintButton_clicked();
+    bool on_presPrintButton_clicked();
 
-    void on_pubPrintButton_clicked();
+    bool on_pubPrintButton_clicked();
 
-    void on_teachExportButton_clicked();
+    bool on_teachExportButton_clicked();
 
-    void on_fundExportButton_clicked();
+    bool on_fundExportButton_clicked();
 
-    void on_presExportButton_clicked();
+    bool on_presExportButton_clicked();
 
-    void on_pubExportButton_clicked();
+    bool on_pubExportButton_clicked();
+    // here ends The Void return masacre
 
 private:
     static std::vector<std::string> GRANTS_MANFIELDS, PRES_MANFIELDS, PUBS_MANFIELDS, TEACH_MANFIELDS;

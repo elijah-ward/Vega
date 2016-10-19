@@ -114,7 +114,7 @@ void TestUpload::uploadFundFileFail(){
  *
  *****************************************************************************/
 
-
+/*
 void TestUpload::teachPrintButtonEnabled()
 {
     QString path = "../Project Information/Sample Data/Teaching_sample.csv";
@@ -146,6 +146,7 @@ void TestUpload::presPrintButtonEnabled()
     w.load_pres(path);
     QVERIFY(w.checkPresPrintButton());
 }
+*/
 
 /******************************************************************************
  *
@@ -153,6 +154,7 @@ void TestUpload::presPrintButtonEnabled()
  *
  *****************************************************************************/
 
+/*
 void TestUpload::teachPrintButtonEnabledFail()
 {
     QString path = "../Project Information/Sample Data/Presentations_sample.csv";
@@ -184,6 +186,7 @@ void TestUpload::presPrintButtonEnabledFail()
     w.load_pres(path);
     QVERIFY(!(w.checkPresPrintButton()));
 }
+*/
 
 /******************************************************************************
  *
@@ -191,6 +194,7 @@ void TestUpload::presPrintButtonEnabledFail()
  *
  *****************************************************************************/
 
+/*
 void TestUpload::teachExportButtonEnabled()
 {
     QString path = "../Project Information/Sample Data/Teaching_sample.csv";
@@ -222,6 +226,7 @@ void TestUpload::presExportButtonEnabled()
     w.load_pres(path);
     QVERIFY(w.checkPresExportButton());
 }
+*/
 
 /******************************************************************************
  *
@@ -229,6 +234,7 @@ void TestUpload::presExportButtonEnabled()
  *
  *****************************************************************************/
 
+/*
 void TestUpload::teachExportButtonEnabledFail()
 {
     QString path = "../Project Information/Sample Data/Presentations_sample.csv";
@@ -260,4 +266,74 @@ void TestUpload::presExportButtonEnabledFail()
     w.load_pres(path);
     QVERIFY(!(w.checkPresExportButton()));
 }
+*/
+
+/******************************************************************************
+ *
+ * Print dialog after button press test
+ *
+ *****************************************************************************/
+
+void TestUpload::teachPrintButtonPress(){
+    QString path = "../Project Information/Sample Data/Teaching_sample.csv";
+    MainWindow w;
+    w.load_teach(path);
+    QVERIFY(w.on_teachPrintButton_clicked());
+}
+
+void TestUpload::fundPrintButtonPress(){
+    QString path = "../Project Information/Sample Data/GrantsClinicalFunding_sample.csv";
+    MainWindow w;
+    w.load_fund(path);
+    QVERIFY(w.on_fundPrintButton_clicked());
+}
+
+void TestUpload::pubPrintButtonPress(){
+    QString path = "../Project Information/Sample Data/Publications_sample.csv";
+    MainWindow w;
+    w.load_pub(path);
+    QVERIFY(w.on_pubPrintButton_clicked());
+}
+
+void TestUpload::presPrintButtonPress(){
+    QString path = "../Project Information/Sample Data/Presentations_sample.csv";
+    MainWindow w;
+    w.load_pres(path);
+    QVERIFY(w.on_presPrintButton_clicked());
+}
+
+/******************************************************************************
+ *
+ * Export to pdf dialog after button press test
+ *
+ *****************************************************************************/
+
+void TestUpload::teachExportButtonPress(){
+    QString path = "../Project Information/Sample Data/Teaching_sample.csv";
+    MainWindow w;
+    w.load_teach(path);
+    QVERIFY(w.on_teachExportButton_clicked());
+}
+
+void TestUpload::fundExportButtonPress(){
+    QString path = "../Project Information/Sample Data/GrantsClinicalFunding_sample.csv";
+    MainWindow w;
+    w.load_fund(path);
+    QVERIFY(w.on_fundExportButton_clicked());
+}
+
+void TestUpload::pubExportButtonPress(){
+    QString path = "../Project Information/Sample Data/Publications_sample.csv";
+    MainWindow w;
+    w.load_pub(path);
+    QVERIFY(w.on_pubExportButton_clicked());
+}
+
+void TestUpload::presExportButtonPress(){
+    QString path = "../Project Information/Sample Data/Presentations_sample.csv";
+    MainWindow w;
+    w.load_pres(path);
+    QVERIFY(w.on_presExportButton_clicked());
+}
+
 
