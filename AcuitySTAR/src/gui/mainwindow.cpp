@@ -1,3 +1,21 @@
+/*
+ * TEAM VEGA MAIN WINDOW
+ *
+ * Last updated: 10/18/2016
+ *
+ * Changes we made to the main functions:
+ * on_XPrintButton_clicked() -> changed return value from void to bool + added return statements
+ * to check if the core block of code executed or not
+ * on_XExportButton_clicked() -> changed return value from void to bool + added return statements
+ * to check if the core block of code executed or not
+ *
+ * where X = {teach, fund, pres, pub}
+ *
+ *
+ * We added extra functions to the bottom of the code to check if certain buttons are active or not
+ *
+ */
+
 #include <QDate>
 #include <QDebug>
 #include <QDirModel>
@@ -105,7 +123,7 @@ MainWindow::~MainWindow() {
     delete printer;
 }
 
-void MainWindow::on_actionLoad_file_triggered() {
+bool MainWindow::on_actionLoad_file_triggered() {
     QStringList filePaths = QFileDialog::getOpenFileNames(this,
                                                           "Select one or more files to load",
                                                           QDir::currentPath(),
@@ -130,7 +148,9 @@ void MainWindow::on_actionLoad_file_triggered() {
             sum = std::accumulate(all_loaded, all_loaded + NUM_TABS, 0);
             ++it;
         }
+        return true;
     }
+    return false;
 }
 
 
@@ -1388,47 +1408,55 @@ void MainWindow::on_fundTreeView_clicked(const QModelIndex &index) {
     }
 }
 
-void MainWindow::on_teachPrintButton_clicked()
+bool MainWindow::on_teachPrintButton_clicked()
 {
     QPrintDialog printDialog(printer, this);
     if (printDialog.exec() == QDialog::Accepted) {
         QCPPainter painter;
         painter.begin(printer);
         ui->teachChartFrame->render(&painter);
+        return true;
     }
+    return false;
 }
 
-void MainWindow::on_fundPrintButton_clicked()
+bool MainWindow::on_fundPrintButton_clicked()
 {
     QPrintDialog printDialog(printer, this);
     if (printDialog.exec() == QDialog::Accepted) {
         QCPPainter painter;
         painter.begin(printer);
         ui->fundChartFrame->render(&painter);
+        return true;
     }
+    return false;
 }
 
-void MainWindow::on_presPrintButton_clicked()
+bool MainWindow::on_presPrintButton_clicked()
 {
     QPrintDialog printDialog(printer, this);
     if (printDialog.exec() == QDialog::Accepted) {
         QCPPainter painter;
         painter.begin(printer);
         ui->presChartFrame->render(&painter);
-    }
+        return true;
+    } 
+    return false;
 }
 
-void MainWindow::on_pubPrintButton_clicked()
+bool MainWindow::on_pubPrintButton_clicked()
 {
     QPrintDialog printDialog(printer, this);
     if (printDialog.exec() == QDialog::Accepted) {
         QCPPainter painter;
         painter.begin(printer);
         ui->pubChartFrame->render(&painter);
+        return true;
     }
+    return false;
 }
 
-void MainWindow::on_teachExportButton_clicked()
+bool MainWindow::on_teachExportButton_clicked()
 {
     QString fileName = QFileDialog::getSaveFileName(this, tr("Export File"),
                                                     QDir::homePath(),
@@ -1444,11 +1472,12 @@ void MainWindow::on_teachExportButton_clicked()
         if (ui->teach_bar_button->isChecked()) {
             ui->teachBarChart->savePdf(fileName);
         } */
+        return true;
     }
-
+    return false;
 }
 
-void MainWindow::on_fundExportButton_clicked()
+bool MainWindow::on_fundExportButton_clicked()
 {
     QString fileName = QFileDialog::getSaveFileName(this, tr("Export File"),
                                                     QDir::homePath(),
@@ -1460,10 +1489,12 @@ void MainWindow::on_fundExportButton_clicked()
         painter.begin(&writer);
         painter.scale(10.0, 10.0);
         ui->fundChartFrame->render(&painter);
+        return true;
     }
+    return false;
 }
 
-void MainWindow::on_presExportButton_clicked()
+bool MainWindow::on_presExportButton_clicked()
 {
     QString fileName = QFileDialog::getSaveFileName(this, tr("Export File"),
                                                     QDir::homePath(),
@@ -1475,10 +1506,12 @@ void MainWindow::on_presExportButton_clicked()
         painter.begin(&writer);
         painter.scale(10.0, 10.0);
         ui->presChartFrame->render(&painter);
+        return true;
     }
+    return false;
 }
 
-void MainWindow::on_pubExportButton_clicked()
+bool MainWindow::on_pubExportButton_clicked()
 {
     QString fileName = QFileDialog::getSaveFileName(this, tr("Export File"),
                                                     QDir::homePath(),
@@ -1490,9 +1523,10 @@ void MainWindow::on_pubExportButton_clicked()
         painter.begin(&writer);
         painter.scale(10.0, 10.0);
         ui->pubChartFrame->render(&painter);
+        return true;
     }
+    return false;
 }
-
 
 char MainWindow::getFilterStartChar(int type) {
     char charInField;
@@ -1576,40 +1610,64 @@ void MainWindow::on_fund_filter_to_textChanged() { refresh(FUNDING);}
  * TEAM VEGA PRINT FUNCTIONS FOR TEST CASES *
  **************************************/
 
-bool MainWindow::checkTeachPrintButton(){
-    return ui->teachPrintButton->isEnabled();
-}
+//bool MainWindow::checkTeachPrintButton(){
+//    return ui->teachPrintButton->isEnabled();
+//}
 
-bool MainWindow::checkFundPrintButton(){
-    return ui->fundPrintButton->isEnabled();
-}
+//bool MainWindow::checkFundPrintButton(){
+//    return ui->fundPrintButton->isEnabled();
+//}
 
-bool MainWindow::checkPubPrintButton(){
-    return ui->pubPrintButton->isEnabled();
-}
+//bool MainWindow::checkPubPrintButton(){
+//    return ui->pubPrintButton->isEnabled();
+//}
 
-bool MainWindow::checkPresPrintButton(){
-    return ui->presPrintButton->isEnabled();
-}
+//bool MainWindow::checkPresPrintButton(){
+//    return ui->presPrintButton->isEnabled();
+//}
 
 /**************************************
  * TEAM VEGA PDF EXPORT FUNCTIONS FOR TEST CASES *
  **************************************/
 
-bool MainWindow::checkTeachExportButton(){
-    return ui->teachExportButton->isEnabled();
+//bool MainWindow::checkTeachExportButton(){
+//    return ui->teachExportButton->isEnabled();
+//}
+
+//bool MainWindow::checkFundExportButton(){
+//    return ui->fundExportButton->isEnabled();
+//}
+
+//bool MainWindow::checkPubExportButton(){
+//    return ui->pubExportButton->isEnabled();
+//}
+
+//bool MainWindow::checkPresExportButton(){
+//    return ui->presExportButton->isEnabled();
+//}
+
+/**************************************
+ * TEAM VEGA PIE CHART CASES *
+ **************************************/
+
+int MainWindow::checkTeachPieBarButton() {
+    return ui->teach_graph_stackedWidget->currentIndex();
 }
 
-bool MainWindow::checkFundExportButton(){
-    return ui->fundExportButton->isEnabled();
+int MainWindow::checkFundPieBarButton() {
+    return ui->fund_graph_stackedWidget->currentIndex();
 }
 
-bool MainWindow::checkPubExportButton(){
-    return ui->pubExportButton->isEnabled();
+int MainWindow::checkPubPieBarButton() {
+    return ui->pub_graph_stackedWidget->currentIndex();
 }
 
-bool MainWindow::checkPresExportButton(){
-    return ui->presExportButton->isEnabled();
+int MainWindow::checkPresPieBarButton() {
+    return ui->pres_graph_stackedWidget->currentIndex();
+}
+
+QString MainWindow::returnTeachHover(){
+    return ui->tabTeach->toolTip();
 }
 
 /**************************************
@@ -1631,5 +1689,7 @@ QString MainWindow::returnPresHover(){
 QString MainWindow::returnGranAndClinHover(){
     return ui->tabFund->toolTip();
 }
+
+
 
 
