@@ -38,22 +38,21 @@ private slots:
      * INSERT VEGA FUNCTIONS HERE *
      ******************************/
 
+    QString returnTeachHover();
+    QString returnPubHover();
+    QString returnPresHover();
+    QString returnGranAndClinHover();
+
 
     bool checkTeachPrintButton();
     bool checkFundPrintButton();
     bool checkPresPrintButton();
     bool checkPubPrintButton();
-    QString returnTeachHover();
 
-//    bool checkTeachPrintButton();
-//    bool checkFundPrintButton();
-//    bool checkPresPrintButton();
-//    bool checkPubPrintButton();
-
-//    bool checkTeachExportButton();
-//    bool checkFundExportButton();
-//    bool checkPresExportButton();
-//    bool checkPubExportButton();
+    bool checkTeachExportButton();
+    bool checkFundExportButton();
+    bool checkPresExportButton();
+    bool checkPubExportButton();
 
     int checkTeachPieBarButton();
     int checkFundPieBarButton();
@@ -133,11 +132,6 @@ private slots:
 
     bool on_pubExportButton_clicked();
     // here ends The Void return masacre
-
-    QString returnTeachHover();
-    QString returnPubHover();
-    QString returnPresHover();
-    QString returnGranAndClinHover();
 
 private:
     static std::vector<std::string> GRANTS_MANFIELDS, PRES_MANFIELDS, PUBS_MANFIELDS, TEACH_MANFIELDS;

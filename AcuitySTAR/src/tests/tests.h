@@ -7,7 +7,7 @@ class TestUpload: public QObject
 {
     Q_OBJECT
 private slots:
-    /*
+
     void uploadTeachCSV();
     void uploadPubCSV();
     void uploadPresCSV();
@@ -16,14 +16,14 @@ private slots:
     void uploadPubCSVFail();
     void uploadPresCSVFail();
     void uploadFundCSVFail();
-	void uploadTeachFileFail();
+    void uploadTeachFileFail();
     void uploadPubFileFail();
     void uploadPresFileFail();
     void uploadFundFileFail();
-    */
 
-    // this is our shit
-    /*
+
+    // this is our codes
+
     void teachPrintButtonEnabled();
     void fundPrintButtonEnabled();
     void pubPrintButtonEnabled();
@@ -33,7 +33,7 @@ private slots:
     void fundPrintButtonEnabledFail();
     void pubPrintButtonEnabledFail();
     void presPrintButtonEnabledFail();
-    */
+
 
     void multipleFileUploadTest();
 
@@ -51,42 +51,36 @@ private slots:
     void checkPubHover();
     void checkPresHover();
     void checkGranAndClinHover();
-	
 
-//    void teachPrintButtonPress();
-//    void fundPrintButtonPress();
-//    void pubPrintButtonPress();
-//    void presPrintButtonPress();
+    void teachPrintButtonPress();
+    void fundPrintButtonPress();
+    void pubPrintButtonPress();
+    void presPrintButtonPress();
 
-//    void teachExportButtonPress();
-//    void fundExportButtonPress();
-//    void pubExportButtonPress();
-//    void presExportButtonPress();
+    void teachExportButtonPress();
+    void fundExportButtonPress();
+    void pubExportButtonPress();
+    void presExportButtonPress();
 
-//    void checkTeachPieButton();
-//    void checkPresPieButton();
-//    void checkFundPieButton();
-//    void checkPubPieButton();
+//    void checkTeachExportButton();
+//    void checkFundExportButton();
+//    void checkPresExportButton();
+//    void checkPubExportButton();
 
-//    void checkTeachBarButton();
-//    void checkPresBarButton();
-//    void checkFundBarButton();
-//    void checkPubBarButton();
+    void checkTeachPieButton();
+    void checkPresPieButton();
+    void checkFundPieButton();
+    void checkPubPieButton();
 
-//    void teachPrintButtonPress();
-//    void fundPrintButtonPress();
-//    void pubPrintButtonPress();
-//    void presPrintButtonPress();
+    void checkTeachBarButton();
+    void checkPresBarButton();
+    void checkFundBarButton();
+    void checkPubBarButton();
 
-//    void teachExportButtonPress();
-//    void fundExportButtonPress();
-//    void pubExportButtonPress();
-//    void presExportButtonPress();
-
-//    void teachLoadFile();
-//    void fundLoadFile();
-//    void pubLoadFile();
-//    void presLoadFile();
+    void teachLoadFile();
+    void fundLoadFile();
+    void pubLoadFile();
+    void presLoadFile();
 
     void randomTwoLetterExtLoadFile();
     void randomOneLetterExtLoadFile();
