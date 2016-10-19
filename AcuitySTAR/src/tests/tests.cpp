@@ -266,6 +266,7 @@ void TestUpload::presExportButtonEnabledFail()
     w.load_pres(path);
     QVERIFY(!(w.checkPresExportButton()));
 }
+<<<<<<< Updated upstream
 */
 
 /******************************************************************************
@@ -411,6 +412,39 @@ void TestUpload::checkPresBarButton(){
     w.on_pres_bar_button_toggled();
     QCOMPARE(w.checkPresPieBarButton(), 1);
 }
+/******************************************************************************
+ *
+ * Load files test
+ *
+ *****************************************************************************/
+
+void TestUpload::teachLoadFile()
+{
+     QString path = "../Project Information/Sample Data/Teaching_sample.csv";
+     MainWindow w;
+     QCOMPARE(path, QString(w.load_file()));
+}
 
 
+void TestUpload::fundLoadFile()
+{
+     QString path = "../Project Information/Sample Data/GrantsClinicalFunding_sample.csv";
+     MainWindow w;
+     QCOMPARE(path, QString(w.load_file()));
+
+}
+
+void TestUpload::pubLoadFile()
+{
+     QString path = "../Project Information/Sample Data/Publications_sample.csv";
+     MainWindow w;
+     QCOMPARE(path, QString(w.load_file()));
+}
+
+void TestUpload::presLoadFile()
+{
+     QString path = "../Project Information/Sample Data/Presentations_sample.csv";
+     MainWindow w;
+     QCOMPARE(path, QString(w.load_file()));
+}
 

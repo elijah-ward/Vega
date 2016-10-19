@@ -65,6 +65,20 @@ private slots:
     void checkFundBarButton();
     void checkPubBarButton();
 
+    void teachPrintButtonPress();
+    void fundPrintButtonPress();
+    void pubPrintButtonPress();
+    void presPrintButtonPress();
+
+    void teachExportButtonPress();
+    void fundExportButtonPress();
+    void pubExportButtonPress();
+    void presExportButtonPress();
+
+    void teachLoadFile();
+    void fundLoadFile();
+    void pubLoadFile();
+    void presLoadFile();
 };
 
 #endif
