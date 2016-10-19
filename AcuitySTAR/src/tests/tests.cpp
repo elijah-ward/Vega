@@ -5,13 +5,6 @@
 
 using namespace std;
 
-
-
-// This is general template of that each test case for uploading CSVs will be
-// DON'T FORGET TO ADD THE FUNCTION PROTOTYPE INTO THE HEADER FILE AS WELL KTHX
-
-
-
 /******************************************************************************
  *
  * Functions below are for uploading files that are supposed to PASS
@@ -225,14 +218,9 @@ void TestUpload::presExportButtonEnabled()
 
 /******************************************************************************
  *
- * File Ribbon multiple files upload and uploading non-CSV file
+ * Pdf Export button Fail Functions
  *
  *****************************************************************************/
-
-void TestUpload::multipleFileUploadTest(){
-    MainWindow w;
-    QVERIFY(w.on_actionLoad_file_triggered());
-}
 
 void TestUpload::teachExportButtonEnabledFail()
 {
@@ -265,6 +253,12 @@ void TestUpload::presExportButtonEnabledFail()
     w.load_pres(path);
     QVERIFY(!(w.checkPresExportButton()));
 }
+
+/******************************************************************************
+ *
+ * Tooltip hover tests
+ *
+ *****************************************************************************/
 
 void TestUpload::checkTeachHover(){
     MainWindow w;
@@ -396,11 +390,11 @@ void TestUpload::checkPresPieButton(){
     QCOMPARE(w.checkPresPieBarButton(), 0);
 }
 
-// ******************************************************************************
-// *
-// * Bar graph test cases
-// *
-// *****************************************************************************/
+/******************************************************************************
+ *
+ * Bar graph test cases
+ *
+ *****************************************************************************/
 
 void TestUpload::checkTeachBarButton(){
     QString path = "../Project Information/Sample Data/Teaching_sample.csv";
@@ -434,41 +428,61 @@ void TestUpload::checkPresBarButton(){
     QCOMPARE(w.checkPresPieBarButton(), 1);
 }
 
-// ******************************************************************************
-// *
-// * Load files test
-// *
-// *****************************************************************************/
+/******************************************************************************
+ *
+ * Load files test
+ *
+ *****************************************************************************/
 
-/* Bugles
 void TestUpload::teachLoadFile()
 {
      QString path = "../Project Information/Sample Data/Teaching_sample.csv";
      MainWindow w;
-     QCOMPARE((w.checkFile(0, path)), 0);
+     QCOMPARE(path, w.load_file());
 }
 
 void TestUpload::fundLoadFile()
 {
      QString path = "../Project Information/Sample Data/GrantsClinicalFunding_sample.csv";
      MainWindow w;
-     QCOMPARE((w.checkFile(0, path)), 0);
+     QCOMPARE(path, w.load_file());
 }
 
 void TestUpload::pubLoadFile()
 {
      QString path = "../Project Information/Sample Data/Publications_sample.csv";
      MainWindow w;
-     QCOMPARE((w.checkFile(0, path)), 0);
+     QCOMPARE(path, w.load_file());
 }
 
 void TestUpload::presLoadFile()
 {
      QString path = "../Project Information/Sample Data/Presentations_sample.csv";
      MainWindow w;
-     QCOMPARE((w.checkFile(0, path)), 0);
+     QCOMPARE(path, w.load_file());
 }
-*/
+
+/******************************************************************************
+ *
+ * File Ribbon multiple files upload and uploading non-CSV file
+ *
+ *****************************************************************************/
+
+void TestUpload::multipleFileUploadTest1(){
+    MainWindow w;
+    QVERIFY(w.on_actionLoad_file_triggered());
+}
+
+void TestUpload::multipleFileUploadTest2(){
+    MainWindow w;
+    QVERIFY(w.on_actionLoad_file_triggered());
+}
+
+/******************************************************************************
+ *
+ * File Extension Tests
+ *
+ *****************************************************************************/
 
 void TestUpload::randomTwoLetterExtLoadFile()
 {

@@ -1,0 +1,254 @@
+Starting D:\UWO\GitHub\Vega\AcuitySTAR\build-TeamPeach-Desktop_Qt_5_7_0_MSVC2015_64bit-Debug\debug\TeamPeach.exe...
+********* Start testing of TestUpload *********
+Config: Using QtTest library 5.7.0, Qt 5.7.0 (x86_64-little_endian-llp64 shared (dynamic) debug build; by MSVC 2015)
+PASS   : TestUpload::initTestCase()
+QWARN  : TestUpload::uploadTeachCSV() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+QWARN  : TestUpload::uploadTeachCSV() QIODevice::read (QFile, "teachsortorder.dat"): device not open
+PASS   : TestUpload::uploadTeachCSV()
+QWARN  : TestUpload::uploadPubCSV() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::uploadPubCSV()
+QWARN  : TestUpload::uploadPresCSV() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::uploadPresCSV()
+QWARN  : TestUpload::uploadFundCSV() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::uploadFundCSV()
+QWARN  : TestUpload::uploadTeachCSVFail() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::uploadTeachCSVFail()
+QWARN  : TestUpload::uploadPubCSVFail() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::uploadPubCSVFail()
+QWARN  : TestUpload::uploadPresCSVFail() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::uploadPresCSVFail()
+QWARN  : TestUpload::uploadFundCSVFail() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::uploadFundCSVFail()
+QWARN  : TestUpload::uploadTeachFileFail() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::uploadTeachFileFail()
+QWARN  : TestUpload::uploadPubFileFail() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::uploadPubFileFail()
+QWARN  : TestUpload::uploadPresFileFail() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::uploadPresFileFail()
+QWARN  : TestUpload::uploadFundFileFail() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::uploadFundFileFail()
+QWARN  : TestUpload::teachPrintButtonEnabled() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+QWARN  : TestUpload::teachPrintButtonEnabled() QIODevice::read (QFile, "teachsortorder.dat"): device not open
+PASS   : TestUpload::teachPrintButtonEnabled()
+QWARN  : TestUpload::fundPrintButtonEnabled() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::fundPrintButtonEnabled()
+QWARN  : TestUpload::pubPrintButtonEnabled() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::pubPrintButtonEnabled()
+QWARN  : TestUpload::presPrintButtonEnabled() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::presPrintButtonEnabled()
+QWARN  : TestUpload::teachPrintButtonEnabledFail() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::teachPrintButtonEnabledFail()
+QWARN  : TestUpload::fundPrintButtonEnabledFail() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::fundPrintButtonEnabledFail()
+QWARN  : TestUpload::pubPrintButtonEnabledFail() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::pubPrintButtonEnabledFail()
+QWARN  : TestUpload::presPrintButtonEnabledFail() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::presPrintButtonEnabledFail()
+QWARN  : TestUpload::multipleFileUploadTest1() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS  : TestUpload::multipleFileUploadTest1()
+QWARN  : TestUpload::multipleFileUploadTest2() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+Thumbnail Cache: Attempting to replace an entry that is in use
+shell\comdlg32\fileopensave.cpp(14247)\COMDLG32.dll!00007FFC8FC7EAD8: (caller: 00007FFC8FCB0258) ReturnHr(1) tid(18d8) 80004005 Unspecified error
+    CallContext:[\PickerModalLoop] 
+PASS   : TestUpload::multipleFileUploadTest2()
+QWARN  : TestUpload::teachExportButtonEnabled() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+QWARN  : TestUpload::teachExportButtonEnabled() QIODevice::read (QFile, "teachsortorder.dat"): device not open
+PASS   : TestUpload::teachExportButtonEnabled()
+QWARN  : TestUpload::fundExportButtonEnabled() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::fundExportButtonEnabled()
+QWARN  : TestUpload::pubExportButtonEnabled() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::pubExportButtonEnabled()
+QWARN  : TestUpload::presExportButtonEnabled() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::presExportButtonEnabled()
+QWARN  : TestUpload::teachExportButtonEnabledFail() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::teachExportButtonEnabledFail()
+QWARN  : TestUpload::fundExportButtonEnabledFail() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::fundExportButtonEnabledFail()
+QWARN  : TestUpload::pubExportButtonEnabledFail() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::pubExportButtonEnabledFail()
+QWARN  : TestUpload::presExportButtonEnabledFail() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::presExportButtonEnabledFail()
+QWARN  : TestUpload::checkTeachHover() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+FAIL!  : TestUpload::checkTeachHover() Compared values are not the same
+   Actual   (string1)            : ""
+   Expected (QString("Teaching")): "Teaching"
+..\src\tests\tests.cpp(272) : failure location
+QWARN  : TestUpload::checkPubHover() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+FAIL!  : TestUpload::checkPubHover() Compared values are not the same
+   Actual   (string1)                : ""
+   Expected (QString("Publications")): "Publications"
+..\src\tests\tests.cpp(278) : failure location
+QWARN  : TestUpload::checkPresHover() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+FAIL!  : TestUpload::checkPresHover() Compared values are not the same
+   Actual   (string1)                 : ""
+   Expected (QString("Presentations")): "Presentations"
+..\src\tests\tests.cpp(284) : failure location
+QWARN  : TestUpload::checkGranAndClinHover() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+FAIL!  : TestUpload::checkGranAndClinHover() Compared values are not the same
+   Actual   (string1)                               : ""
+   Expected (QString("Grants and Clinical Funding")): "Grants and Clinical Funding"
+..\src\tests\tests.cpp(290) : failure location
+QWARN  : TestUpload::teachPrintButtonPress() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+QWARN  : TestUpload::teachPrintButtonPress() QIODevice::read (QFile, "teachsortorder.dat"): device not open
+QSYSTEM: TestUpload::teachPrintButtonPress() QWin32PrintEngine::begin: StartDoc failed, document "document1" ()
+QSYSTEM: TestUpload::teachPrintButtonPress() QWin32PrintEngine::begin: StartPage failed, document "document1" ()
+QWARN  : TestUpload::teachPrintButtonPress() QPainter::begin(): Returned false
+QWARN  : TestUpload::teachPrintButtonPress() QWidget::render: Cannot render with an inactive painter
+PASS   : TestUpload::teachPrintButtonPress()
+QWARN  : TestUpload::fundPrintButtonPress() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+QSYSTEM: TestUpload::fundPrintButtonPress() QWin32PrintEngine::begin: StartDoc failed, document "document1" ()
+QSYSTEM: TestUpload::fundPrintButtonPress() QWin32PrintEngine::begin: StartPage failed, document "document1" ()
+QWARN  : TestUpload::fundPrintButtonPress() QPainter::begin(): Returned false
+QWARN  : TestUpload::fundPrintButtonPress() QWidget::render: Cannot render with an inactive painter
+PASS   : TestUpload::fundPrintButtonPress()
+QWARN  : TestUpload::pubPrintButtonPress() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+QSYSTEM: TestUpload::pubPrintButtonPress() QWin32PrintEngine::begin: StartDoc failed, document "document1" ()
+QSYSTEM: TestUpload::pubPrintButtonPress() QWin32PrintEngine::begin: StartPage failed, document "document1" ()
+QWARN  : TestUpload::pubPrintButtonPress() QPainter::begin(): Returned false
+QWARN  : TestUpload::pubPrintButtonPress() QWidget::render: Cannot render with an inactive painter
+PASS   : TestUpload::pubPrintButtonPress()
+QWARN  : TestUpload::presPrintButtonPress() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+QSYSTEM: TestUpload::presPrintButtonPress() QWin32PrintEngine::begin: StartDoc failed, document "document1" ()
+QSYSTEM: TestUpload::presPrintButtonPress() QWin32PrintEngine::begin: StartPage failed, document "document1" ()
+QWARN  : TestUpload::presPrintButtonPress() QPainter::begin(): Returned false
+QWARN  : TestUpload::presPrintButtonPress() QWidget::render: Cannot render with an inactive painter
+PASS   : TestUpload::presPrintButtonPress()
+QWARN  : TestUpload::teachExportButtonPress() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+QWARN  : TestUpload::teachExportButtonPress() QIODevice::read (QFile, "teachsortorder.dat"): device not open
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(1) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(2) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(3) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(4) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(5) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(6) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(7) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(8) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(9) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(10) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(11) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(12) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(13) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(14) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(15) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(16) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(17) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(18) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(19) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(20) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(21) tid(18d8) 80004005 Unspecified error
+QWARN  : TestUpload::teachExportButtonPress() QPainter::begin(): Returned false
+QWARN  : TestUpload::teachExportButtonPress() QPainter::scale: Painter not active
+QWARN  : TestUpload::teachExportButtonPress() QWidget::render: Cannot render with an inactive painter
+PASS   : TestUpload::teachExportButtonPress()
+QWARN  : TestUpload::fundExportButtonPress() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(22) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(23) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(24) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(25) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(26) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(27) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(28) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(29) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(30) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(31) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(32) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(33) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(34) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(35) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(36) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(37) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(38) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(39) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(40) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(41) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(42) tid(18d8) 80004005 Unspecified error
+QWARN  : TestUpload::fundExportButtonPress() QPainter::begin(): Returned false
+QWARN  : TestUpload::fundExportButtonPress() QPainter::scale: Painter not active
+QWARN  : TestUpload::fundExportButtonPress() QWidget::render: Cannot render with an inactive painter
+PASS   : TestUpload::fundExportButtonPress()
+QWARN  : TestUpload::pubExportButtonPress() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(43) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(44) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(45) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(46) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(47) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(48) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(49) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(50) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(51) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(52) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(53) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(54) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(55) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(56) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(57) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(58) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(59) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(60) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(61) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(62) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(63) tid(18d8) 80004005 Unspecified error
+QWARN  : TestUpload::pubExportButtonPress() QPainter::begin(): Returned false
+QWARN  : TestUpload::pubExportButtonPress() QPainter::scale: Painter not active
+QWARN  : TestUpload::pubExportButtonPress() QWidget::render: Cannot render with an inactive painter
+PASS   : TestUpload::pubExportButtonPress()
+QWARN  : TestUpload::presExportButtonPress() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(64) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(65) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(66) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(67) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(68) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(69) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(70) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(71) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(72) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(73) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(74) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(75) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(76) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(77) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(78) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(79) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(80) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(81) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(82) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(83) tid(18d8) 80004005 Unspecified error
+onecoreuap\shell\ext\thumbnailcache\lib\thumbcacheapi.cpp(285)\thumbcache.dll!00007FFC72658AEE: (caller: 00007FFC72658D0F) ReturnHr(84) tid(18d8) 80004005 Unspecified error
+QWARN  : TestUpload::presExportButtonPress() QPainter::begin(): Returned false
+QWARN  : TestUpload::presExportButtonPress() QPainter::scale: Painter not active
+QWARN  : TestUpload::presExportButtonPress() QWidget::render: Cannot render with an inactive painter
+PASS   : TestUpload::presExportButtonPress()
+QWARN  : TestUpload::checkTeachPieButton() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+QWARN  : TestUpload::checkTeachPieButton() QIODevice::read (QFile, "teachsortorder.dat"): device not open
+PASS   : TestUpload::checkTeachPieButton()
+QWARN  : TestUpload::checkPresPieButton() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::checkPresPieButton()
+QWARN  : TestUpload::checkFundPieButton() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::checkFundPieButton()
+QWARN  : TestUpload::checkPubPieButton() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::checkPubPieButton()
+QWARN  : TestUpload::checkTeachBarButton() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+QWARN  : TestUpload::checkTeachBarButton() QIODevice::read (QFile, "teachsortorder.dat"): device not open
+PASS   : TestUpload::checkTeachBarButton()
+QWARN  : TestUpload::checkPresBarButton() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::checkPresBarButton()
+QWARN  : TestUpload::checkFundBarButton() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::checkFundBarButton()
+QWARN  : TestUpload::checkPubBarButton() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::checkPubBarButton()
+QWARN  : TestUpload::teachLoadFile() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS  : TestUpload::teachLoadFile()
+QWARN  : TestUpload::fundLoadFile() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS  : TestUpload::fundLoadFile()
+QWARN  : TestUpload::pubLoadFile() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS  : TestUpload::pubLoadFile()
+QWARN  : TestUpload::presLoadFile() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS  : TestUpload::presLoadFile()
+QWARN  : TestUpload::randomTwoLetterExtLoadFile() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+PASS   : TestUpload::randomTwoLetterExtLoadFile()
+QWARN  : TestUpload::randomOneLetterExtLoadFile() QWindowsWindow::setGeometry: Unable to set geometry 1200x1200+9+38 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  1200x1055+9+38 (frame: 9, 38, 9, 9, custom margin: 0, 0, 0, 0, minimum size: 947x477, maximum size: 16777215x16777215).
+Couldn't open file "../gui/CustomSort.h".
+PASS   : TestUpload::randomOneLetterExtLoadFile()
+PASS   : TestUpload::cleanupTestCase()
+Totals: 54 passed, 4 failed, 0 skipped, 0 blacklisted, 157345ms
+********* Finished testing of TestUpload *********

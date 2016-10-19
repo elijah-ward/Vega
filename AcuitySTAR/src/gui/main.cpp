@@ -14,6 +14,10 @@ int main(int argc, char *argv[]) {
 
     QApplication app(argc, argv);
     if (test) {
+        QStringList testCmd;
+        QDir testLogDir;
+        testLogDir.mkdir("testlogs");
+        testCmd << " " << "-o " << "testlogs/qtTestLog.txt";
         TestUpload *test_obj = new TestUpload();
         QTest::qExec(test_obj);
     }
