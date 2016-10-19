@@ -227,7 +227,7 @@ p, li { white-space: pre-wrap; }
        <item row="7" column="1">
         <widget class="QTabWidget" name="categoryTab">
          <property name="toolTip">
-          <string>Export to pdf</string>
+          <string/>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(255, 255, 255);</string>
@@ -236,7 +236,7 @@ p, li { white-space: pre-wrap; }
           <enum>QTabWidget::Rounded</enum>
          </property>
          <property name="currentIndex">
-          <number>1</number>
+          <number>0</number>
          </property>
          <property name="usesScrollButtons">
           <bool>false</bool>
