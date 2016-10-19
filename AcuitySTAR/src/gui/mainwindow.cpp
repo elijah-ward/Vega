@@ -1603,48 +1603,50 @@ void MainWindow::on_fund_filter_from_textChanged() { refresh(FUNDING);}
 void MainWindow::on_fund_filter_to_textChanged() { refresh(FUNDING);}
 
 /**************************************
+ *                                    *
  * TEAM VEGA FUNCTIONS FOR TEST CASES *
+ *                                    *
  **************************************/
 
-/**************************************
+/********************************************
  * TEAM VEGA PRINT FUNCTIONS FOR TEST CASES *
- **************************************/
+ ********************************************/
 
-//bool MainWindow::checkTeachPrintButton(){
-//    return ui->teachPrintButton->isEnabled();
-//}
+bool MainWindow::checkTeachPrintButton(){
+    return ui->teachPrintButton->isEnabled();
+}
 
-//bool MainWindow::checkFundPrintButton(){
-//    return ui->fundPrintButton->isEnabled();
-//}
+bool MainWindow::checkFundPrintButton(){
+    return ui->fundPrintButton->isEnabled();
+}
 
-//bool MainWindow::checkPubPrintButton(){
-//    return ui->pubPrintButton->isEnabled();
-//}
+bool MainWindow::checkPubPrintButton(){
+    return ui->pubPrintButton->isEnabled();
+}
 
-//bool MainWindow::checkPresPrintButton(){
-//    return ui->presPrintButton->isEnabled();
-//}
+bool MainWindow::checkPresPrintButton(){
+    return ui->presPrintButton->isEnabled();
+}
 
-/**************************************
+/*************************************************
  * TEAM VEGA PDF EXPORT FUNCTIONS FOR TEST CASES *
- **************************************/
+ *************************************************/
 
-//bool MainWindow::checkTeachExportButton(){
-//    return ui->teachExportButton->isEnabled();
-//}
+bool MainWindow::checkTeachExportButton(){
+    return ui->teachExportButton->isEnabled();
+}
 
-//bool MainWindow::checkFundExportButton(){
-//    return ui->fundExportButton->isEnabled();
-//}
+bool MainWindow::checkFundExportButton(){
+    return ui->fundExportButton->isEnabled();
+}
 
-//bool MainWindow::checkPubExportButton(){
-//    return ui->pubExportButton->isEnabled();
-//}
+bool MainWindow::checkPubExportButton(){
+    return ui->pubExportButton->isEnabled();
+}
 
-//bool MainWindow::checkPresExportButton(){
-//    return ui->presExportButton->isEnabled();
-//}
+bool MainWindow::checkPresExportButton(){
+    return ui->presExportButton->isEnabled();
+}
 
 /**************************************
  * TEAM VEGA PIE CHART CASES *
@@ -1664,10 +1666,6 @@ int MainWindow::checkPubPieBarButton() {
 
 int MainWindow::checkPresPieBarButton() {
     return ui->pres_graph_stackedWidget->currentIndex();
-}
-
-QString MainWindow::returnTeachHover(){
-    return ui->tabTeach->toolTip();
 }
 
 /**************************************

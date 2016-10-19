@@ -43,17 +43,11 @@ private slots:
     bool checkFundPrintButton();
     bool checkPresPrintButton();
     bool checkPubPrintButton();
-    QString returnTeachHover();
 
-//    bool checkTeachPrintButton();
-//    bool checkFundPrintButton();
-//    bool checkPresPrintButton();
-//    bool checkPubPrintButton();
-
-//    bool checkTeachExportButton();
-//    bool checkFundExportButton();
-//    bool checkPresExportButton();
-//    bool checkPubExportButton();
+    bool checkTeachExportButton();
+    bool checkFundExportButton();
+    bool checkPresExportButton();
+    bool checkPubExportButton();
 
     int checkTeachPieBarButton();
     int checkFundPieBarButton();
