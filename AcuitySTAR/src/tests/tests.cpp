@@ -261,3 +261,26 @@ void TestUpload::presExportButtonEnabledFail()
     QVERIFY(!(w.checkPresExportButton()));
 }
 
+void TestUpload::checkTeachHover(){
+    MainWindow w;
+    QString string1 = w.returnTeachHover();
+    QCOMPARE(string1, QString("Teaching"));
+}
+
+void TestUpload::checkPubHover(){
+	MainWindow w;
+    QString string1 = w.returnPubHover();
+    QCOMPARE(string1, QString("Publications"));
+}
+
+void TestUpload::checkPresHover(){
+	MainWindow w;
+    QString string1 = w.returnPresHover();
+    QCOMPARE(string1, QString("Presentations"));
+}
+
+void TestUpload::checkGranAndClinHover(){
+	MainWindow w;
+    QString string1 = w.returnGranAndClinHover();
+    QCOMPARE(string1, QString("Grants and Clinical Funding"));
+}

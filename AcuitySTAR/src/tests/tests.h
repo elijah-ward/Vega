@@ -42,6 +42,12 @@ private slots:
     void fundExportButtonEnabledFail();
     void pubExportButtonEnabledFail();
     void presExportButtonEnabledFail();
+	
+    void checkTeachHover();
+    void checkPubHover();
+    void checkPresHover();
+    void checkGranAndClinHover();
+	
 };
 
 #endif

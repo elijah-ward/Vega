@@ -1612,4 +1612,24 @@ bool MainWindow::checkPresExportButton(){
     return ui->presExportButton->isEnabled();
 }
 
+/**************************************
+ * TEAM VEGA PDF EXPORT FUNCTIONS FOR TEST CASES *
+ **************************************/
+
+QString MainWindow::returnTeachHover(){
+    return ui->tabTeach->toolTip();
+}
+
+QString MainWindow::returnPubHover(){
+    return ui->tabPub->toolTip();
+}
+
+QString MainWindow::returnPresHover(){
+    return ui->tabPres->toolTip();
+}
+
+QString MainWindow::returnGranAndClinHover(){
+    return ui->tabFund->toolTip();
+}
+
 

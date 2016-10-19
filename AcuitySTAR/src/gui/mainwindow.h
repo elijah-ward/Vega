@@ -120,6 +120,11 @@ private slots:
 
     void on_pubExportButton_clicked();
 
+    QString returnTeachHover();
+    QString returnPubHover();
+    QString returnPresHover();
+    QString returnGranAndClinHover();
+
 private:
     static std::vector<std::string> GRANTS_MANFIELDS, PRES_MANFIELDS, PUBS_MANFIELDS, TEACH_MANFIELDS;
 
