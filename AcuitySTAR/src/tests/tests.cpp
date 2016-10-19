@@ -110,7 +110,7 @@ void TestUpload::uploadFundFileFail(){
 
 /******************************************************************************
  *
- * Alex testing random
+ * Print button enabled TC's
  *
  *****************************************************************************/
 
@@ -119,6 +119,106 @@ void TestUpload::teachPrintButtonEnabled()
     QString path = "../Project Information/Sample Data/Teaching_sample.csv";
     MainWindow w;
     w.load_teach(path);
-    QVERIFY(w.checkTeachButton());
+    QVERIFY(w.checkTeachPrintButton());
 }
+
+void TestUpload::fundPrintButtonEnabled()
+{
+    QString path = "../Project Information/Sample Data/GrantsClinicalFunding_sample.csv";
+    MainWindow w;
+    w.load_fund(path);
+    QVERIFY(w.checkFundPrintButton());
+}
+
+void TestUpload::pubPrintButtonEnabled()
+{
+    QString path = "../Project Information/Sample Data/Publications_sample.csv";
+    MainWindow w;
+    w.load_pub(path);
+    QVERIFY(w.checkPubPrintButton());
+}
+
+void TestUpload::presPrintButtonEnabled()
+{
+    QString path = "../Project Information/Sample Data/Presentations_sample.csv";
+    MainWindow w;
+    w.load_pres(path);
+    QVERIFY(w.checkPresPrintButton());
+}
+
+/******************************************************************************
+ *
+ * Print button disabled TC's
+ *
+ *****************************************************************************/
+
+void TestUpload::teachPrintButtonEnabledFail()
+{
+    QString path = "../Project Information/Sample Data/Presentations_sample.csv";
+    MainWindow w;
+    w.load_teach(path);
+    QVERIFY(!(w.checkTeachPrintButton()));
+}
+
+void TestUpload::fundPrintButtonEnabledFail()
+{
+    QString path = "../Project Information/Sample Data/Teaching_sample.csv";
+    MainWindow w;
+    w.load_fund(path);
+    QVERIFY(!(w.checkFundPrintButton()));
+}
+
+void TestUpload::pubPrintButtonEnabledFail()
+{
+    QString path = "../Project Information/Sample Data/Teaching_sample.csv";
+    MainWindow w;
+    w.load_pub(path);
+    QVERIFY(!(w.checkPubPrintButton()));
+}
+
+void TestUpload::presPrintButtonEnabledFail()
+{
+    QString path = "../Project Information/Sample Data/Teaching_sample.csv";
+    MainWindow w;
+    w.load_pres(path);
+    QVERIFY(!(w.checkPresPrintButton()));
+}
+
+/******************************************************************************
+ *
+ * Pdf Export button enabled TC's
+ *
+ *****************************************************************************/
+
+//void TestUpload::teachExportButtonEnabled()
+//{
+//    QString path = "../Project Information/Sample Data/Teaching_sample.csv";
+//    MainWindow w;
+//    w.load_teach(path);
+//    QVERIFY(w.checkTeachExportButton());
+//}
+
+//void TestUpload::fundExportButtonEnabled()
+//{
+//    QString path = "../Project Information/Sample Data/GrantsClinicalFunding_sample.csv";
+//    MainWindow w;
+//    w.load_fund(path);
+//    QVERIFY(w.checkFundExportButton());
+//}
+
+//void TestUpload::pubExportButtonEnabled()
+//{
+//    QString path = "../Project Information/Sample Data/Publications_sample.csv";
+//    MainWindow w;
+//    w.load_pub(path);
+//    QVERIFY(w.checkPubExportButton());
+//}
+
+//void TestUpload::presExportButtonEnabled()
+//{
+//    QString path = "../Project Information/Sample Data/Presentations_sample.csv";
+//    MainWindow w;
+//    w.load_pres(path);
+//    QVERIFY(w.checkPresExportButton());
+//}
 

@@ -1572,7 +1572,21 @@ void MainWindow::on_fund_filter_to_textChanged() { refresh(FUNDING);}
  * TEAM VEGA FUNCTIONS FOR TEST CASES *
  **************************************/
 
-bool MainWindow::checkTeachButton(){
+bool MainWindow::checkTeachPrintButton(){
     return ui->teachPrintButton->isEnabled();
 }
+
+bool MainWindow::checkFundPrintButton(){
+    return ui->fundPrintButton->isEnabled();
+}
+
+bool MainWindow::checkPubPrintButton(){
+    return ui->pubPrintButton->isEnabled();
+}
+
+bool MainWindow::checkPresPrintButton(){
+    return ui->presPrintButton->isEnabled();
+}
+
+
 

@@ -38,7 +38,10 @@ private slots:
      * INSERT VEGA FUNCTIONS HERE *
      ******************************/
 
-    bool checkTeachButton();
+    bool checkTeachPrintButton();
+    bool checkFundPrintButton();
+    bool checkPresPrintButton();
+    bool checkPubPrintButton();
 
     /******************************/
 
