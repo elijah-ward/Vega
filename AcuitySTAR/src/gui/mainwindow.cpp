@@ -105,7 +105,7 @@ MainWindow::~MainWindow() {
     delete printer;
 }
 
-void MainWindow::on_actionLoad_file_triggered() {
+bool MainWindow::on_actionLoad_file_triggered() {
     QStringList filePaths = QFileDialog::getOpenFileNames(this,
                                                           "Select one or more files to load",
                                                           QDir::currentPath(),
@@ -130,7 +130,9 @@ void MainWindow::on_actionLoad_file_triggered() {
             sum = std::accumulate(all_loaded, all_loaded + NUM_TABS, 0);
             ++it;
         }
+        return true;
     }
+    return false;
 }
 
 
@@ -1493,7 +1495,6 @@ void MainWindow::on_pubExportButton_clicked()
     }
 }
 
-
 char MainWindow::getFilterStartChar(int type) {
     char charInField;
 
@@ -1588,5 +1589,6 @@ bool MainWindow::checkPresPrintButton(){
     return ui->presPrintButton->isEnabled();
 }
 
-
-
+QString MainWindow::returnTeachHover(){
+    return ui->tabTeach->toolTip();
+}

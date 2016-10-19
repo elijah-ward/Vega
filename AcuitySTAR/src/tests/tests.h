@@ -23,14 +23,19 @@ private slots:
     */
 
     // this is our shit
+    /*
     void teachPrintButtonEnabled();
     void fundPrintButtonEnabled();
     void pubPrintButtonEnabled();
     void presPrintButtonEnabled();
+	
     void teachPrintButtonEnabledFail();
     void fundPrintButtonEnabledFail();
     void pubPrintButtonEnabledFail();
     void presPrintButtonEnabledFail();
+    */
+
+    void multipleFileUploadTest();
 };
 
 #endif

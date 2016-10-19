@@ -114,6 +114,7 @@ void TestUpload::uploadFundFileFail(){
  *
  *****************************************************************************/
 
+/*
 void TestUpload::teachPrintButtonEnabled()
 {
     QString path = "../Project Information/Sample Data/Teaching_sample.csv";
@@ -145,6 +146,7 @@ void TestUpload::presPrintButtonEnabled()
     w.load_pres(path);
     QVERIFY(w.checkPresPrintButton());
 }
+*/
 
 /******************************************************************************
  *
@@ -152,6 +154,7 @@ void TestUpload::presPrintButtonEnabled()
  *
  *****************************************************************************/
 
+/*
 void TestUpload::teachPrintButtonEnabledFail()
 {
     QString path = "../Project Information/Sample Data/Presentations_sample.csv";
@@ -183,6 +186,7 @@ void TestUpload::presPrintButtonEnabledFail()
     w.load_pres(path);
     QVERIFY(!(w.checkPresPrintButton()));
 }
+*/
 
 /******************************************************************************
  *
@@ -190,35 +194,47 @@ void TestUpload::presPrintButtonEnabledFail()
  *
  *****************************************************************************/
 
-//void TestUpload::teachExportButtonEnabled()
-//{
-//    QString path = "../Project Information/Sample Data/Teaching_sample.csv";
-//    MainWindow w;
-//    w.load_teach(path);
-//    QVERIFY(w.checkTeachExportButton());
-//}
+/*
+void TestUpload::teachExportButtonEnabled()
+{
+    QString path = "../Project Information/Sample Data/Teaching_sample.csv";
+    MainWindow w;
+    w.load_teach(path);
+    QVERIFY(w.checkTeachExportButton());
+}
 
-//void TestUpload::fundExportButtonEnabled()
-//{
-//    QString path = "../Project Information/Sample Data/GrantsClinicalFunding_sample.csv";
-//    MainWindow w;
-//    w.load_fund(path);
-//    QVERIFY(w.checkFundExportButton());
-//}
+void TestUpload::fundExportButtonEnabled()
+{
+    QString path = "../Project Information/Sample Data/GrantsClinicalFunding_sample.csv";
+    MainWindow w;
+    w.load_fund(path);
+    QVERIFY(w.checkFundExportButton());
+}
 
-//void TestUpload::pubExportButtonEnabled()
-//{
-//    QString path = "../Project Information/Sample Data/Publications_sample.csv";
-//    MainWindow w;
-//    w.load_pub(path);
-//    QVERIFY(w.checkPubExportButton());
-//}
+void TestUpload::pubExportButtonEnabled()
+{
+    QString path = "../Project Information/Sample Data/Publications_sample.csv";
+    MainWindow w;
+    w.load_pub(path);
+    QVERIFY(w.checkPubExportButton());
+}
 
-//void TestUpload::presExportButtonEnabled()
-//{
-//    QString path = "../Project Information/Sample Data/Presentations_sample.csv";
-//    MainWindow w;
-//    w.load_pres(path);
-//    QVERIFY(w.checkPresExportButton());
-//}
+void TestUpload::presExportButtonEnabled()
+{
+    QString path = "../Project Information/Sample Data/Presentations_sample.csv";
+    MainWindow w;
+    w.load_pres(path);
+    QVERIFY(w.checkPresExportButton());
+}
+*/
 
+/******************************************************************************
+ *
+ * File Ribbon multiple files upload and uploading non-CSV file
+ *
+ *****************************************************************************/
+
+void TestUpload::multipleFileUploadTest(){
+    MainWindow w;
+    QVERIFY(w.on_actionLoad_file_triggered());
+}
