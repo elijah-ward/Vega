@@ -1609,40 +1609,63 @@ void MainWindow::on_fund_filter_to_textChanged() { refresh(FUNDING);}
  * TEAM VEGA PRINT FUNCTIONS FOR TEST CASES *
  **************************************/
 
-bool MainWindow::checkTeachPrintButton(){
-    return ui->teachPrintButton->isEnabled();
-}
+//bool MainWindow::checkTeachPrintButton(){
+//    return ui->teachPrintButton->isEnabled();
+//}
 
-bool MainWindow::checkFundPrintButton(){
-    return ui->fundPrintButton->isEnabled();
-}
+//bool MainWindow::checkFundPrintButton(){
+//    return ui->fundPrintButton->isEnabled();
+//}
 
-bool MainWindow::checkPubPrintButton(){
-    return ui->pubPrintButton->isEnabled();
-}
+//bool MainWindow::checkPubPrintButton(){
+//    return ui->pubPrintButton->isEnabled();
+//}
 
-bool MainWindow::checkPresPrintButton(){
-    return ui->presPrintButton->isEnabled();
-}
+//bool MainWindow::checkPresPrintButton(){
+//    return ui->presPrintButton->isEnabled();
+//}
 
 /**************************************
  * TEAM VEGA PDF EXPORT FUNCTIONS FOR TEST CASES *
  **************************************/
 
-bool MainWindow::checkTeachExportButton(){
-    return ui->teachExportButton->isEnabled();
+//bool MainWindow::checkTeachExportButton(){
+//    return ui->teachExportButton->isEnabled();
+//}
+
+//bool MainWindow::checkFundExportButton(){
+//    return ui->fundExportButton->isEnabled();
+//}
+
+//bool MainWindow::checkPubExportButton(){
+//    return ui->pubExportButton->isEnabled();
+//}
+
+//bool MainWindow::checkPresExportButton(){
+//    return ui->presExportButton->isEnabled();
+//}
+
+/**************************************
+ * TEAM VEGA PIE CHART CASES *
+ **************************************/
+
+int MainWindow::checkTeachPieBarButton() {
+    return ui->teach_graph_stackedWidget->currentIndex();
 }
 
-bool MainWindow::checkFundExportButton(){
-    return ui->fundExportButton->isEnabled();
+int MainWindow::checkFundPieBarButton() {
+    return ui->fund_graph_stackedWidget->currentIndex();
 }
 
-bool MainWindow::checkPubExportButton(){
-    return ui->pubExportButton->isEnabled();
+int MainWindow::checkPubPieBarButton() {
+    return ui->pub_graph_stackedWidget->currentIndex();
 }
 
-bool MainWindow::checkPresExportButton(){
-    return ui->presExportButton->isEnabled();
+int MainWindow::checkPresPieBarButton() {
+    return ui->pres_graph_stackedWidget->currentIndex();
 }
+
+
+
 
 
