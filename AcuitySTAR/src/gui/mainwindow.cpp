@@ -105,8 +105,6 @@ MainWindow::MainWindow(QWidget *parent) :
     printer = new QPrinter();
 
     dateChanged = {false, false, false, false};
-
-    makePlot();
 }
 
 MainWindow::~MainWindow() {
@@ -965,6 +963,7 @@ void MainWindow::on_fund_delete_sort_clicked() {
     }
 }
 
+void MainWindow::on_teach_line_button_toggled() { ui->teach_graph_stackedWidget->setCurrentIndex(2);} // alex
 void MainWindow::on_teach_bar_button_toggled() { ui->teach_graph_stackedWidget->setCurrentIndex(1);}
 void MainWindow::on_teach_pie_button_toggled() { ui->teach_graph_stackedWidget->setCurrentIndex(0);}
 void MainWindow::on_pub_bar_button_toggled() { ui->pub_graph_stackedWidget->setCurrentIndex(1);}
@@ -991,6 +990,7 @@ bool MainWindow::load_teach(QString path, bool multi_file) {
         ui->teach_filter_to->setEnabled(true);
         ui->teach_pie_button->setEnabled(true);
         ui->teach_bar_button->setEnabled(true);
+        ui->teach_line_button->setEnabled(true); // Alex
         ui->teach_to_label->setEnabled(true);
         ui->teach_sort_label->setEnabled(true);
         ui->teach_filter->setEnabled(true);
@@ -1243,6 +1243,11 @@ void MainWindow::on_teachTreeView_clicked(const QModelIndex &index) {
             ui->teachBarChart->clearPlottables();
             setupBarChart(ui->teachBarChart, chartList);
             ui->teachBarChart->replot();
+
+            // Alex
+            ui->teachLineChart->clearPlottables();
+
+
 
             setupPieChart(ui->teachPieChart, ui->teachPieList, chartList);
 
@@ -1689,7 +1694,7 @@ QString MainWindow::returnGranAndClinHover(){
     return ui->tabFund->toolTip();
 }
 
-// Alex Plot
+// Alex test Plot
 void MainWindow::makePlot() {
     // generate some data:
     QVector<double> x(101), y(101); // initialize with entries 0..100
@@ -1699,17 +1704,24 @@ void MainWindow::makePlot() {
       y[i] = x[i]*x[i]; // let's plot a quadratic function
     }
     // create graph and assign data to it:
-    ui->fundBarChart->addGraph();
-    ui->fundBarChart->graph(0)->setData(x, y);
+    ui->teachLineChart->addGraph();
+    ui->teachLineChart->graph(0)->setData(x, y);
     // give the axes some labels:
-    ui->fundBarChart->xAxis->setLabel("x");
-    ui->fundBarChart->yAxis->setLabel("y");
+    ui->teachLineChart->xAxis->setLabel("x");
+    ui->teachLineChart->yAxis->setLabel("y");
     // set axes ranges, so we see all data:
-    ui->fundBarChart->xAxis->setRange(-1, 1);
-    ui->fundBarChart->yAxis->setRange(0, 1);
-    ui->fundBarChart->replot();
+    ui->teachLineChart->xAxis->setRange(-1, 1);
+    ui->teachLineChart->yAxis->setRange(0, 1);
+    ui->teachLineChart->replot();
 }
 
+// Alex Line plot
+void MainWindow::setupLineChart(QCustomPlot *lineChart, std::vector<std::pair <std::string, double>> lineChartList) {
+    // create empty bar chart objects:
+    QCPGraph *testGraph = new QCPGraph(lineChart->yAxis, lineChart->xAxis);
+    lineChart->addPlottable(testGraph);
+
+}
 
 
 

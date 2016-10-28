@@ -842,6 +842,13 @@ p, li { white-space: pre-wrap; }
              </property>
             </widget>
            </item>
+           <item row="5" column="11">
+            <widget class="QRadioButton" name="teach_line_button">
+             <property name="text">
+              <string>Line Chart</string>
+             </property>
+            </widget>
+           </item>
           </layout>
          </widget>
          <widget class="QWidget" name="tabPub">
