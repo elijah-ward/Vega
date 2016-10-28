@@ -138,6 +138,8 @@ private slots:
 
     //Alex
     void makePlot();
+
+
 private:
 
 
@@ -179,6 +181,8 @@ private:
 
     void setupPieChart(PieChartWidget *pieChart, QListWidget *pieListWidget, std::vector<std::pair<std::string, double> > pieChartList);
     void setupBarChart(QCustomPlot *barChart, std::vector<std::pair<std::string, double> > barChartList);
+
+    // setupLinecChart
     void setupLineChart(QCustomPlot *lineChart, std::vector<std::pair <std::string, double> > lineChartList);
 
     bool handle_field_errors(std::vector<std::vector<std::string>*>& errors,

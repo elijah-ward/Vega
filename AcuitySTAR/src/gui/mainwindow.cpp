@@ -1244,11 +1244,11 @@ void MainWindow::on_teachTreeView_clicked(const QModelIndex &index) {
             setupBarChart(ui->teachBarChart, chartList);
             ui->teachBarChart->replot();
 
+
             // Alex
             ui->teachLineChart->clearPlottables();
             setupLineChart(ui->teachLineChart, chartList);
             ui->teachLineChart->replot();
-
 
             setupPieChart(ui->teachPieChart, ui->teachPieList, chartList);
 
@@ -1695,6 +1695,7 @@ QString MainWindow::returnGranAndClinHover(){
     return ui->tabFund->toolTip();
 }
 
+
 // Alex test Plot
 void MainWindow::makePlot() {
     // generate some data:
@@ -1718,17 +1719,84 @@ void MainWindow::makePlot() {
 
 // Alex Line plot
 void MainWindow::setupLineChart(QCustomPlot *lineChart, std::vector<std::pair <std::string, double>> lineChartList) {
+    /*
     // create empty line chart
     QCPGraph *testGraph = new QCPGraph(lineChart->xAxis, lineChart->yAxis);
     lineChart->addPlottable(testGraph);
+    */
+
+    QCPGraph *yLabels = new QCPGraph(lineChart->yAxis, lineChart->xAxis);
+    lineChart->addPlottable(yLabels);
 
     // set x and y axis titles
     lineChart->yAxis->setLabel("SHOW ME WHAT YOU GOT");
     lineChart->xAxis->setLabel("SHOW ME WHAT TIME YOU GOT IT");
 
+    // get label list
+    int lineSize = (int) lineChartList.size();
+    double maxCount = 0;
+    double scaledCount;
+    QVector<double> ticks;
+    QVector<QString> ylabels;
+    QVector<double> count;
+
+    for (int i = 0; i < lineSize; i++){
+        ticks << (i+1);
+        ylabels << QString::fromStdString(lineChartList[i].first);
+        if (lineChartList[i].second>1000000){
+            scaledCount = lineChartList[i].second/1000000;
+        } else if (lineChartList[i].second>1000){
+            scaledCount = lineChartList[i].second/1000;
+        } else{
+            scaledCount = lineChartList[i].second;
+        }
+        count << scaledCount;
+
+        if (maxCount < lineChartList[i].second)
+            maxCount = lineChartList[i].second;
+    }
+
+    //setup Y Axis
+    lineChart->yAxis->setAutoTicks(false);
+    lineChart->yAxis->setAutoTickLabels(false);
+    lineChart->yAxis->setTickVector(ticks);
+    lineChart->yAxis->setTickVectorLabels(ylabels);
+    lineChart->yAxis->setTickLabelPadding(1);
+    lineChart->yAxis->setSubTickCount(0);
+    lineChart->yAxis->setTickLength(0, 1);
+    lineChart->yAxis->grid()->setVisible(true);
+    lineChart->yAxis->setRange(0, lineSize+1);
+
+    if(maxCount>1000000){
+        maxCount = maxCount/1000000;
+        lineChart->xAxis->setLabel("Total (in Millions)");
+    }else if (maxCount>1000){
+        maxCount = maxCount/1000;
+        lineChart->xAxis->setLabel("Total (in Thousands)");
+    }else{
+        lineChart->xAxis->setLabel("Total");
+    }
+
+    // setup X Axis
+    lineChart->xAxis->setAutoTicks(true);
+    lineChart->xAxis->setRange(0,maxCount+(maxCount*.05));
+    lineChart->xAxis->setAutoTickLabels(true);
+    lineChart->xAxis->setAutoTickStep(true);
+    lineChart->xAxis->grid()->setSubGridVisible(true);
+
+    QPen gridPen;
+    gridPen.setStyle(Qt::SolidLine);
+    gridPen.setColor(QColor(0, 0, 0, 25));
+    lineChart->xAxis->grid()->setPen(gridPen);
+    gridPen.setStyle(Qt::DotLine);
+    lineChart->xAxis->grid()->setSubGridPen(gridPen);
+
+    yLabels->setData(ticks, count);
+
+    /*
     // sample data
     QVector<double> x(101), y(101); // initialize with entries 0..100
-    for (int i=0; i<101; ++i)
+    for (int i=0; i < 101; ++i)
     {
       x[i] = i/50.0 - 1; // x goes from -1 to 1
       y[i] = x[i]*x[i]; // let's plot a quadratic function
@@ -1739,7 +1807,6 @@ void MainWindow::setupLineChart(QCustomPlot *lineChart, std::vector<std::pair <s
 
     lineChart->xAxis->setRange(-1, 1);
     lineChart->yAxis->setRange(0, 1);
+    */
+
 }
-
-
-
