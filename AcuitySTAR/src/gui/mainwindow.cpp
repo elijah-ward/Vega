@@ -1246,7 +1246,8 @@ void MainWindow::on_teachTreeView_clicked(const QModelIndex &index) {
 
             // Alex
             ui->teachLineChart->clearPlottables();
-
+            setupLineChart(ui->teachLineChart, chartList);
+            ui->teachLineChart->replot();
 
 
             setupPieChart(ui->teachPieChart, ui->teachPieList, chartList);
@@ -1717,10 +1718,27 @@ void MainWindow::makePlot() {
 
 // Alex Line plot
 void MainWindow::setupLineChart(QCustomPlot *lineChart, std::vector<std::pair <std::string, double>> lineChartList) {
-    // create empty bar chart objects:
-    QCPGraph *testGraph = new QCPGraph(lineChart->yAxis, lineChart->xAxis);
+    // create empty line chart
+    QCPGraph *testGraph = new QCPGraph(lineChart->xAxis, lineChart->yAxis);
     lineChart->addPlottable(testGraph);
 
+    // set x and y axis titles
+    lineChart->yAxis->setLabel("SHOW ME WHAT YOU GOT");
+    lineChart->xAxis->setLabel("SHOW ME WHAT TIME YOU GOT IT");
+
+    // sample data
+    QVector<double> x(101), y(101); // initialize with entries 0..100
+    for (int i=0; i<101; ++i)
+    {
+      x[i] = i/50.0 - 1; // x goes from -1 to 1
+      y[i] = x[i]*x[i]; // let's plot a quadratic function
+    }
+
+    lineChart->addGraph();
+    lineChart->graph(0)->setData(x, y);
+
+    lineChart->xAxis->setRange(-1, 1);
+    lineChart->yAxis->setRange(0, 1);
 }
 
 
