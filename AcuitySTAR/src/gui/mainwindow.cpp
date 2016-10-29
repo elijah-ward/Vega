@@ -179,8 +179,8 @@ void MainWindow::readSettings(){
     resize(settings.value("size", QSize(1080, 720)).toSize());
     move(settings.value("pos", QPoint(200,200)).toPoint());
 
-    yearStart = settings.value("yearStart").toInt();
-    yearEnd = settings.value("yearEnd").toInt();
+    yearStart = settings.value("yearStart",1950).toInt();
+    yearEnd = settings.value("yearEnd",2016).toInt();
 
     printf("yearStart: %d", yearStart);
     printf("yearEnd: %d", yearEnd);
