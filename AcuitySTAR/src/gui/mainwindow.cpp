@@ -179,11 +179,12 @@ void MainWindow::readSettings(){
     resize(settings.value("size", QSize(1080, 720)).toSize());
     move(settings.value("pos", QPoint(200,200)).toPoint());
 
-    yearStart = settings.value("yearStart").toInt();
-    yearEnd = settings.value("yearEnd").toInt();
+    yearStart = settings.value("yearStart",1950).toInt();
+    yearEnd = settings.value("yearEnd",2016).toInt();
 
     printf("yearStart: %d", yearStart);
     printf("yearEnd: %d", yearEnd);
+
 
     QDate startDate(yearStart,1,1);
     QDate endDate(yearEnd,1,1);
@@ -195,6 +196,17 @@ void MainWindow::readSettings(){
     QString pubFile = settings.value("pubPath").toString();
     QString teachFile = settings.value("teachPath").toString();
     QString presFile = settings.value("presPath").toString();
+
+
+    qDebug().nospace() << "fundFile: "<< fundFile;
+    qDebug().nospace() << "pubFile: "<< pubFile;
+    qDebug().nospace() << "teachFile: "<< teachFile;
+    qDebug().nospace() << "presFile: "<< presFile;
+
+    qDebug().nospace() << "fundPath: "<< fundPath;
+    qDebug().nospace() << "pubPath: "<< pubPath;
+    qDebug().nospace() << "teachPath: "<< teachPath;
+    qDebug().nospace() << "presPath: "<< presPath;
 
     if(!fundFile.isEmpty()){
         load_fund(fundFile,0);
