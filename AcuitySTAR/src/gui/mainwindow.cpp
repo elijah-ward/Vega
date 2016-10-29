@@ -208,6 +208,11 @@ void MainWindow::readSettings(){
     qDebug().nospace() << "teachPath: "<< teachPath;
     qDebug().nospace() << "presPath: "<< presPath;
 
+    QMessageBox::StandardButton loadFiles = QMessageBox::question(this, "Load Previous Session...", tr("Would  you like to load the previous session data?\n"),
+                                                                  QMessageBox::Cancel | QMessageBox::No | QMessageBox::Yes, QMessageBox::Yes);
+
+    if(loadFiles == QMessageBox::Yes){
+
     if(!fundFile.isEmpty()){
         load_fund(fundFile);
     }
@@ -222,6 +227,11 @@ void MainWindow::readSettings(){
 
     if(!presFile.isEmpty()){
         load_pres(presFile);
+    }
+
+    }
+    else if(loadFiles == QMessageBox::Cancel){
+        QApplication::quit();
     }
 
     settings.endGroup();

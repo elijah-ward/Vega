@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1200</width>
+    <width>1526</width>
     <height>1200</height>
    </rect>
   </property>
@@ -2610,8 +2610,8 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1200</width>
-     <height>26</height>
+     <width>1526</width>
+     <height>33</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
