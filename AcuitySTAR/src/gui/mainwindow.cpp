@@ -100,8 +100,6 @@ MainWindow::MainWindow(QWidget *parent) :
 
     dateChanged = {false, false, false, false};
 
-
-
 }
 
 MainWindow::~MainWindow() {
@@ -1061,12 +1059,19 @@ void MainWindow::on_fund_delete_sort_clicked() {
     }
 }
 
+void MainWindow::on_teach_line_button_toggled() { ui->teach_graph_stackedWidget->setCurrentIndex(2);} // alex
 void MainWindow::on_teach_bar_button_toggled() { ui->teach_graph_stackedWidget->setCurrentIndex(1);}
 void MainWindow::on_teach_pie_button_toggled() { ui->teach_graph_stackedWidget->setCurrentIndex(0);}
+
+void MainWindow::on_pub_line_button_toggled() { ui->pub_graph_stackedWidget->setCurrentIndex(2);} // alex
 void MainWindow::on_pub_bar_button_toggled() { ui->pub_graph_stackedWidget->setCurrentIndex(1);}
 void MainWindow::on_pub_pie_button_toggled() { ui->pub_graph_stackedWidget->setCurrentIndex(0);}
+
+void MainWindow::on_pres_line_button_toggled() { ui->pres_graph_stackedWidget->setCurrentIndex(2);} // alex
 void MainWindow::on_pres_bar_button_toggled() { ui->pres_graph_stackedWidget->setCurrentIndex(1);}
 void MainWindow::on_pres_pie_button_toggled() { ui->pres_graph_stackedWidget->setCurrentIndex(0);}
+
+void MainWindow::on_fund_line_button_toggled() { ui->fund_graph_stackedWidget->setCurrentIndex(2);} // alex
 void MainWindow::on_fund_bar_button_toggled() { ui->fund_graph_stackedWidget->setCurrentIndex(1);}
 void MainWindow::on_fund_pie_button_toggled() { ui->fund_graph_stackedWidget->setCurrentIndex(0);}
 
@@ -1087,6 +1092,7 @@ bool MainWindow::load_teach(QString path, bool multi_file) {
         ui->teach_filter_to->setEnabled(true);
         ui->teach_pie_button->setEnabled(true);
         ui->teach_bar_button->setEnabled(true);
+        ui->teach_line_button->setEnabled(true);
         ui->teach_to_label->setEnabled(true);
         ui->teach_sort_label->setEnabled(true);
         ui->teach_filter->setEnabled(true);
@@ -1138,6 +1144,7 @@ bool MainWindow::load_pub(QString path, bool multi_file) {
         ui->pub_filter_to->setEnabled(true);
         ui->pub_pie_button->setEnabled(true);
         ui->pub_bar_button->setEnabled(true);
+        ui->pub_line_button->setEnabled(true);
         ui->pub_to_label->setEnabled(true);
         ui->pub_sort_label->setEnabled(true);
         ui->pub_filter->setEnabled(true);
@@ -1189,6 +1196,7 @@ bool MainWindow::load_pres(QString path, bool multi_file) {
         ui->pres_filter_to->setEnabled(true);
         ui->pres_pie_button->setEnabled(true);
         ui->pres_bar_button->setEnabled(true);
+        ui->pres_line_button->setEnabled(true);
         ui->pres_to_label->setEnabled(true);
         ui->pres_sort_label->setEnabled(true);
         ui->pres_filter->setEnabled(true);
@@ -1240,6 +1248,7 @@ bool MainWindow::load_fund(QString path, bool multi_file) {
         ui->fund_filter_to->setEnabled(true);
         ui->fund_pie_button->setEnabled(true);
         ui->fund_bar_button->setEnabled(true);
+        ui->fund_line_button->setEnabled(true);
         ui->fund_to_label->setEnabled(true);
         ui->fund_sort_label->setEnabled(true);
         ui->fund_filter->setEnabled(true);
@@ -1340,6 +1349,11 @@ void MainWindow::on_teachTreeView_clicked(const QModelIndex &index) {
             setupBarChart(ui->teachBarChart, chartList);
             ui->teachBarChart->replot();
 
+            // Alex
+            ui->teachLineChart->clearPlottables();
+            setupLineChart(ui->teachLineChart, chartList);
+            ui->teachLineChart->replot();
+
             setupPieChart(ui->teachPieChart, ui->teachPieList, chartList);
 
             if (parentsList.size()>1) {
@@ -1389,6 +1403,11 @@ void MainWindow::on_pubTreeView_clicked(const QModelIndex &index) {
             ui->pubBarChart->clearPlottables();
             setupBarChart(ui->pubBarChart, chartList);
             ui->pubBarChart->replot();
+
+            //Alex
+            ui->pubLineChart->clearPlottables();
+            setupLineChart(ui->pubLineChart, chartList);
+            ui->pubLineChart->replot();
 
             setupPieChart(ui->pubPieChart, ui->pubPieList, chartList);
 
@@ -1440,6 +1459,10 @@ void MainWindow::on_presTreeView_clicked(const QModelIndex &index) {
             setupBarChart(ui->presBarChart, chartList);
             ui->presBarChart->replot();
 
+            ui->presLineChart->clearPlottables();
+            setupLineChart(ui->presLineChart, chartList);
+            ui->presLineChart->replot();
+
             setupPieChart(ui->presPieChart, ui->presPieList, chartList);
 
             if (parentsList.size()>1) {
@@ -1486,6 +1509,10 @@ void MainWindow::on_fundTreeView_clicked(const QModelIndex &index) {
                 ui->fundBarChart->clearPlottables();
                 setupBarChart(ui->fundBarChart, chartList);
                 ui->fundBarChart->replot();
+
+                ui->fundLineChart->clearPlottables();
+                setupLineChart(ui->fundLineChart, chartList);
+                ui->fundLineChart->replot();
 
                 setupPieChart(ui->fundPieChart, ui->fundPieList, chartList);
 
@@ -1786,5 +1813,129 @@ QString MainWindow::returnGranAndClinHover(){
 }
 
 
+// Alex test Plot
+void MainWindow::makePlot() {
+    // generate some data:
+    QVector<double> x(101), y(101); // initialize with entries 0..100
+    for (int i=0; i<101; ++i)
+    {
+      x[i] = i/50.0 - 1; // x goes from -1 to 1
+      y[i] = x[i]*x[i]; // let's plot a quadratic function
+    }
+    // create graph and assign data to it:
+    ui->teachLineChart->addGraph();
+    ui->teachLineChart->graph(0)->setData(x, y);
+    // give the axes some labels:
+    ui->teachLineChart->xAxis->setLabel("x");
+    ui->teachLineChart->yAxis->setLabel("y");
+    // set axes ranges, so we see all data:
+    ui->teachLineChart->xAxis->setRange(-1, 1);
+    ui->teachLineChart->yAxis->setRange(0, 1);
+    ui->teachLineChart->replot();
+}
+
+// Alex Line plot
+void MainWindow::setupLineChart(QCustomPlot *lineChart, std::vector<std::pair <std::string, double>> lineChartList) {
+    /*
+    // create empty line chart
+    QCPGraph *testGraph = new QCPGraph(lineChart->xAxis, lineChart->yAxis);
+    lineChart->addPlottable(testGraph);
+    */
+
+    QCPGraph *xLabels = new QCPGraph(lineChart->xAxis, lineChart->yAxis);
+    xLabels->setScatterStyle(QCPScatterStyle(QCPScatterStyle::ssDisc, 10));
+    lineChart->addPlottable(xLabels);
+
+    /*
+    // set x and y axis titles
+    lineChart->yAxis->setLabel("SHOW ME WHAT YOU GOT");
+    lineChart->xAxis->setLabel("SHOW ME WHAT TIME YOU GOT IT");
+    */
+
+    // get label list
+    int lineSize = (int) lineChartList.size();
+    double maxCount = 0;
+    double minCount = lineChartList[0].second;
+    double scaledCount;
+    QVector<double> ticks;
+    QVector<QString> xlabels;
+    QVector<double> count;
 
 
+    for (int i = 0; i < lineSize; i++){
+
+        ticks << (i+1);
+        xlabels << QString::fromStdString(lineChartList[i].first);
+        if (lineChartList[i].second>1000000){
+            scaledCount = lineChartList[i].second/1000000;
+        } else if (lineChartList[i].second>1000){
+            scaledCount = lineChartList[i].second/1000;
+        } else{
+            scaledCount = lineChartList[i].second;
+        }
+        count << scaledCount;
+
+        if (maxCount < lineChartList[i].second)
+            maxCount = lineChartList[i].second;
+
+        if (minCount > lineChartList[i].second)
+            minCount = lineChartList[i].second;
+    }
+
+
+    //setup X Axis
+    lineChart->xAxis->setAutoTicks(false);
+    lineChart->xAxis->setAutoTickLabels(false);
+    lineChart->xAxis->setTickVector(ticks);
+    lineChart->xAxis->setTickVectorLabels(xlabels);
+    lineChart->xAxis->setTickLabelPadding(1);
+    lineChart->xAxis->setSubTickCount(0);
+    lineChart->xAxis->setTickLength(0, 1);
+    lineChart->xAxis->grid()->setVisible(true);
+    lineChart->xAxis->setRange(0, lineSize+1);
+
+
+    if(maxCount>1000000){
+        maxCount = maxCount/1000000;
+        lineChart->yAxis->setLabel("Total Hours (in Millions)");
+    }else if (maxCount>1000){
+        maxCount = maxCount/1000;
+        lineChart->yAxis->setLabel("Total Hours (in Thousands)");
+    }else{
+        lineChart->yAxis->setLabel("Total Hours");
+    }
+
+    // setup Y Axis
+    lineChart->yAxis->setAutoTicks(true);
+    lineChart->yAxis->setRange(minCount - (minCount * 0.1),maxCount+(maxCount*.05));
+    lineChart->yAxis->setAutoTickLabels(true);
+    lineChart->yAxis->setAutoTickStep(true);
+    lineChart->yAxis->grid()->setSubGridVisible(true);
+
+
+    QPen gridPen;
+    gridPen.setStyle(Qt::SolidLine);
+    gridPen.setColor(QColor(0, 0, 0, 25));
+    lineChart->yAxis->grid()->setPen(gridPen);
+    gridPen.setStyle(Qt::DotLine);
+    lineChart->yAxis->grid()->setSubGridPen(gridPen);
+
+    xLabels->setData(ticks, count);
+
+    /*
+    // sample data
+    QVector<double> x(101), y(101); // initialize with entries 0..100
+    for (int i=0; i < 101; ++i)
+    {
+      x[i] = i/50.0 - 1; // x goes from -1 to 1
+      y[i] = x[i]*x[i]; // let's plot a quadratic function
+    }
+
+    lineChart->addGraph();
+    lineChart->graph(0)->setData(x, y);
+
+    lineChart->xAxis->setRange(-1, 1);
+    lineChart->yAxis->setRange(0, 1);
+    */
+
+}
