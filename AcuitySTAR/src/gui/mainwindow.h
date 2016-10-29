@@ -34,6 +34,17 @@ public:
 
 private slots:
 
+    /*******************************
+     * Save Session State Functions*
+     *******************************/
+
+    void readSettings();
+    void writeSettings();
+
+    void closeEvent(QCloseEvent *event);
+    bool confirmQuit();
+
+
     /******************************
      * INSERT VEGA FUNCTIONS HERE *
      ******************************/
