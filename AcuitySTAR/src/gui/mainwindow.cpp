@@ -1738,6 +1738,7 @@ void MainWindow::setupLineChart(QCustomPlot *lineChart, std::vector<std::pair <s
     // get label list
     int lineSize = (int) lineChartList.size();
     double maxCount = 0;
+    double minCount = lineChartList[0].second;
     double scaledCount;
     QVector<double> ticks;
     QVector<QString> xlabels;
@@ -1745,6 +1746,7 @@ void MainWindow::setupLineChart(QCustomPlot *lineChart, std::vector<std::pair <s
 
 
     for (int i = 0; i < lineSize; i++){
+
         ticks << (i+1);
         xlabels << QString::fromStdString(lineChartList[i].first);
         if (lineChartList[i].second>1000000){
@@ -1758,6 +1760,9 @@ void MainWindow::setupLineChart(QCustomPlot *lineChart, std::vector<std::pair <s
 
         if (maxCount < lineChartList[i].second)
             maxCount = lineChartList[i].second;
+
+        if (minCount > lineChartList[i].second)
+            minCount = lineChartList[i].second;
     }
 
 
@@ -1785,7 +1790,7 @@ void MainWindow::setupLineChart(QCustomPlot *lineChart, std::vector<std::pair <s
 
     // setup Y Axis
     lineChart->yAxis->setAutoTicks(true);
-    lineChart->yAxis->setRange(0,maxCount+(maxCount*.05));
+    lineChart->yAxis->setRange(minCount - (minCount * 0.1),maxCount+(maxCount*.05));
     lineChart->yAxis->setAutoTickLabels(true);
     lineChart->yAxis->setAutoTickStep(true);
     lineChart->yAxis->grid()->setSubGridVisible(true);
