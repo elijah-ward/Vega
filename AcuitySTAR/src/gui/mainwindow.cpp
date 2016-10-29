@@ -1726,6 +1726,7 @@ void MainWindow::setupLineChart(QCustomPlot *lineChart, std::vector<std::pair <s
     */
 
     QCPGraph *xLabels = new QCPGraph(lineChart->xAxis, lineChart->yAxis);
+    xLabels->setScatterStyle(QCPScatterStyle(QCPScatterStyle::ssDisc, 10));
     lineChart->addPlottable(xLabels);
 
     /*
@@ -1741,6 +1742,7 @@ void MainWindow::setupLineChart(QCustomPlot *lineChart, std::vector<std::pair <s
     QVector<double> ticks;
     QVector<QString> xlabels;
     QVector<double> count;
+
 
     for (int i = 0; i < lineSize; i++){
         ticks << (i+1);
@@ -1758,6 +1760,7 @@ void MainWindow::setupLineChart(QCustomPlot *lineChart, std::vector<std::pair <s
             maxCount = lineChartList[i].second;
     }
 
+
     //setup X Axis
     lineChart->xAxis->setAutoTicks(false);
     lineChart->xAxis->setAutoTickLabels(false);
@@ -1769,14 +1772,15 @@ void MainWindow::setupLineChart(QCustomPlot *lineChart, std::vector<std::pair <s
     lineChart->xAxis->grid()->setVisible(true);
     lineChart->xAxis->setRange(0, lineSize+1);
 
+
     if(maxCount>1000000){
         maxCount = maxCount/1000000;
-        lineChart->yAxis->setLabel("Total (in Millions)");
+        lineChart->yAxis->setLabel("Total Hours (in Millions)");
     }else if (maxCount>1000){
         maxCount = maxCount/1000;
-        lineChart->yAxis->setLabel("Total (in Thousands)");
+        lineChart->yAxis->setLabel("Total Hours (in Thousands)");
     }else{
-        lineChart->yAxis->setLabel("Total");
+        lineChart->yAxis->setLabel("Total Hours");
     }
 
     // setup Y Axis
@@ -1785,6 +1789,7 @@ void MainWindow::setupLineChart(QCustomPlot *lineChart, std::vector<std::pair <s
     lineChart->yAxis->setAutoTickLabels(true);
     lineChart->yAxis->setAutoTickStep(true);
     lineChart->yAxis->grid()->setSubGridVisible(true);
+
 
     QPen gridPen;
     gridPen.setStyle(Qt::SolidLine);
