@@ -179,8 +179,8 @@ void MainWindow::readSettings(){
     resize(settings.value("size", QSize(1080, 720)).toSize());
     move(settings.value("pos", QPoint(200,200)).toPoint());
 
-    yearStart = settings.value("yearStart",1950).toInt();
-    yearEnd = settings.value("yearEnd",2016).toInt();
+    yearStart = settings.value("yearStarts",1984).toInt();
+    yearEnd = settings.value("yearEnds",1984).toInt();
 
     printf("yearStart: %d", yearStart);
     printf("yearEnd: %d", yearEnd);
@@ -208,20 +208,30 @@ void MainWindow::readSettings(){
     qDebug().nospace() << "teachPath: "<< teachPath;
     qDebug().nospace() << "presPath: "<< presPath;
 
+    QMessageBox::StandardButton loadFiles = QMessageBox::question(this, "Load Previous Session...", tr("Would  you like to load the previous session data?\n"),
+                                                                  QMessageBox::Cancel | QMessageBox::No | QMessageBox::Yes, QMessageBox::Yes);
+
+    if(loadFiles == QMessageBox::Yes){
+
     if(!fundFile.isEmpty()){
-        load_fund(fundFile,0);
+        load_fund(fundFile);
     }
 
     if(!pubFile.isEmpty()){
-        load_pub(pubFile,0);
+        load_pub(pubFile);
     }
 
     if(!teachFile.isEmpty()){
-        load_teach(teachFile,0);
+        load_teach(teachFile);
     }
 
     if(!presFile.isEmpty()){
-        load_pres(presFile,0);
+        load_pres(presFile);
+    }
+
+    }
+    else if(loadFiles == QMessageBox::Cancel){
+        QApplication::quit();
     }
 
     settings.endGroup();
