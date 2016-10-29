@@ -58,9 +58,10 @@ MainWindow::MainWindow(QWidget *parent) :
     fundTree(NULL), presTree(NULL), pubTree(NULL), teachTree(NULL),
     funddb(NULL), presdb(NULL), pubdb(NULL), teachdb(NULL) {
     // draw GUI elements
+
     ui->setupUi(this);
 
-    this->showMaximized();
+    MainWindow::readSettings();
 
     // set up the logo
     QPixmap logo(":/logo.png");
@@ -82,13 +83,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->FromDate->setDateRange(startDate, QDate::currentDate());
     ui->ToDate->setDateRange(startDate, QDate::currentDate());
 
-    // set default dates (1950->current)
-    ui->FromDate->setDate(startDate);
-    ui->ToDate->setDate(QDate::currentDate());
-
-    // set some member variables to the current date values
-    yearStart = 1950;
-    yearEnd = QDate::currentDate().year();
 
     //default print is disabled
     ui->teachPrintButton->setEnabled(false);
@@ -105,6 +99,7 @@ MainWindow::MainWindow(QWidget *parent) :
     printer = new QPrinter();
 
     dateChanged = {false, false, false, false};
+
 }
 
 MainWindow::~MainWindow() {
@@ -121,6 +116,107 @@ MainWindow::~MainWindow() {
     delete teachdb;
     delete printer;
 }
+
+void MainWindow::closeEvent(QCloseEvent *event)
+{
+    if (confirmQuit()) {
+        writeSettings();
+        event->accept();
+    } else {
+        event->ignore();
+    }
+}
+
+bool MainWindow::confirmQuit(){
+
+    QMessageBox::StandardButton responseButton = QMessageBox::question(this, "Peachy Galaxy", tr("Are you sure you want to quit?\n\n Your changes will be stored for the next session.\n"),
+                                                                       QMessageBox::Cancel | QMessageBox::No | QMessageBox::Yes,
+                                                                       QMessageBox::Yes);
+    if(responseButton == QMessageBox::Yes){
+        return true;
+    }
+    else{
+        return false;
+    }
+
+}
+
+void MainWindow::writeSettings(){
+
+    QSettings settings("Peachy Galaxy", "Western University");
+
+    settings.beginGroup("MainWindow");
+    settings.setValue("size", size());
+    settings.setValue("pos", pos());
+    settings.setValue("yearStart", yearStart);
+    settings.setValue("yearEnd", yearEnd);
+
+    if(!fundPath.isEmpty()){
+        settings.setValue("fundPath", fundPath);
+    }
+
+    if(!pubPath.isEmpty()){
+        settings.setValue("pubPath", pubPath);
+    }
+
+    if(!teachPath.isEmpty()){
+        settings.setValue("teachPath", teachPath);
+    }
+
+    if(!presPath.isEmpty()){
+        settings.setValue("presPath", presPath);
+    }
+
+    settings.endGroup();
+
+}
+
+void MainWindow::readSettings(){
+
+    QSettings settings("Peachy Galaxy", "Western University");
+
+    settings.beginGroup("MainWindow");
+    resize(settings.value("size", QSize(1080, 720)).toSize());
+    move(settings.value("pos", QPoint(200,200)).toPoint());
+
+    yearStart = settings.value("yearStart").toInt();
+    yearEnd = settings.value("yearEnd").toInt();
+
+    printf("yearStart: %d", yearStart);
+    printf("yearEnd: %d", yearEnd);
+
+    QDate startDate(yearStart,1,1);
+    QDate endDate(yearEnd,1,1);
+
+    ui->FromDate->setDate(startDate);
+    ui->ToDate->setDate(endDate);
+
+    QString fundFile = settings.value("fundPath").toString();
+    QString pubFile = settings.value("pubPath").toString();
+    QString teachFile = settings.value("teachPath").toString();
+    QString presFile = settings.value("presPath").toString();
+
+    if(!fundFile.isEmpty()){
+        load_fund(fundFile,0);
+    }
+
+    if(!pubFile.isEmpty()){
+        load_pub(pubFile,0);
+    }
+
+    if(!teachFile.isEmpty()){
+        load_teach(teachFile,0);
+    }
+
+    if(!presFile.isEmpty()){
+        load_pres(presFile,0);
+    }
+
+    settings.endGroup();
+
+
+}
+
 
 bool MainWindow::on_actionLoad_file_triggered() {
     QStringList filePaths = QFileDialog::getOpenFileNames(this,
