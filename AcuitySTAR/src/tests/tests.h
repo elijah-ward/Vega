@@ -7,6 +7,8 @@ class TestSuite: public QObject
 {
     Q_OBJECT
 private slots:
+    void readWriteState();
+
     void uploadTeachCSV();
     void uploadPubCSV();
     void uploadPresCSV();

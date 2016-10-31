@@ -61,10 +61,22 @@ MainWindow::MainWindow(QWidget *parent, bool saveState) :
 
     ui->setupUi(this);
 
-    if(saveState){
+    saveStateGlobal = saveState;
+
+    if(saveStateGlobal){
 
     MainWindow::readSettings();
 
+    }
+    else{
+        yearStart = 1950;
+        yearEnd = 2016;
+
+        QDate startDate(yearStart,1,1);
+        QDate endDate(yearEnd,1,1);
+
+        ui->FromDate->setDate(startDate);
+        ui->ToDate->setDate(endDate);
     }
 
     // set up the logo
@@ -123,15 +135,26 @@ MainWindow::~MainWindow() {
 
 void MainWindow::closeEvent(QCloseEvent *event)
 {
+
+    if (saveStateGlobal){
+
+
     if (confirmQuit()) {
         writeSettings();
         event->accept();
     } else {
         event->ignore();
     }
+
+    }
+    else{
+        event->accept();
+    }
 }
 
 bool MainWindow::confirmQuit(){
+
+
 
     QMessageBox::StandardButton responseButton = QMessageBox::question(this, "Peachy Galaxy", tr("Are you sure you want to quit?\n\n Your changes will be stored for the next session.\n"),
                                                                        QMessageBox::Cancel | QMessageBox::No | QMessageBox::Yes,

@@ -161,6 +161,8 @@ private:
 
     static std::vector<std::string> GRANTS_MANFIELDS, PRES_MANFIELDS, PUBS_MANFIELDS, TEACH_MANFIELDS;
 
+    bool saveStateGlobal;
+
     enum TABS {
         TEACH, PUBLICATIONS, PRESENTATIONS, FUNDING
     };
