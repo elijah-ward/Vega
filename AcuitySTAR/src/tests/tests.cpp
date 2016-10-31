@@ -12,6 +12,11 @@ using namespace std;
  *****************************************************************************/
 
 
+
+/*****************************
+ * id: session-state-1       *
+ *****************************/
+
 void TestSuite::readWriteState()
 {
     MainWindow w(0,true);
@@ -143,6 +148,10 @@ void TestSuite::readWriteState()
  *
  *****************************************************************************/
 
+/*****************************
+ * id: file-upload-1       *
+ *****************************/
+
 void TestSuite::uploadTeachCSV()
 {
     QString path = "../Project Information/Sample Data/Teaching_sample.csv";
@@ -174,6 +183,10 @@ void TestSuite::uploadFundCSV(){
  * These functions upload .csv files
  *
  *****************************************************************************/
+
+/*****************************
+ * id: file-upload-2       *
+ *****************************/
 
 void TestSuite::uploadTeachCSVFail()
 {
@@ -207,6 +220,10 @@ void TestSuite::uploadFundCSVFail(){
  *
  *****************************************************************************/
 
+/*****************************
+ * id: file-upload-3       *
+ *****************************/
+
 void TestSuite::uploadTeachFileFail()
 {
     QString path = "../README.md";
@@ -239,6 +256,10 @@ void TestSuite::uploadFundFileFail(){
  *
  *****************************************************************************/
 
+/*****************************
+ * id: print-button-enabled-1*
+ *****************************/
+
 void TestSuite::teachPrintButtonEnabled()
 {
     QString path = "../Project Information/Sample Data/Teaching_sample.csv";
@@ -246,6 +267,10 @@ void TestSuite::teachPrintButtonEnabled()
     w.load_teach(path);
     QVERIFY(w.checkTeachPrintButton());
 }
+
+/*****************************
+ * id: print-button-enabled-2*
+ *****************************/
 
 void TestSuite::fundPrintButtonEnabled()
 {
@@ -255,6 +280,10 @@ void TestSuite::fundPrintButtonEnabled()
     QVERIFY(w.checkFundPrintButton());
 }
 
+/*****************************
+ * id: print-button-enabled-3*
+ *****************************/
+
 void TestSuite::pubPrintButtonEnabled()
 {
     QString path = "../Project Information/Sample Data/Publications_sample.csv";
@@ -262,6 +291,10 @@ void TestSuite::pubPrintButtonEnabled()
     w.load_pub(path);
     QVERIFY(w.checkPubPrintButton());
 }
+
+/*****************************
+ * id: print-button-enabled-4*
+ *****************************/
 
 void TestSuite::presPrintButtonEnabled()
 {
@@ -278,6 +311,10 @@ void TestSuite::presPrintButtonEnabled()
  *
  *****************************************************************************/
 
+/******************************
+ * id: print-button-disabled-1*
+ ******************************/
+
 void TestSuite::teachPrintButtonEnabledFail()
 {
     QString path = "../Project Information/Sample Data/Presentations_sample.csv";
@@ -285,6 +322,10 @@ void TestSuite::teachPrintButtonEnabledFail()
     w.load_teach(path);
     QVERIFY(!(w.checkTeachPrintButton()));
 }
+
+/******************************
+ * id: print-button-disabled-2*
+ ******************************/
 
 void TestSuite::fundPrintButtonEnabledFail()
 {
@@ -294,6 +335,10 @@ void TestSuite::fundPrintButtonEnabledFail()
     QVERIFY(!(w.checkFundPrintButton()));
 }
 
+/******************************
+ * id: print-button-disabled-3*
+ ******************************/
+
 void TestSuite::pubPrintButtonEnabledFail()
 {
     QString path = "../Project Information/Sample Data/Teaching_sample.csv";
@@ -301,6 +346,10 @@ void TestSuite::pubPrintButtonEnabledFail()
     w.load_pub(path);
     QVERIFY(!(w.checkPubPrintButton()));
 }
+
+/******************************
+ * id: print-button-disabled-4*
+ ******************************/
 
 void TestSuite::presPrintButtonEnabledFail()
 {
@@ -316,6 +365,10 @@ void TestSuite::presPrintButtonEnabledFail()
  *
  *****************************************************************************/
 
+/******************************
+ * id: pdf-button-enabled-1   *
+ ******************************/
+
 void TestSuite::teachExportButtonEnabled()
 {
     QString path = "../Project Information/Sample Data/Teaching_sample.csv";
@@ -323,6 +376,10 @@ void TestSuite::teachExportButtonEnabled()
     w.load_teach(path);
     QVERIFY(w.checkTeachExportButton());
 }
+
+/******************************
+ * id: pdf-button-enabled-2   *
+ ******************************/
 
 void TestSuite::fundExportButtonEnabled()
 {
@@ -332,6 +389,10 @@ void TestSuite::fundExportButtonEnabled()
     QVERIFY(w.checkFundExportButton());
 }
 
+/******************************
+ * id: pdf-button-enabled-3   *
+ ******************************/
+
 void TestSuite::pubExportButtonEnabled()
 {
     QString path = "../Project Information/Sample Data/Publications_sample.csv";
@@ -339,6 +400,10 @@ void TestSuite::pubExportButtonEnabled()
     w.load_pub(path);
     QVERIFY(w.checkPubExportButton());
 }
+
+/******************************
+ * id: pdf-button-enabled-4   *
+ ******************************/
 
 void TestSuite::presExportButtonEnabled()
 {
@@ -354,6 +419,10 @@ void TestSuite::presExportButtonEnabled()
  *
  *****************************************************************************/
 
+/******************************
+ * id: pdf-button-disabled-1  *
+ ******************************/
+
 void TestSuite::teachExportButtonEnabledFail()
 {
     QString path = "../Project Information/Sample Data/Presentations_sample.csv";
@@ -361,6 +430,10 @@ void TestSuite::teachExportButtonEnabledFail()
     w.load_teach(path);
     QVERIFY(!(w.checkTeachExportButton()));
 }
+
+/******************************
+ * id: pdf-button-disabled-2  *
+ ******************************/
 
 void TestSuite::fundExportButtonEnabledFail()
 {
@@ -370,6 +443,10 @@ void TestSuite::fundExportButtonEnabledFail()
     QVERIFY(!(w.checkFundExportButton()));
 }
 
+/******************************
+ * id: pdf-button-disabled-3  *
+ ******************************/
+
 void TestSuite::pubExportButtonEnabledFail()
 {
     QString path = "../Project Information/Sample Data/Teaching_sample.csv";
@@ -377,6 +454,10 @@ void TestSuite::pubExportButtonEnabledFail()
     w.load_pub(path);
     QVERIFY(!(w.checkPubExportButton()));
 }
+
+/******************************
+ * id: pdf-button-disabled-4  *
+ ******************************/
 
 void TestSuite::presExportButtonEnabledFail()
 {
@@ -392,11 +473,19 @@ void TestSuite::presExportButtonEnabledFail()
  *
  *****************************************************************************/
 
+/*****************************
+ * id: hover-check-1         *
+ *****************************/
+
 void TestSuite::checkTeachHover(){
     MainWindow w(0,false);
     QString string1 = w.returnTeachHover();
     QCOMPARE(string1, QString("Teaching"));
 }
+
+/*****************************
+ * id: hover-check-2         *
+ *****************************/
 
 void TestSuite::checkPubHover(){
     MainWindow w(0,false);
@@ -404,11 +493,19 @@ void TestSuite::checkPubHover(){
     QCOMPARE(string1, QString("Publications"));
 }
 
+/*****************************
+ * id: hover-check-3         *
+ *****************************/
+
 void TestSuite::checkPresHover(){
     MainWindow w(0,false);
     QString string1 = w.returnPresHover();
     QCOMPARE(string1, QString("Presentations"));
 }
+
+/*****************************
+ * id: hover-check-4         *
+ *****************************/
 
 void TestSuite::checkGranAndClinHover(){
     MainWindow w(0,false);
@@ -422,12 +519,20 @@ void TestSuite::checkGranAndClinHover(){
  *
  *****************************************************************************/
 
+/*****************************
+ * id: print-dialog-appears-1*
+ *****************************/
+
 void TestSuite::teachPrintButtonPress(){
     QString path = "../Project Information/Sample Data/Teaching_sample.csv";
     MainWindow w(0,false);
     w.load_teach(path);
     QVERIFY(w.on_teachPrintButton_clicked());
 }
+
+/*****************************
+ * id: print-dialog-appears-2*
+ *****************************/
 
 void TestSuite::fundPrintButtonPress(){
     QString path = "../Project Information/Sample Data/GrantsClinicalFunding_sample.csv";
@@ -436,12 +541,20 @@ void TestSuite::fundPrintButtonPress(){
     QVERIFY(w.on_fundPrintButton_clicked());
 }
 
+/*****************************
+ * id: print-dialog-appears-3*
+ *****************************/
+
 void TestSuite::pubPrintButtonPress(){
     QString path = "../Project Information/Sample Data/Publications_sample.csv";
     MainWindow w(0,false);
     w.load_pub(path);
     QVERIFY(w.on_pubPrintButton_clicked());
 }
+
+/*****************************
+ * id: print-dialog-appears-4*
+ *****************************/
 
 void TestSuite::presPrintButtonPress(){
     QString path = "../Project Information/Sample Data/Presentations_sample.csv";
@@ -456,12 +569,20 @@ void TestSuite::presPrintButtonPress(){
  *
  *****************************************************************************/
 
+/*****************************
+ * id: pdf-dialog-appears-1  *
+ *****************************/
+
 void TestSuite::teachExportButtonPress(){
     QString path = "../Project Information/Sample Data/Teaching_sample.csv";
     MainWindow w(0,false);
     w.load_teach(path);
     QVERIFY(w.on_teachExportButton_clicked());
 }
+
+/*****************************
+ * id: pdf-dialog-appears-2  *
+ *****************************/
 
 void TestSuite::fundExportButtonPress(){
     QString path = "../Project Information/Sample Data/GrantsClinicalFunding_sample.csv";
@@ -470,12 +591,20 @@ void TestSuite::fundExportButtonPress(){
     QVERIFY(w.on_fundExportButton_clicked());
 }
 
+/*****************************
+ * id: pdf-dialog-appears-3  *
+ *****************************/
+
 void TestSuite::pubExportButtonPress(){
     QString path = "../Project Information/Sample Data/Publications_sample.csv";
     MainWindow w(0,false);
     w.load_pub(path);
     QVERIFY(w.on_pubExportButton_clicked());
 }
+
+/*****************************
+ * id: pdf-dialog-appears-4  *
+ *****************************/
 
 void TestSuite::presExportButtonPress(){
     QString path = "../Project Information/Sample Data/Presentations_sample.csv";
@@ -490,6 +619,10 @@ void TestSuite::presExportButtonPress(){
  *
  *****************************************************************************/
 
+/*****************************
+ * id: pie-chart-toggled-1   *
+ *****************************/
+
 void TestSuite::checkTeachPieButton(){
     QString path = "../Project Information/Sample Data/Teaching_sample.csv";
     MainWindow w(0,false);
@@ -497,6 +630,10 @@ void TestSuite::checkTeachPieButton(){
     w.on_teach_pie_button_toggled();
     QCOMPARE(w.checkTeachPieBarButton(), 0);
 }
+
+/*****************************
+ * id: pie-chart-toggled-2   *
+ *****************************/
 
 void TestSuite::checkFundPieButton(){
     QString path = "../Project Information/Sample Data/GrantsClinicalFunding_sample.csv";
@@ -506,6 +643,10 @@ void TestSuite::checkFundPieButton(){
     QCOMPARE(w.checkFundPieBarButton(), 0);
 }
 
+/*****************************
+ * id: pie-chart-toggled-3   *
+ *****************************/
+
 void TestSuite::checkPubPieButton(){
     QString path = "../Project Information/Sample Data/Publications_sample.csv";
     MainWindow w(0,false);
@@ -513,6 +654,10 @@ void TestSuite::checkPubPieButton(){
     w.on_pub_pie_button_toggled();
     QCOMPARE(w.checkPubPieBarButton(), 0);
 }
+
+/*****************************
+ * id: pie-chart-toggled-4   *
+ *****************************/
 
 void TestSuite::checkPresPieButton(){
     QString path = "../Project Information/Sample Data/Presentations_sample.csv";
@@ -528,6 +673,10 @@ void TestSuite::checkPresPieButton(){
  *
  *****************************************************************************/
 
+/*****************************
+ * id: pie-chart-toggled-1   *
+ *****************************/
+
 void TestSuite::checkTeachBarButton(){
     QString path = "../Project Information/Sample Data/Teaching_sample.csv";
     MainWindow w(0,false);
@@ -535,6 +684,10 @@ void TestSuite::checkTeachBarButton(){
     w.on_teach_bar_button_toggled();
     QCOMPARE(w.checkTeachPieBarButton(), 1);
 }
+
+/*****************************
+ * id: pie-chart-toggled-2   *
+ *****************************/
 
 void TestSuite::checkFundBarButton(){
     QString path = "../Project Information/Sample Data/GrantsClinicalFunding_sample.csv";
@@ -544,6 +697,10 @@ void TestSuite::checkFundBarButton(){
     QCOMPARE(w.checkFundPieBarButton(), 1);
 }
 
+/*****************************
+ * id: pie-chart-toggled-3   *
+ *****************************/
+
 void TestSuite::checkPubBarButton(){
     QString path = "../Project Information/Sample Data/Publications_sample.csv";
     MainWindow w(0,false);
@@ -551,6 +708,10 @@ void TestSuite::checkPubBarButton(){
     w.on_pub_bar_button_toggled();
     QCOMPARE(w.checkPubPieBarButton(), 1);
 }
+
+/*****************************
+ * id: pie-chart-toggled-4   *
+ *****************************/
 
 void TestSuite::checkPresBarButton(){
     QString path = "../Project Information/Sample Data/Presentations_sample.csv";
@@ -566,12 +727,20 @@ void TestSuite::checkPresBarButton(){
  *
  *****************************************************************************/
 
+/*****************************
+ * id: file-ribbon-upload-1  *
+ *****************************/
+
 void TestSuite::teachLoadFile()
 {
      QString path = "../Project Information/Sample Data/Teaching_sample.csv";
      MainWindow w(0,false);
      QCOMPARE(path, w.load_file());
 }
+
+/*****************************
+ * id: file-ribbon-upload-2  *
+ *****************************/
 
 void TestSuite::fundLoadFile()
 {
@@ -580,12 +749,20 @@ void TestSuite::fundLoadFile()
      QCOMPARE(path, w.load_file());
 }
 
+/*****************************
+ * id: file-ribbon-upload-3  *
+ *****************************/
+
 void TestSuite::pubLoadFile()
 {
      QString path = "../Project Information/Sample Data/Publications_sample.csv";
      MainWindow w(0,false);
      QCOMPARE(path, w.load_file());
 }
+
+/*****************************
+ * id: file-ribbon-upload-4  *
+ *****************************/
 
 void TestSuite::presLoadFile()
 {
@@ -599,6 +776,10 @@ void TestSuite::presLoadFile()
  * File Ribbon multiple files upload and uploading non-CSV file
  *
  *****************************************************************************/
+
+/*****************************
+ * id: file-ribbon-upload-5  *
+ *****************************/
 
 void TestSuite::multipleFileUploadTest1(){
     MainWindow w(0,false);
@@ -615,6 +796,10 @@ void TestSuite::multipleFileUploadTest2(){
  * File Extension Tests
  *
  *****************************************************************************/
+
+/*****************************
+ * id: session-state-1       *
+ *****************************/
 
 void TestSuite::randomTwoLetterExtLoadFile()
 {
