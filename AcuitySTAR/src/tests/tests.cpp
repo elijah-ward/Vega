@@ -16,8 +16,8 @@ void TestSuite::readWriteState()
 {
     MainWindow w(0,true);
 
-    int yearStartBefore = 1960;
-    int yearEndBefore = 1984;
+    bool settingsCorrect = true;
+
     QSize screenSizeBefore = QSize(1200,800);
     QPoint positionBefore = QPoint(500,500);
 
@@ -29,22 +29,111 @@ void TestSuite::readWriteState()
     w.resize(screenSizeBefore);
     w.move(positionBefore);
 
-    w.yearStart = yearStartBefore;
-    w.yearEnd = yearEndBefore;
 
     w.load_teach(teachPath);
     w.load_pub(pubPath);
     w.load_pres(presPath);
     w.load_fund(fundPath);
 
+    int yearStartBefore = w.yearStart;
+    int yearEndBefore = w.yearEnd;
+
     w.close();
 
-    //We need to simulate user interaction here with key presses.
+    MainWindow x(0,true);
+
+    //Tester must click 'Yes' when asked to restore the last session
+
+    for(;;){
+        if(x.appReady){
+
+            //Check yearStart
+
+            if(x.yearStart ==yearStartBefore){
+                printf("\nyearStart is OK\n");
+            }
+            else{
+                printf("\nyearStart FAILED\n");
+                settingsCorrect = false;
+            }
+
+            //Check yearEnd
+
+            if(x.yearEnd ==yearEndBefore){
+                printf("\nyearEnd is OK\n");
+            }
+            else{
+                printf("\nyearEnd FAILED\n");
+                settingsCorrect = false;
+            }
+
+            //Check Window Size
+
+            if(x.size() == screenSizeBefore){
+                printf("\nwindow size is OK\n");
+            }
+            else{
+                printf("\n window size FAILED\n");
+                settingsCorrect = false;
+            }
+
+            //Check window Position
+
+            if(x.pos() ==positionBefore){
+                printf("\nPosition is OK\n");
+            }
+            else{
+                printf("\nPosition FAILED\n");
+                settingsCorrect = false;
+            }
+
+            //Check teachPath
+
+            if(x.teachPath ==teachPath){
+                printf("\nteachPath is OK\n");
+            }
+            else{
+                printf("\nteachPath FAILED\n");
+                settingsCorrect = false;
+            }
+
+            //Check pubPath
+
+            if(x.pubPath ==pubPath){
+                printf("\npubPath is OK\n");
+            }
+            else{
+                printf("\npubPath FAILED\n");
+                settingsCorrect = false;
+            }
+
+            //Check presPath
+
+            if(x.presPath ==presPath){
+                printf("\npresPath is OK\n");
+            }
+            else{
+                printf("\npresPath FAILED\n");
+                settingsCorrect = false;
+            }
+
+            //Check fundPath
+
+            if(x.fundPath ==fundPath){
+                printf("\nfundPath is OK\n");
+            }
+            else{
+                printf("\nfundPath FAILED\n");
+                settingsCorrect = false;
+            }
 
 
-    QVERIFY(w.load_teach(teachPath));
 
 
+    QVERIFY(settingsCorrect);
+    break;
+    }
+    }
 
 }
 
