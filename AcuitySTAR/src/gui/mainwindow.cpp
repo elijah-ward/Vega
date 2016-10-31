@@ -62,6 +62,7 @@ MainWindow::MainWindow(QWidget *parent, bool saveState) :
     ui->setupUi(this);
 
     saveStateGlobal = saveState;
+    appReady = false;
 
     if(saveStateGlobal){
 
@@ -77,6 +78,7 @@ MainWindow::MainWindow(QWidget *parent, bool saveState) :
 
         ui->FromDate->setDate(startDate);
         ui->ToDate->setDate(endDate);
+        appReady = true;
     }
 
     // set up the logo
@@ -261,7 +263,7 @@ void MainWindow::readSettings(){
         QApplication::quit();
     }
 
-
+    appReady = true;
 
     settings.endGroup();
 
@@ -1783,6 +1785,7 @@ void MainWindow::on_fund_filter_to_textChanged() { refresh(FUNDING);}
  * TEAM VEGA FUNCTIONS FOR TEST CASES *
  *                                    *
  **************************************/
+
 
 /********************************************
  * TEAM VEGA PRINT FUNCTIONS FOR TEST CASES *

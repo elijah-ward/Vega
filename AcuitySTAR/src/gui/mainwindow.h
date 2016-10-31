@@ -49,6 +49,7 @@ private slots:
      * INSERT VEGA FUNCTIONS HERE *
      ******************************/
 
+
     QString returnTeachHover();
     QString returnPubHover();
     QString returnPresHover();
@@ -162,6 +163,7 @@ private:
     static std::vector<std::string> GRANTS_MANFIELDS, PRES_MANFIELDS, PUBS_MANFIELDS, TEACH_MANFIELDS;
 
     bool saveStateGlobal;
+    bool appReady;
 
     enum TABS {
         TEACH, PUBLICATIONS, PRESENTATIONS, FUNDING
