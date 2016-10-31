@@ -53,7 +53,7 @@ std::vector<std::string> MainWindow::PRES_MANFIELDS = {"Member Name", "Date", "T
 std::vector<std::string> MainWindow::PUBS_MANFIELDS = {"Member Name", "Type", "Status Date", "Role", "Title"};
 std::vector<std::string> MainWindow::TEACH_MANFIELDS = {"Member Name", "Start Date", "Program"};
 
-MainWindow::MainWindow(QWidget *parent) :
+MainWindow::MainWindow(QWidget *parent, bool saveState) :
     QMainWindow(parent), ui(new Ui::MainWindow),
     fundTree(NULL), presTree(NULL), pubTree(NULL), teachTree(NULL),
     funddb(NULL), presdb(NULL), pubdb(NULL), teachdb(NULL) {
@@ -61,7 +61,11 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->setupUi(this);
 
+    if(saveState){
+
     MainWindow::readSettings();
+
+    }
 
     // set up the logo
     QPixmap logo(":/logo.png");
@@ -234,11 +238,14 @@ void MainWindow::readSettings(){
         QApplication::quit();
     }
 
+
+
     settings.endGroup();
 
 
-}
 
+
+}
 
 bool MainWindow::on_actionLoad_file_triggered() {
     QStringList filePaths = QFileDialog::getOpenFileNames(this,

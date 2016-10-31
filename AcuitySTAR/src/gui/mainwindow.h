@@ -29,7 +29,7 @@ class MainWindow : public QMainWindow {
     friend class TestSuite;
 
 public:
-    explicit MainWindow(QWidget *parent = 0);
+    explicit MainWindow(QWidget *parent = 0, bool saveState = true);
     ~MainWindow();
 
 private slots:
