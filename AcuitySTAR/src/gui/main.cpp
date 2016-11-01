@@ -10,7 +10,7 @@
 using namespace std;
 
 int main(int argc, char *argv[]) {
-    int test = 1;   /* test on */
+    int test = 0;   /* test on */
 
     QApplication app(argc, argv);
     if (test) {
@@ -22,7 +22,7 @@ int main(int argc, char *argv[]) {
         QTest::qExec(test_obj);
     }
 
-    MainWindow w(0,false);
+    MainWindow w(0,true);
 
     w.show();
 
