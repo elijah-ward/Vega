@@ -157,6 +157,8 @@ private slots:
     void makePlot();
 
 
+    void on_load_file_button_clicked();
+
 private:
 
 
