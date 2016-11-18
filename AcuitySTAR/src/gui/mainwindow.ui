@@ -78,7 +78,7 @@
           <enum>QTabWidget::Rounded</enum>
          </property>
          <property name="currentIndex">
-          <number>2</number>
+          <number>3</number>
          </property>
          <property name="usesScrollButtons">
           <bool>false</bool>
@@ -498,28 +498,6 @@
              </property>
             </spacer>
            </item>
-           <item row="0" column="0">
-            <widget class="QPushButton" name="teach_load_file">
-             <property name="minimumSize">
-              <size>
-               <width>100</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Load Presentation CSV File&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="autoFillBackground">
-              <bool>false</bool>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(204, 204, 204);</string>
-             </property>
-             <property name="text">
-              <string>Load file...</string>
-             </property>
-            </widget>
-           </item>
            <item row="5" column="3">
             <widget class="QLineEdit" name="teach_filter_from">
              <property name="enabled">
@@ -661,19 +639,6 @@
              </property>
             </widget>
            </item>
-           <item row="0" column="1" colspan="12">
-            <widget class="QLabel" name="teach_file_label">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="text">
-              <string>No file chosen.</string>
-             </property>
-            </widget>
-           </item>
            <item row="5" column="9">
             <widget class="QRadioButton" name="teach_bar_button">
              <property name="enabled">
@@ -691,6 +656,19 @@
              </property>
              <property name="text">
               <string>Line Chart</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="teach_file_label">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>No file chosen.</string>
              </property>
             </widget>
            </item>
@@ -1022,28 +1000,6 @@
              </property>
             </widget>
            </item>
-           <item row="0" column="0">
-            <widget class="QPushButton" name="pub_load_file">
-             <property name="minimumSize">
-              <size>
-               <width>100</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Load Presentation CSV File&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="autoFillBackground">
-              <bool>false</bool>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(204, 204, 204);</string>
-             </property>
-             <property name="text">
-              <string>Load file...</string>
-             </property>
-            </widget>
-           </item>
            <item row="4" column="3">
             <widget class="QLineEdit" name="pub_filter_from">
              <property name="enabled">
@@ -1194,19 +1150,6 @@
              </property>
             </spacer>
            </item>
-           <item row="0" column="1" colspan="12">
-            <widget class="QLabel" name="pub_file_label">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="text">
-              <string>No file chosen.</string>
-             </property>
-            </widget>
-           </item>
            <item row="0" column="14" alignment="Qt::AlignRight">
             <widget class="QToolButton" name="pubPrintButton">
              <property name="toolTip">
@@ -1268,6 +1211,19 @@
              </property>
              <property name="text">
               <string>Line Chart</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="pub_file_label">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>No file chosen.</string>
              </property>
             </widget>
            </item>
@@ -1743,35 +1699,6 @@
              </property>
             </widget>
            </item>
-           <item row="0" column="0">
-            <widget class="QPushButton" name="pres_load_file">
-             <property name="minimumSize">
-              <size>
-               <width>100</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Load Presentation CSV File&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="autoFillBackground">
-              <bool>false</bool>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(204, 204, 204);</string>
-             </property>
-             <property name="text">
-              <string>Load file...</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1" colspan="12">
-            <widget class="QLabel" name="pres_file_label">
-             <property name="text">
-              <string>No file chosen.</string>
-             </property>
-            </widget>
-           </item>
            <item row="2" column="10">
             <spacer name="horizontalSpacer_31">
              <property name="orientation">
@@ -1848,6 +1775,13 @@
              </property>
              <property name="text">
               <string>Line Chart</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="pres_file_label">
+             <property name="text">
+              <string>No file chosen.</string>
              </property>
             </widget>
            </item>
@@ -2097,28 +2031,6 @@
              </property>
             </spacer>
            </item>
-           <item row="0" column="0">
-            <widget class="QPushButton" name="fund_load_file">
-             <property name="minimumSize">
-              <size>
-               <width>100</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Load Presentation CSV File&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="autoFillBackground">
-              <bool>false</bool>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(204, 204, 204);</string>
-             </property>
-             <property name="text">
-              <string>Load file...</string>
-             </property>
-            </widget>
-           </item>
            <item row="2" column="7">
             <spacer name="horizontalSpacer_5">
              <property name="orientation">
@@ -2205,13 +2117,6 @@
              </property>
              <property name="toolButtonStyle">
               <enum>Qt::ToolButtonTextBesideIcon</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1" colspan="12">
-            <widget class="QLabel" name="fund_file_label">
-             <property name="text">
-              <string>No file chosen.</string>
              </property>
             </widget>
            </item>
@@ -2434,6 +2339,13 @@
              </property>
             </widget>
            </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="fund_file_label">
+             <property name="text">
+              <string>No file chosen.</string>
+             </property>
+            </widget>
+           </item>
           </layout>
          </widget>
         </widget>
@@ -2609,15 +2521,38 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="minimumSize">
           <size>
-           <width>100</width>
+           <width>138</width>
            <height>0</height>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(204, 204, 204);</string>
+          <string notr="true">QPushButton#load_file_button {
+   background-color: #03A9F4;
+    border-style: outset;
+    border-width: 1px;
+    border-radius: 1px;
+    border-color: #FFFFFF;
+    min-width: 120px;
+    padding: 8px;
+	color: #FFFFFF;
+	font: 14px;
+}
+QPushButton#load_file_button:pressed {
+    background-color: #0288D1;
+    border-style: inset;
+}</string>
          </property>
          <property name="text">
           <string>Load File...</string>
+         </property>
+         <property name="autoDefault">
+          <bool>false</bool>
+         </property>
+         <property name="default">
+          <bool>false</bool>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
          </property>
         </widget>
        </item>
