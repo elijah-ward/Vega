@@ -1113,6 +1113,7 @@ void MainWindow::on_fund_delete_sort_clicked() {
     }
 }
 
+void MainWindow::on_teach_stacked_button_toggled() { ui->teach_graph_stackedWidget->setCurrentIndex(3);} // alex
 void MainWindow::on_teach_line_button_toggled() { ui->teach_graph_stackedWidget->setCurrentIndex(2);} // alex
 void MainWindow::on_teach_bar_button_toggled() { ui->teach_graph_stackedWidget->setCurrentIndex(1);}
 void MainWindow::on_teach_pie_button_toggled() { ui->teach_graph_stackedWidget->setCurrentIndex(0);}
@@ -1147,6 +1148,7 @@ bool MainWindow::load_teach(QString path, bool multi_file) {
         ui->teach_pie_button->setEnabled(true);
         ui->teach_bar_button->setEnabled(true);
         ui->teach_line_button->setEnabled(true);
+        ui->teach_stacked_button->setEnabled(true);
         ui->teach_to_label->setEnabled(true);
         ui->teach_sort_label->setEnabled(true);
         ui->teach_filter->setEnabled(true);
@@ -1867,45 +1869,12 @@ QString MainWindow::returnGranAndClinHover(){
     return ui->tabFund->toolTip();
 }
 
-
-// Alex test Plot
-void MainWindow::makePlot() {
-    // generate some data:
-    QVector<double> x(101), y(101); // initialize with entries 0..100
-    for (int i=0; i<101; ++i)
-    {
-      x[i] = i/50.0 - 1; // x goes from -1 to 1
-      y[i] = x[i]*x[i]; // let's plot a quadratic function
-    }
-    // create graph and assign data to it:
-    ui->teachLineChart->addGraph();
-    ui->teachLineChart->graph(0)->setData(x, y);
-    // give the axes some labels:
-    ui->teachLineChart->xAxis->setLabel("x");
-    ui->teachLineChart->yAxis->setLabel("y");
-    // set axes ranges, so we see all data:
-    ui->teachLineChart->xAxis->setRange(-1, 1);
-    ui->teachLineChart->yAxis->setRange(0, 1);
-    ui->teachLineChart->replot();
-}
-
 // Alex Line plot
 void MainWindow::setupLineChart(QCustomPlot *lineChart, std::vector<std::pair <std::string, double>> lineChartList) {
-    /*
-    // create empty line chart
-    QCPGraph *testGraph = new QCPGraph(lineChart->xAxis, lineChart->yAxis);
-    lineChart->addPlottable(testGraph);
-    */
 
     QCPGraph *xLabels = new QCPGraph(lineChart->xAxis, lineChart->yAxis);
     xLabels->setScatterStyle(QCPScatterStyle(QCPScatterStyle::ssDisc, 10));
     lineChart->addPlottable(xLabels);
-
-    /*
-    // set x and y axis titles
-    lineChart->yAxis->setLabel("SHOW ME WHAT YOU GOT");
-    lineChart->xAxis->setLabel("SHOW ME WHAT TIME YOU GOT IT");
-    */
 
     // get label list
     int lineSize = (int) lineChartList.size();
@@ -1948,7 +1917,7 @@ void MainWindow::setupLineChart(QCustomPlot *lineChart, std::vector<std::pair <s
     lineChart->xAxis->setTickLength(0, 1);
     lineChart->xAxis->grid()->setVisible(true);
     lineChart->xAxis->setRange(0, lineSize+1);
-
+    lineChart->xAxis->setTickLabelRotation(20);
 
     if(maxCount>1000000){
         maxCount = maxCount/1000000;
@@ -1977,21 +1946,12 @@ void MainWindow::setupLineChart(QCustomPlot *lineChart, std::vector<std::pair <s
 
     xLabels->setData(ticks, count);
 
-    /*
-    // sample data
-    QVector<double> x(101), y(101); // initialize with entries 0..100
-    for (int i=0; i < 101; ++i)
-    {
-      x[i] = i/50.0 - 1; // x goes from -1 to 1
-      y[i] = x[i]*x[i]; // let's plot a quadratic function
-    }
+}
 
-    lineChart->addGraph();
-    lineChart->graph(0)->setData(x, y);
+// Alex stacked plot
+void MainWindow::setupStackedChart(QCustomPlot *stackedChart, std::vector<std::pair <std::string, double>> stackedChartList) {
 
-    lineChart->xAxis->setRange(-1, 1);
-    lineChart->yAxis->setRange(0, 1);
-    */
+
 
 }
 

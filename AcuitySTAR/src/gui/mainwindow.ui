@@ -78,7 +78,7 @@
           <enum>QTabWidget::Rounded</enum>
          </property>
          <property name="currentIndex">
-          <number>3</number>
+          <number>0</number>
          </property>
          <property name="usesScrollButtons">
           <bool>false</bool>
@@ -91,8 +91,8 @@
            <string>Teaching</string>
           </attribute>
           <layout class="QGridLayout" name="gridLayout_7">
-           <item row="3" column="8">
-            <spacer name="horizontalSpacer_21">
+           <item row="3" column="9">
+            <spacer name="horizontalSpacer_26">
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
              </property>
@@ -104,244 +104,41 @@
              </property>
             </spacer>
            </item>
-           <item row="6" column="0" colspan="7">
-            <widget class="QTreeView" name="teachTreeView">
+           <item row="5" column="9">
+            <widget class="QRadioButton" name="teach_bar_button">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Bar Chart</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="11">
+            <widget class="QRadioButton" name="teach_line_button">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Line Chart</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="teach_file_label">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
              </property>
-             <property name="styleSheet">
-              <string notr="true"/>
+             <property name="text">
+              <string>No file chosen.</string>
              </property>
-             <property name="frameShape">
-              <enum>QFrame::NoFrame</enum>
-             </property>
-             <property name="frameShadow">
-              <enum>QFrame::Sunken</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="0" colspan="15">
-            <widget class="Line" name="line_7">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0" colspan="15">
-            <widget class="Line" name="line_8">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="7" colspan="8">
-            <widget class="QFrame" name="teachChartFrame">
-             <property name="frameShape">
-              <enum>QFrame::Box</enum>
-             </property>
-             <property name="frameShadow">
-              <enum>QFrame::Sunken</enum>
-             </property>
-             <property name="lineWidth">
-              <number>3</number>
-             </property>
-             <layout class="QGridLayout" name="gridLayout_21">
-              <item row="1" column="0">
-               <widget class="QStackedWidget" name="teach_graph_stackedWidget">
-                <property name="enabled">
-                 <bool>true</bool>
-                </property>
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="midLineWidth">
-                 <number>0</number>
-                </property>
-                <property name="currentIndex">
-                 <number>2</number>
-                </property>
-                <widget class="QWidget" name="teach_pie_page">
-                 <layout class="QGridLayout" name="gridLayout_10">
-                  <item row="0" column="1">
-                   <widget class="QListWidget" name="teachPieList">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>0</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>16777215</width>
-                      <height>16777215</height>
-                     </size>
-                    </property>
-                    <property name="baseSize">
-                     <size>
-                      <width>0</width>
-                      <height>0</height>
-                     </size>
-                    </property>
-                    <property name="focusPolicy">
-                     <enum>Qt::NoFocus</enum>
-                    </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::LeftToRight</enum>
-                    </property>
-                    <property name="frameShape">
-                     <enum>QFrame::NoFrame</enum>
-                    </property>
-                    <property name="selectionMode">
-                     <enum>QAbstractItemView::NoSelection</enum>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="0" column="0">
-                   <widget class="PieChartWidget" name="teachPieChart" native="true">
-                    <property name="enabled">
-                     <bool>true</bool>
-                    </property>
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>250</width>
-                      <height>0</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>16777215</width>
-                      <height>16777215</height>
-                     </size>
-                    </property>
-                    <property name="focusPolicy">
-                     <enum>Qt::TabFocus</enum>
-                    </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::LeftToRight</enum>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true"/>
-                    </property>
-                    <layout class="QGridLayout" name="_5">
-                     <property name="spacing">
-                      <number>0</number>
-                     </property>
-                    </layout>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-                <widget class="QWidget" name="teach_bar_page">
-                 <layout class="QGridLayout" name="gridLayout_13">
-                  <item row="1" column="0">
-                   <widget class="QCustomPlot" name="teachBarChart" native="true">
-                    <property name="enabled">
-                     <bool>true</bool>
-                    </property>
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>250</width>
-                      <height>0</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>16777215</width>
-                      <height>16777215</height>
-                     </size>
-                    </property>
-                    <property name="focusPolicy">
-                     <enum>Qt::TabFocus</enum>
-                    </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::LeftToRight</enum>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true"/>
-                    </property>
-                    <layout class="QGridLayout" name="_9">
-                     <property name="spacing">
-                      <number>0</number>
-                     </property>
-                    </layout>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-                <widget class="QWidget" name="teach_line_page">
-                 <layout class="QGridLayout" name="gridLayout_12">
-                  <item row="0" column="0">
-                   <widget class="QCustomPlot" name="teachLineChart" native="true">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>250</width>
-                      <height>0</height>
-                     </size>
-                    </property>
-                    <property name="focusPolicy">
-                     <enum>Qt::TabFocus</enum>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </widget>
-              </item>
-              <item row="0" column="0">
-               <widget class="QLabel" name="teachGraphTitle">
-                <property name="styleSheet">
-                 <string notr="true">font: bold 12px;</string>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-             </layout>
             </widget>
            </item>
            <item row="3" column="10">
             <spacer name="horizontalSpacer_19">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="3" column="9">
-            <spacer name="horizontalSpacer_26">
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
              </property>
@@ -366,36 +163,7 @@
              </property>
             </spacer>
            </item>
-           <item row="0" column="13">
-            <widget class="QToolButton" name="teachExportButton">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="toolTip">
-              <string>Export to pdf</string>
-             </property>
-             <property name="layoutDirection">
-              <enum>Qt::LeftToRight</enum>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(204, 204, 204);</string>
-             </property>
-             <property name="text">
-              <string>Export</string>
-             </property>
-             <property name="icon">
-              <iconset resource="../images.qrc">
-               <normaloff>:/Pdf.svg</normaloff>:/Pdf.svg</iconset>
-             </property>
-             <property name="toolButtonStyle">
-              <enum>Qt::ToolButtonTextBesideIcon</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="14">
+           <item row="0" column="15">
             <widget class="QToolButton" name="teachPrintButton">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -639,37 +407,302 @@
              </property>
             </widget>
            </item>
-           <item row="5" column="9">
-            <widget class="QRadioButton" name="teach_bar_button">
-             <property name="enabled">
-              <bool>false</bool>
+           <item row="3" column="8">
+            <spacer name="horizontalSpacer_21">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
              </property>
-             <property name="text">
-              <string>Bar Chart</string>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
              </property>
-            </widget>
+            </spacer>
            </item>
-           <item row="5" column="11">
-            <widget class="QRadioButton" name="teach_line_button">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="text">
-              <string>Line Chart</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="0">
-            <widget class="QLabel" name="teach_file_label">
+           <item row="6" column="0" colspan="7">
+            <widget class="QTreeView" name="teachTreeView">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
              </property>
-             <property name="text">
-              <string>No file chosen.</string>
+             <property name="styleSheet">
+              <string notr="true"/>
              </property>
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Sunken</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0" colspan="16">
+            <widget class="Line" name="line_7">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="16">
+            <widget class="Line" name="line_8">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="13">
+            <widget class="QRadioButton" name="teach_stacked_button">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Stacked Bar Chart</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="14">
+            <widget class="QToolButton" name="teachExportButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="toolTip">
+              <string>Export to pdf</string>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(204, 204, 204);</string>
+             </property>
+             <property name="text">
+              <string>Export</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../images.qrc">
+               <normaloff>:/Pdf.svg</normaloff>:/Pdf.svg</iconset>
+             </property>
+             <property name="toolButtonStyle">
+              <enum>Qt::ToolButtonTextBesideIcon</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="7" colspan="9">
+            <widget class="QFrame" name="teachChartFrame">
+             <property name="frameShape">
+              <enum>QFrame::Box</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Sunken</enum>
+             </property>
+             <property name="lineWidth">
+              <number>3</number>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_21">
+              <item row="1" column="0">
+               <widget class="QStackedWidget" name="teach_graph_stackedWidget">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="midLineWidth">
+                 <number>0</number>
+                </property>
+                <property name="currentIndex">
+                 <number>3</number>
+                </property>
+                <widget class="QWidget" name="teach_pie_page">
+                 <layout class="QGridLayout" name="gridLayout_10">
+                  <item row="0" column="1">
+                   <widget class="QListWidget" name="teachPieList">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="baseSize">
+                     <size>
+                      <width>0</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="focusPolicy">
+                     <enum>Qt::NoFocus</enum>
+                    </property>
+                    <property name="layoutDirection">
+                     <enum>Qt::LeftToRight</enum>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::NoFrame</enum>
+                    </property>
+                    <property name="selectionMode">
+                     <enum>QAbstractItemView::NoSelection</enum>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="0">
+                   <widget class="PieChartWidget" name="teachPieChart" native="true">
+                    <property name="enabled">
+                     <bool>true</bool>
+                    </property>
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>250</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="focusPolicy">
+                     <enum>Qt::TabFocus</enum>
+                    </property>
+                    <property name="layoutDirection">
+                     <enum>Qt::LeftToRight</enum>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true"/>
+                    </property>
+                    <layout class="QGridLayout" name="_5">
+                     <property name="spacing">
+                      <number>0</number>
+                     </property>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="teach_bar_page">
+                 <layout class="QGridLayout" name="gridLayout_13">
+                  <item row="1" column="0">
+                   <widget class="QCustomPlot" name="teachBarChart" native="true">
+                    <property name="enabled">
+                     <bool>true</bool>
+                    </property>
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>250</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="focusPolicy">
+                     <enum>Qt::TabFocus</enum>
+                    </property>
+                    <property name="layoutDirection">
+                     <enum>Qt::LeftToRight</enum>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true"/>
+                    </property>
+                    <layout class="QGridLayout" name="_9">
+                     <property name="spacing">
+                      <number>0</number>
+                     </property>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="teach_line_page">
+                 <layout class="QGridLayout" name="gridLayout_12">
+                  <item row="0" column="0">
+                   <widget class="QCustomPlot" name="teachLineChart" native="true">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>250</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="focusPolicy">
+                     <enum>Qt::TabFocus</enum>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="teach_stacked_page">
+                 <layout class="QGridLayout" name="gridLayout_24">
+                  <item row="0" column="0">
+                   <widget class="QCustomPlot" name="teachStackedChart" native="true">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>250</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="focusPolicy">
+                     <enum>Qt::TabFocus</enum>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="teachGraphTitle">
+                <property name="styleSheet">
+                 <string notr="true">font: bold 12px;</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </widget>
            </item>
           </layout>
@@ -785,7 +818,7 @@
                  <number>0</number>
                 </property>
                 <property name="currentIndex">
-                 <number>1</number>
+                 <number>2</number>
                 </property>
                 <widget class="QWidget" name="pub_pie_page">
                  <layout class="QGridLayout" name="gridLayout_18">

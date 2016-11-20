@@ -103,6 +103,7 @@ private slots:
     void on_pres_delete_sort_clicked();
     void on_fund_delete_sort_clicked();
 
+    void on_teach_stacked_button_toggled();
     void on_teach_line_button_toggled();
     void on_teach_pie_button_toggled();
     void on_teach_bar_button_toggled();
@@ -155,7 +156,7 @@ private slots:
     // here ends The Void return masacre
 
     //Alex
-    void makePlot();
+    void setupStackedChart(QCustomPlot *stackedChart, std::vector<std::pair <std::string, double> > stackedChartList);
 
 
     void on_load_file_button_clicked();
