@@ -1994,3 +1994,8 @@ void MainWindow::setupLineChart(QCustomPlot *lineChart, std::vector<std::pair <s
     */
 
 }
+
+void MainWindow::on_load_file_button_clicked()
+{
+    on_actionLoad_file_triggered();
+}

@@ -75,6 +75,7 @@ private slots:
 
     QString load_file();
 
+
     void on_pres_load_file_clicked();
     void on_pub_load_file_clicked();
     void on_fund_load_file_clicked();
@@ -156,6 +157,8 @@ private slots:
     //Alex
     void makePlot();
 
+
+    void on_load_file_button_clicked();
 
 private:
 
