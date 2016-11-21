@@ -22,7 +22,7 @@ int main(int argc, char *argv[]) {
         QTest::qExec(test_obj);
     }
 
-    MainWindow w(0,false);
+    MainWindow w(0,true);
 
     w.show();
 
