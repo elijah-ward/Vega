@@ -75,6 +75,7 @@ private slots:
 
     QString load_file();
 
+
     void on_pres_load_file_clicked();
     void on_pub_load_file_clicked();
     void on_fund_load_file_clicked();
@@ -102,19 +103,22 @@ private slots:
     void on_pres_delete_sort_clicked();
     void on_fund_delete_sort_clicked();
 
+    void on_teach_scatter_button_toggled();
     void on_teach_line_button_toggled();
     void on_teach_pie_button_toggled();
     void on_teach_bar_button_toggled();
 
-     void on_pub_line_button_toggled();
+    void on_pub_scatter_button_toggled();
+    void on_pub_line_button_toggled();
     void on_pub_pie_button_toggled();
     void on_pub_bar_button_toggled();
 
-
+    void on_pres_scatter_button_toggled();
     void on_pres_line_button_toggled();
     void on_pres_pie_button_toggled();
     void on_pres_bar_button_toggled();
 
+    void on_fund_scatter_button_toggled();
     void on_fund_line_button_toggled();
     void on_fund_pie_button_toggled();
     void on_fund_bar_button_toggled();
@@ -154,8 +158,10 @@ private slots:
     // here ends The Void return masacre
 
     //Alex
-    void makePlot();
+    void setupScatterChart(QCustomPlot *stackedChart, std::vector<std::pair <std::string, double> > stackedChartList);
 
+
+    void on_load_file_button_clicked();
 
 private:
 
