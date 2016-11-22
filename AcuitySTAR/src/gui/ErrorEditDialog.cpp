@@ -80,6 +80,8 @@ ErrorEditDialog::ErrorEditDialog(QWidget *parent,
     item->setBackground(brushFocus);
     ui->tableWidget->scrollToItem(item,QAbstractItemView::PositionAtCenter);
 
+    QString errorCount = "Error: " + QString::number(errorIndex + 1) + "/" + QString::number(pointList.size());
+    ui->errorLabel->setText(errorCount);
 }
 
 //Clean up allocated memory for the table items
@@ -109,6 +111,8 @@ void ErrorEditDialog::saveData() {
 
 void ErrorEditDialog::on_next_clicked()
 {
+    QString errorCount = "";
+
     // Initialize the brush colors
     QBrush brush(QColor(255, 0, 0, 30));
     QBrush brushFocus(QColor(255, 0, 0, 100));
@@ -130,9 +134,13 @@ void ErrorEditDialog::on_next_clicked()
     QTableWidgetItem * i = ui->tableWidget->item(pointList[errorIndex].x(), pointList[errorIndex].y());
     i->setBackground(brushFocus);
     ui->tableWidget->scrollToItem(i,QAbstractItemView::PositionAtCenter);
+
+    errorCount = "Error: " + QString::number(errorIndex + 1) + "/" + QString::number(pointList.size());
+    ui->errorLabel->setText(errorCount);
 }
 
 void ErrorEditDialog::on_prev_clicked(){
+    QString errorCount = "";
 
     // Initialize brush colours
     QBrush brush(QColor(255, 0, 0, 30));
@@ -155,6 +163,9 @@ void ErrorEditDialog::on_prev_clicked(){
     QTableWidgetItem * i = ui->tableWidget->item(pointList[errorIndex].x(), pointList[errorIndex].y());
     i->setBackground(brushFocus);
     ui->tableWidget->scrollToItem(i,QAbstractItemView::PositionAtCenter);
+
+    errorCount = "Error: " + QString::number(errorIndex + 1) + "/" + QString::number(pointList.size());
+    ui->errorLabel->setText(errorCount);
 }
 
 

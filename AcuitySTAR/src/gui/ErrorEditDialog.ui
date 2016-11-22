@@ -18,13 +18,6 @@
     <normaloff>:/icon32.ico</normaloff>:/icon32.ico</iconset>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0">
-    <widget class="QLabel" name="label">
-     <property name="text">
-      <string>Label</string>
-     </property>
-    </widget>
-   </item>
    <item row="3" column="3">
     <widget class="QPushButton" name="save">
      <property name="maximumSize">
@@ -72,6 +65,18 @@
     <widget class="QPushButton" name="next">
      <property name="text">
       <string>Next</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="errorLabel">
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Error: </string>
      </property>
     </widget>
    </item>
