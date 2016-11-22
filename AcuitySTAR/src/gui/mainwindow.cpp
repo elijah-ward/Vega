@@ -1182,6 +1182,12 @@ bool MainWindow::load_teach(QString path, bool multi_file) {
         ui->teachTreeView->setSortingEnabled(true);
         ui->teachTreeView->header()->sortIndicatorChanged(0, Qt::AscendingOrder);
 
+        for (int c = 0; c < ui->teachTreeView->header()->count(); ++c)
+        {
+            ui->teachTreeView->header()->setSectionResizeMode(
+                c, QHeaderView::Stretch);
+        }
+
         return true;
     } else {
         if (!multi_file) {
@@ -1235,11 +1241,19 @@ bool MainWindow::load_pub(QString path, bool multi_file) {
         makeTree(PUBLICATIONS);
         ui->pub_file_label->setText(pubPath);
 
+        // needed for sort via proxyModel
         QSortFilterProxyModel* pProxyModel = new QSortFilterProxyModel(ui->pubTreeView);
         pProxyModel->setSourceModel(ui->pubTreeView->model());
         ui->pubTreeView->setModel(pProxyModel);
         ui->pubTreeView->setSortingEnabled(true);
         ui->pubTreeView->header()->sortIndicatorChanged(0, Qt::AscendingOrder);
+
+        // make all columns default to expanded so they look nice
+        for (int c = 0; c < ui->pubTreeView->header()->count(); ++c)
+        {
+            ui->pubTreeView->header()->setSectionResizeMode(
+                c, QHeaderView::Stretch);
+        }
 
         return true;
     } else {
@@ -1300,6 +1314,13 @@ bool MainWindow::load_pres(QString path, bool multi_file) {
         ui->presTreeView->setSortingEnabled(true);
         ui->presTreeView->header()->sortIndicatorChanged(0, Qt::AscendingOrder);
 
+        // make all columns default to expanded so they look nice
+        for (int c = 0; c < ui->presTreeView->header()->count(); ++c)
+        {
+            ui->presTreeView->header()->setSectionResizeMode(
+                c, QHeaderView::Stretch);
+        }
+
         return true;
     } else {
         if (!multi_file) {
@@ -1358,6 +1379,13 @@ bool MainWindow::load_fund(QString path, bool multi_file) {
         ui->fundTreeView->setModel(pProxyModel);
         ui->fundTreeView->setSortingEnabled(true);
         ui->fundTreeView->header()->sortIndicatorChanged(0, Qt::AscendingOrder);
+
+        // make all columns default to expanded so they look nice
+        for (int c = 0; c < ui->fundTreeView->header()->count(); ++c)
+        {
+            ui->fundTreeView->header()->setSectionResizeMode(
+                c, QHeaderView::Stretch);
+        }
 
         return true;
     } else {
