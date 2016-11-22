@@ -28,7 +28,7 @@
 
 // I MADE IT GLOBAL I'M SORRY TEAM PLEASE FIND A GOOD FIX
 static int errorIndex = 0;
-
+static int errorCount;
 
 
 
@@ -78,6 +78,11 @@ ErrorEditDialog::ErrorEditDialog(QWidget *parent,
         row++;
     }
 
+    //shows original number of errors in file
+    errorCount = errors.size();
+    QString labelText = QString::number(errorCount);
+    ui->label->setText(labelText);
+
     //This sets focus to the first error in the queue
     item = ui->tableWidget->item((pointList[errorIndex]).x(), (pointList[errorIndex]).y());
     item->setBackground(brushFocus);
@@ -115,7 +120,7 @@ void ErrorEditDialog::saveData() {
 void ErrorEditDialog::on_next_clicked()
 
 {
-    QString errorCount = "";
+    //QString errorCount = "";
 
     // Initialize the brush colors
     QBrush brush(QColor(255, 0, 0, 30));
@@ -124,6 +129,16 @@ void ErrorEditDialog::on_next_clicked()
     // Change colour of cell currently in focus
     QTableWidgetItem * deFocus = ui->tableWidget->item((pointList[errorIndex]).x(), (pointList[errorIndex]).y());
     deFocus->setBackground(brush);
+
+    //for counting number of errors
+    QString currItemText = fixed->text();
+    if(!(currItemText.isEmpty()) && !(currItemText.isNull()))
+    {
+        errorCount--;
+        fixed->setFlags(fixed->flags() ^ Qt::ItemIsEditable);
+    }
+    QString labelText = QString::number(errorCount);
+    ui->label->setText(labelText);
 
     // If end of pointList is reached, no. Otherwise, errorIndex++
     if (errorIndex >= pointList.size() - 1){
@@ -153,6 +168,16 @@ void ErrorEditDialog::on_prev_clicked(){
     // Change colour of cell currently focus
     QTableWidgetItem * fixed = ui->tableWidget->item(pointList[errorIndex].x(), pointList[errorIndex].y());
     fixed->setBackground(brush);
+
+    //for counting number of errors
+    QString currItemText = fixed->text();
+    if(!(currItemText.isEmpty()) && !(currItemText.isNull()))
+    {
+        errorCount--;
+        fixed->setFlags(fixed->flags() ^ Qt::ItemIsEditable);
+    }
+    QString labelText = QString::number(errorCount);
+    ui->label->setText(labelText);
 
     // If beginnng of pointList is reached, no. Otherwise, errorIndex--
     if (errorIndex <= 0){
