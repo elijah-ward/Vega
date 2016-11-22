@@ -1,7 +1,6 @@
 #include "ui_ErrorEditDialog.h"
 #include "ErrorEditDialog.h"
 
-#include <QTableWidgetItem>
 #include <QStringList>
 #include <QDebug>
 #include <QBrush>
@@ -41,7 +40,8 @@ ErrorEditDialog::ErrorEditDialog(QWidget *parent,
 
     ui->tableWidget->setHorizontalHeaderLabels(listHeaders);
     QTableWidgetItem* item;
-    QBrush brush(QColor(255, 0, 0, 100));
+    QBrush brush(QColor(255, 0, 0, 30));
+    QBrush brushFocus(QColor(255, 0, 0, 100));
     std::vector<std::vector<std::string>*>::iterator it;
     int row = 0;
 
@@ -54,10 +54,11 @@ ErrorEditDialog::ErrorEditDialog(QWidget *parent,
             for (int i = 0; i < (int) mandatory.size(); i++) {
                 if (mandatory[i].compare(headers.at(col)) == 0
                         && (*it)->at(col).compare("") == 0) {
+                    //Commenting this out temporarily
                     item->setBackground(brush);
                     item->setFlags(flag);
                     QPoint pt(row,col);
-                    q.enqueue(pt);
+                    queue.enqueue(pt);
                 }
             }
             ui->tableWidget->setItem(row, col, item);
@@ -65,6 +66,10 @@ ErrorEditDialog::ErrorEditDialog(QWidget *parent,
         row++;
     }
 
+    //This sets focus to the first error in the queue
+    item = ui->tableWidget->item(queue.front().x(), queue.front().y());
+    item->setBackground(brushFocus);
+    ui->tableWidget->scrollToItem(item,QAbstractItemView::PositionAtCenter);
 
 }
 
@@ -95,16 +100,16 @@ void ErrorEditDialog::saveData() {
 
 void ErrorEditDialog::on_next_clicked()
 {
-    //std::cout<< (q.first()).x();
-    //ui->label->setText("a");
-    //ui->tableWidget->scrollToBottom();
-    QPoint x(5,6);
-    QTableWidgetItem *y = ui->tableWidget->itemAt(x);
-    ui->tableWidget->scrollToItem(y,QAbstractItemView::PositionAtTop);
-    //QTableWidgetItem *i = ui->tableWidget->itemAt(q.first());
-    //ui->tableWidget->scrollToItem(i,QAbstractItemView::PositionAtTop);
-    //q.pop_front();
+    QBrush brush(QColor(255, 0, 0, 30));
+    QBrush brushFocus(QColor(255, 0, 0, 100));
 
+    QTableWidgetItem * fixed = ui->tableWidget->item(queue.front().x(), queue.front().y());
+    fixed->setBackground(brush);
+    queue.pop_front();
+
+    QTableWidgetItem * i = ui->tableWidget->item(queue.front().x(), queue.front().y());
+    i->setBackground(brushFocus);
+    ui->tableWidget->scrollToItem(i,QAbstractItemView::PositionAtCenter);
 }
 
 void ErrorEditDialog::on_save_clicked()
