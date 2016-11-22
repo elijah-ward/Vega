@@ -8,6 +8,8 @@
 #include <QColor>
 #include <QAbstractButton>
 #include <QMessageBox>
+#include <QQueue>
+#include <iostream>
 
 /*
  * Load data contained in the errors vector into a QWidgetTable
@@ -42,6 +44,7 @@ ErrorEditDialog::ErrorEditDialog(QWidget *parent,
     QBrush brush(QColor(255, 0, 0, 100));
     std::vector<std::vector<std::string>*>::iterator it;
     int row = 0;
+
     for (it = errors.begin(); it != errors.end(); it++) {
         for (int col = 0; col < (int) headers.size() && col < (int) (*it)->size(); col++) {
             item = new QTableWidgetItem();
@@ -53,12 +56,16 @@ ErrorEditDialog::ErrorEditDialog(QWidget *parent,
                         && (*it)->at(col).compare("") == 0) {
                     item->setBackground(brush);
                     item->setFlags(flag);
+                    QPoint pt(row,col);
+                    q.enqueue(pt);
                 }
             }
             ui->tableWidget->setItem(row, col, item);
         }
         row++;
     }
+
+
 }
 
 //Clean up allocated memory for the table items
@@ -84,6 +91,16 @@ void ErrorEditDialog::saveData() {
         }
     }
     accept();
+}
+
+void ErrorEditDialog::on_next_clicked()
+{
+    //ui->label->setText("Hello");
+    std::cout<< (q.front()).x();
+    QTableWidgetItem *i = ui->tableWidget->itemAt(q.front());
+    ui->tableWidget->scrollToBottom();
+    ui->tableWidget->scrollToItem(i,QAbstractItemView::PositionAtTop);
+    q.pop_front();
 }
 
 void ErrorEditDialog::on_save_clicked()
