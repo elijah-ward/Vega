@@ -40,7 +40,8 @@ ErrorEditDialog::ErrorEditDialog(QWidget *parent,
 
     ui->tableWidget->setHorizontalHeaderLabels(listHeaders);
     QTableWidgetItem* item;
-    QBrush brush(QColor(255, 0, 0, 100));
+    QBrush brush(QColor(255, 0, 0, 30));
+    QBrush brushFocus(QColor(255, 0, 0, 100));
     std::vector<std::vector<std::string>*>::iterator it;
     int row = 0;
 
@@ -54,7 +55,7 @@ ErrorEditDialog::ErrorEditDialog(QWidget *parent,
                 if (mandatory[i].compare(headers.at(col)) == 0
                         && (*it)->at(col).compare("") == 0) {
                     //Commenting this out temporarily
-                    //item->setBackground(brush);
+                    item->setBackground(brush);
                     item->setFlags(flag);
                     QPoint pt(row,col);
                     queue.enqueue(pt);
@@ -67,7 +68,7 @@ ErrorEditDialog::ErrorEditDialog(QWidget *parent,
 
     //This sets focus to the first error in the queue
     item = ui->tableWidget->item(queue.front().x(), queue.front().y());
-    item->setBackground(brush);
+    item->setBackground(brushFocus);
     ui->tableWidget->scrollToItem(item,QAbstractItemView::PositionAtCenter);
 
 }
@@ -99,15 +100,15 @@ void ErrorEditDialog::saveData() {
 
 void ErrorEditDialog::on_next_clicked()
 {
-    QBrush brush(QColor(255, 0, 0, 100));
-    QBrush brushFixed(QColor(0, 255, 0, 100));
+    QBrush brush(QColor(255, 0, 0, 30));
+    QBrush brushFocus(QColor(255, 0, 0, 100));
 
     QTableWidgetItem * fixed = ui->tableWidget->item(queue.front().x(), queue.front().y());
-    fixed->setBackground(brushFixed);
+    fixed->setBackground(brush);
     queue.pop_front();
 
     QTableWidgetItem * i = ui->tableWidget->item(queue.front().x(), queue.front().y());
-    i->setBackground(brush);
+    i->setBackground(brushFocus);
     ui->tableWidget->scrollToItem(i,QAbstractItemView::PositionAtCenter);
 }
 
