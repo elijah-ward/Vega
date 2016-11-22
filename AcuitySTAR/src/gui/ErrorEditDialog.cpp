@@ -95,12 +95,16 @@ void ErrorEditDialog::saveData() {
 
 void ErrorEditDialog::on_next_clicked()
 {
-    //ui->label->setText("Hello");
-    std::cout<< (q.front()).x();
-    QTableWidgetItem *i = ui->tableWidget->itemAt(q.front());
-    ui->tableWidget->scrollToBottom();
-    ui->tableWidget->scrollToItem(i,QAbstractItemView::PositionAtTop);
-    q.pop_front();
+    //std::cout<< (q.first()).x();
+    //ui->label->setText("a");
+    //ui->tableWidget->scrollToBottom();
+    QPoint x(5,6);
+    QTableWidgetItem *y = ui->tableWidget->itemAt(x);
+    ui->tableWidget->scrollToItem(y,QAbstractItemView::PositionAtTop);
+    //QTableWidgetItem *i = ui->tableWidget->itemAt(q.first());
+    //ui->tableWidget->scrollToItem(i,QAbstractItemView::PositionAtTop);
+    //q.pop_front();
+
 }
 
 void ErrorEditDialog::on_save_clicked()
