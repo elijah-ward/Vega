@@ -19,6 +19,16 @@
  * then a warning message will be displayed.  If cancel is clicked all errors
  * are discarded.
  */
+
+
+
+
+// I MADE IT GLOBAL I'M SORRY TEAM PLEASE FIND A GOOD FIX
+static int errorIndex = 0;
+
+
+
+
 ErrorEditDialog::ErrorEditDialog(QWidget *parent,
                                  std::vector<std::vector<std::string>*>& errors,
                                  std::vector<std::string>& headers,
@@ -54,11 +64,10 @@ ErrorEditDialog::ErrorEditDialog(QWidget *parent,
             for (int i = 0; i < (int) mandatory.size(); i++) {
                 if (mandatory[i].compare(headers.at(col)) == 0
                         && (*it)->at(col).compare("") == 0) {
-                    //Commenting this out temporarily
                     item->setBackground(brush);
                     item->setFlags(flag);
                     QPoint pt(row,col);
-                    queue.enqueue(pt);
+                    pointList.push_back(pt);
                 }
             }
             ui->tableWidget->setItem(row, col, item);
@@ -67,7 +76,7 @@ ErrorEditDialog::ErrorEditDialog(QWidget *parent,
     }
 
     //This sets focus to the first error in the queue
-    item = ui->tableWidget->item(queue.front().x(), queue.front().y());
+    item = ui->tableWidget->item((pointList[errorIndex]).x(), (pointList[errorIndex]).y());
     item->setBackground(brushFocus);
     ui->tableWidget->scrollToItem(item,QAbstractItemView::PositionAtCenter);
 
@@ -100,17 +109,54 @@ void ErrorEditDialog::saveData() {
 
 void ErrorEditDialog::on_next_clicked()
 {
+    // Initialize the brush colors
     QBrush brush(QColor(255, 0, 0, 30));
     QBrush brushFocus(QColor(255, 0, 0, 100));
 
-    QTableWidgetItem * fixed = ui->tableWidget->item(queue.front().x(), queue.front().y());
-    fixed->setBackground(brush);
-    queue.pop_front();
+    // Change colour of cell currently in focus
+    QTableWidgetItem * deFocus = ui->tableWidget->item((pointList[errorIndex]).x(), (pointList[errorIndex]).y());
+    deFocus->setBackground(brush);
 
-    QTableWidgetItem * i = ui->tableWidget->item(queue.front().x(), queue.front().y());
+    // If end of pointList is reached, no. Otherwise, errorIndex++
+    if (errorIndex >= pointList.size() - 1){
+        QMessageBox msgBox;
+        msgBox.setText("End of error list reached.");
+        msgBox.exec();
+    } else{
+        errorIndex++;
+    }
+
+    // Change colour of new cell in focus
+    QTableWidgetItem * i = ui->tableWidget->item(pointList[errorIndex].x(), pointList[errorIndex].y());
     i->setBackground(brushFocus);
     ui->tableWidget->scrollToItem(i,QAbstractItemView::PositionAtCenter);
 }
+
+void ErrorEditDialog::on_prev_clicked(){
+
+    // Initialize brush colours
+    QBrush brush(QColor(255, 0, 0, 30));
+    QBrush brushFocus(QColor(255, 0, 0, 100));
+
+    // Change colour of cell currently focus
+    QTableWidgetItem * fixed = ui->tableWidget->item(pointList[errorIndex].x(), pointList[errorIndex].y());
+    fixed->setBackground(brush);
+
+    // If beginnng of pointList is reached, no. Otherwise, errorIndex--
+    if (errorIndex <= 0){
+        QMessageBox msgBox;
+        msgBox.setText("Beginning of error list reached.");
+        msgBox.exec();
+    } else{
+        errorIndex--;
+    }
+
+    // Change colour of new cell in focus
+    QTableWidgetItem * i = ui->tableWidget->item(pointList[errorIndex].x(), pointList[errorIndex].y());
+    i->setBackground(brushFocus);
+    ui->tableWidget->scrollToItem(i,QAbstractItemView::PositionAtCenter);
+}
+
 
 void ErrorEditDialog::on_save_clicked()
 {
