@@ -1176,7 +1176,10 @@ bool MainWindow::load_teach(QString path, bool multi_file) {
         makeTree(TEACH);
         ui->teach_file_label->setText(teachPath);
 
-
+        QSortFilterProxyModel* pProxyModel = new QSortFilterProxyModel(ui->teachTreeView);
+        pProxyModel->setSourceModel(ui->teachTreeView->model());
+        ui->teachTreeView->setModel(pProxyModel);
+        ui->teachTreeView->setSortingEnabled(true);
 
         return true;
     } else {
@@ -1231,6 +1234,11 @@ bool MainWindow::load_pub(QString path, bool multi_file) {
         makeTree(PUBLICATIONS);
         ui->pub_file_label->setText(pubPath);
 
+        QSortFilterProxyModel* pProxyModel = new QSortFilterProxyModel(ui->pubTreeView);
+        pProxyModel->setSourceModel(ui->pubTreeView->model());
+        ui->pubTreeView->setModel(pProxyModel);
+        ui->pubTreeView->setSortingEnabled(true);
+
         return true;
     } else {
         if (!multi_file) {
@@ -1284,6 +1292,11 @@ bool MainWindow::load_pres(QString path, bool multi_file) {
         makeTree(PRESENTATIONS);
         ui->pres_file_label->setText(presPath);
 
+        QSortFilterProxyModel* pProxyModel = new QSortFilterProxyModel(ui->presTreeView);
+        pProxyModel->setSourceModel(ui->presTreeView->model());
+        ui->presTreeView->setModel(pProxyModel);
+        ui->presTreeView->setSortingEnabled(true);
+
         return true;
     } else {
         if (!multi_file) {
@@ -1336,6 +1349,11 @@ bool MainWindow::load_fund(QString path, bool multi_file) {
         fundPath = path;
         makeTree(FUNDING);
         ui->fund_file_label->setText(fundPath);
+
+        QSortFilterProxyModel* pProxyModel = new QSortFilterProxyModel(ui->fundTreeView);
+        pProxyModel->setSourceModel(ui->fundTreeView->model());
+        ui->fundTreeView->setModel(pProxyModel);
+        ui->fundTreeView->setSortingEnabled(true);
 
         return true;
     } else {
