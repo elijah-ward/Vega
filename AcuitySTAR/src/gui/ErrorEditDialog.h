@@ -1,6 +1,7 @@
 #ifndef ERROREDITDIALOG_H
 #define ERROREDITDIALOG_H
 
+#include <QMessageBox>
 #include <QDialog>
 #include <vector>
 #include <string>
@@ -26,13 +27,12 @@ public:
 
 private slots:
      void on_next_clicked();
+     void on_prev_clicked();
      void on_save_clicked();
      void on_cancel_clicked();
 
 private:
-    QQueue<QPoint> queue;
-    QTableWidgetItem * previousItem;
-    int index;
+    std::vector<QPoint> pointList;
     std::vector<std::vector<std::string>*> errorList;
     std::vector<std::string> headerList;
     std::vector<std::string> mandatoryList;
