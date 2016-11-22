@@ -65,6 +65,10 @@ ErrorEditDialog::ErrorEditDialog(QWidget *parent,
         row++;
     }
 
+    //This sets focus to the first error in the queue
+    item = ui->tableWidget->item(queue.front().x(), queue.front().y());
+    item->setBackground(brush);
+    ui->tableWidget->scrollToItem(item,QAbstractItemView::PositionAtCenter);
 
 }
 
@@ -95,20 +99,16 @@ void ErrorEditDialog::saveData() {
 
 void ErrorEditDialog::on_next_clicked()
 {
-    static int index = 0;
     QBrush brush(QColor(255, 0, 0, 100));
     QBrush brushFixed(QColor(0, 255, 0, 100));
 
-    if (index > 0){
-        QTableWidgetItem * fixed = ui->tableWidget->item(queue.front().x(), queue.front().y());
-        fixed->setBackground(brushFixed);
-        queue.pop_front();
-    }
+    QTableWidgetItem * fixed = ui->tableWidget->item(queue.front().x(), queue.front().y());
+    fixed->setBackground(brushFixed);
+    queue.pop_front();
 
     QTableWidgetItem * i = ui->tableWidget->item(queue.front().x(), queue.front().y());
     i->setBackground(brush);
     ui->tableWidget->scrollToItem(i,QAbstractItemView::PositionAtCenter);
-    index = 1;
 }
 
 void ErrorEditDialog::on_save_clicked()
