@@ -43,6 +43,7 @@ private slots:
 
     void closeEvent(QCloseEvent *event);
     bool confirmQuit();
+    bool confirmSave();
 
 
     /******************************

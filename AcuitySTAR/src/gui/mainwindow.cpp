@@ -142,7 +142,9 @@ void MainWindow::closeEvent(QCloseEvent *event)
 
 
     if (confirmQuit()) {
-        writeSettings();
+        if (confirmSave()){
+            writeSettings();
+        }
         event->accept();
     } else {
         event->ignore();
@@ -154,12 +156,26 @@ void MainWindow::closeEvent(QCloseEvent *event)
     }
 }
 
+bool MainWindow::confirmSave(){
+
+    QMessageBox::StandardButton responseButton = QMessageBox::question(this, "Peachy Galaxy", tr("Would you like to save your session?\n"),
+                                                                       QMessageBox::No | QMessageBox::Yes,
+                                                                       QMessageBox::Yes);
+    if(responseButton == QMessageBox::Yes){
+        return true;
+    }
+    else{
+        return false;
+    }
+
+}
+
 bool MainWindow::confirmQuit(){
 
 
 
-    QMessageBox::StandardButton responseButton = QMessageBox::question(this, "Peachy Galaxy", tr("Are you sure you want to quit?\n\n Your changes will be stored for the next session.\n"),
-                                                                       QMessageBox::Cancel | QMessageBox::No | QMessageBox::Yes,
+    QMessageBox::StandardButton responseButton = QMessageBox::question(this, "Peachy Galaxy", tr("Are you sure you want to quit?\n"),
+                                                                       QMessageBox::No | QMessageBox::Yes,
                                                                        QMessageBox::Yes);
     if(responseButton == QMessageBox::Yes){
         return true;
@@ -238,7 +254,7 @@ void MainWindow::readSettings(){
     qDebug().nospace() << "presPath: "<< presPath;
 
     QMessageBox::StandardButton loadFiles = QMessageBox::question(this, "Load Previous Session...", tr("Would  you like to load the previous session data?\n"),
-                                                                  QMessageBox::Cancel | QMessageBox::No | QMessageBox::Yes, QMessageBox::Yes);
+                                                                  QMessageBox::No | QMessageBox::Yes, QMessageBox::Yes);
 
     if(loadFiles == QMessageBox::Yes){
 
