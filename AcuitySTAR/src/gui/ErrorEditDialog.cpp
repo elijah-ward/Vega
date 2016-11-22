@@ -1,7 +1,6 @@
 #include "ui_ErrorEditDialog.h"
 #include "ErrorEditDialog.h"
 
-#include <QTableWidgetItem>
 #include <QStringList>
 #include <QDebug>
 #include <QBrush>
@@ -54,10 +53,11 @@ ErrorEditDialog::ErrorEditDialog(QWidget *parent,
             for (int i = 0; i < (int) mandatory.size(); i++) {
                 if (mandatory[i].compare(headers.at(col)) == 0
                         && (*it)->at(col).compare("") == 0) {
-                    item->setBackground(brush);
+                    //Commenting this out temporarily
+                    //item->setBackground(brush);
                     item->setFlags(flag);
                     QPoint pt(row,col);
-                    q.enqueue(pt);
+                    queue.enqueue(pt);
                 }
             }
             ui->tableWidget->setItem(row, col, item);
@@ -95,12 +95,13 @@ void ErrorEditDialog::saveData() {
 
 void ErrorEditDialog::on_next_clicked()
 {
-    //ui->label->setText("Hello");
-    std::cout<< (q.front()).x();
-    QTableWidgetItem *i = ui->tableWidget->itemAt(q.front());
-    ui->tableWidget->scrollToBottom();
-    ui->tableWidget->scrollToItem(i,QAbstractItemView::PositionAtTop);
-    q.pop_front();
+    QBrush brush(QColor(255, 0, 0, 100));
+    QTableWidgetItem * i = ui->tableWidget->item(queue.front().x(), queue.front().y());
+    i->setBackground(brush);
+    ui->tableWidget->scrollToItem(i,QAbstractItemView::PositionAtCenter);
+
+    //Pop the front of the queue
+    queue.pop_front();
 }
 
 void ErrorEditDialog::on_save_clicked()

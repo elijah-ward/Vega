@@ -5,6 +5,7 @@
 #include <vector>
 #include <string>
 #include <QQueue>
+#include <QTableWidgetItem>
 
 class QAbstractButton;
 
@@ -29,7 +30,9 @@ private slots:
      void on_cancel_clicked();
 
 private:
-    QQueue<QPoint> q;
+    QQueue<QPoint> queue;
+    QTableWidgetItem * previousItem;
+    int index;
     std::vector<std::vector<std::string>*> errorList;
     std::vector<std::string> headerList;
     std::vector<std::string> mandatoryList;
