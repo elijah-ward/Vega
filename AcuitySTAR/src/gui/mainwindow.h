@@ -142,27 +142,24 @@ private slots:
 
     // the following methods used to have void returns, changed by Andy and Alex to bools for test purposes
     bool on_teachPrintButton_clicked();
-
     bool on_fundPrintButton_clicked();
-
     bool on_presPrintButton_clicked();
-
     bool on_pubPrintButton_clicked();
-
     bool on_teachExportButton_clicked();
-
     bool on_fundExportButton_clicked();
-
     bool on_presExportButton_clicked();
-
     bool on_pubExportButton_clicked();
     // here ends The Void return masacre
 
     //Alex
     void setupScatterChart(QCustomPlot *stackedChart, std::vector<std::pair <std::string, double> > stackedChartList);
-
-
     void on_load_file_button_clicked();
+
+    //Here are Deliverable 4 functions (Created by Andy)
+    bool checkTeachColumnSortable();
+    bool checkPubColumnSortable();
+    bool checkPresColumnSortable();
+    bool checkFundColumnSortable();
 
 private:
 

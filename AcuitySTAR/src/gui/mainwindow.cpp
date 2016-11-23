@@ -2125,3 +2125,23 @@ void MainWindow::on_load_file_button_clicked()
 {
     on_actionLoad_file_triggered();
 }
+
+/**************************************
+ * TEAM VEGA COLUMN SORT TEST CASES   *
+ **************************************/
+
+bool MainWindow::checkTeachColumnSortable(){
+    return ui->teachTreeView->isSortingEnabled();
+}
+
+bool MainWindow::checkPubColumnSortable(){
+    return ui->pubTreeView->isSortingEnabled();
+}
+
+bool MainWindow::checkPresColumnSortable(){
+    return ui->presTreeView->isSortingEnabled();
+}
+
+bool MainWindow::checkFundColumnSortable(){
+    return ui->fundTreeView->isSortingEnabled();
+}
