@@ -28,7 +28,7 @@
 
 // I MADE IT GLOBAL I'M SORRY TEAM PLEASE FIND A GOOD FIX
 static int errorIndex = 0;
-
+static int errorCount;
 
 
 
@@ -78,13 +78,18 @@ ErrorEditDialog::ErrorEditDialog(QWidget *parent,
         row++;
     }
 
+    //shows original number of errors in file
+    errorCount = errors.size();
+    QString labelText = "Erros remaining: " + QString::number(errorCount);
+    ui->errorLabel->setText(labelText);
+
     //This sets focus to the first error in the queue
     item = ui->tableWidget->item((pointList[errorIndex]).x(), (pointList[errorIndex]).y());
     item->setBackground(brushFocus);
     ui->tableWidget->scrollToItem(item,QAbstractItemView::PositionAtCenter);
 
-    QString errorCount = "Error: " + QString::number(errorIndex + 1) + "/" + QString::number(pointList.size());
-    ui->errorLabel->setText(errorCount);
+    //QString errorCount = "Error: " + QString::number(errorIndex + 1) + "/" + QString::number(pointList.size());
+    //ui->errorLabel->setText(errorCount);
 }
 
 //Clean up allocated memory for the table items
@@ -115,7 +120,7 @@ void ErrorEditDialog::saveData() {
 void ErrorEditDialog::on_next_clicked()
 
 {
-    QString errorCount = "";
+    //QString errorCount = ""; //andy's old error counter
 
     // Initialize the brush colors
     QBrush brush(QColor(255, 0, 0, 30));
@@ -124,6 +129,16 @@ void ErrorEditDialog::on_next_clicked()
     // Change colour of cell currently in focus
     QTableWidgetItem * deFocus = ui->tableWidget->item((pointList[errorIndex]).x(), (pointList[errorIndex]).y());
     deFocus->setBackground(brush);
+
+    //for counting number of errors
+    QString currItemText = deFocus->text();
+    if(!(currItemText.isEmpty()) && !(currItemText.isNull()))
+    {
+        errorCount--;
+        deFocus->setFlags(deFocus->flags() ^ Qt::ItemIsEditable);
+    }
+    QString labelText = "Errors remaining: " + QString::number(errorCount);
+    ui->errorLabel->setText(labelText);
 
     // If end of pointList is reached, no. Otherwise, errorIndex++
     if (errorIndex >= pointList.size() - 1){
@@ -139,12 +154,13 @@ void ErrorEditDialog::on_next_clicked()
     i->setBackground(brushFocus);
     ui->tableWidget->scrollToItem(i,QAbstractItemView::PositionAtCenter);
 
-    errorCount = "Error: " + QString::number(errorIndex + 1) + "/" + QString::number(pointList.size());
-    ui->errorLabel->setText(errorCount);
+    //andy's old error counter
+    //errorCount = "Error: " + QString::number(errorIndex + 1) + "/" + QString::number(pointList.size());
+    //ui->errorLabel->setText(errorCount);
 }
 
 void ErrorEditDialog::on_prev_clicked(){
-    QString errorCount = "";
+    //QString errorCount = ""; //andy's old error counter
 
     // Initialize brush colours
     QBrush brush(QColor(255, 0, 0, 30));
@@ -153,6 +169,16 @@ void ErrorEditDialog::on_prev_clicked(){
     // Change colour of cell currently focus
     QTableWidgetItem * fixed = ui->tableWidget->item(pointList[errorIndex].x(), pointList[errorIndex].y());
     fixed->setBackground(brush);
+
+    //for counting number of errors
+    QString currItemText = fixed->text();
+    if(!(currItemText.isEmpty()) && !(currItemText.isNull()))
+    {
+        errorCount--;
+        fixed->setFlags(fixed->flags() ^ Qt::ItemIsEditable);
+    }
+    QString labelText = "Errors remaining: " + QString::number(errorCount);
+    ui->errorLabel->setText(labelText);
 
     // If beginnng of pointList is reached, no. Otherwise, errorIndex--
     if (errorIndex <= 0){
@@ -167,9 +193,9 @@ void ErrorEditDialog::on_prev_clicked(){
     QTableWidgetItem * i = ui->tableWidget->item(pointList[errorIndex].x(), pointList[errorIndex].y());
     i->setBackground(brushFocus);
     ui->tableWidget->scrollToItem(i,QAbstractItemView::PositionAtCenter);
-
-    errorCount = "Error: " + QString::number(errorIndex + 1) + "/" + QString::number(pointList.size());
-    ui->errorLabel->setText(errorCount);
+    //andy's old error counter
+    //errorCount = "Error: " + QString::number(errorIndex + 1) + "/" + QString::number(pointList.size());
+    //ui->errorLabel->setText(errorCount);
 }
 
 

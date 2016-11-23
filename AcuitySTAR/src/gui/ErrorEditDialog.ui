@@ -76,7 +76,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Error: </string>
+      <string>Errors: </string>
      </property>
     </widget>
    </item>
