@@ -18,6 +18,8 @@ class ErrorEditDialog : public QDialog
 {
     Q_OBJECT
 
+    friend class TestSuite;
+
 public:
      ErrorEditDialog(QWidget *parent,
                      std::vector<std::vector<std::string>*>& errors,

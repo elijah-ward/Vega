@@ -43,6 +43,7 @@
 #include <QModelIndex>
 #include <QStringList>
 #include <QVariant>
+#include <iostream>
 
 class TreeItem;
 class RecordsManager;
