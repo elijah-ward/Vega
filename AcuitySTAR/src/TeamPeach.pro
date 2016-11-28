@@ -51,7 +51,6 @@ SOURCES += \
     datamodel/TeachingTreeModel.cpp \
     database/TestCSVReader.cpp \
     gui/qcustomplot.cpp \
-    tests/tests-old.cpp \
     tests/tests.cpp
 
 FORMS += \
