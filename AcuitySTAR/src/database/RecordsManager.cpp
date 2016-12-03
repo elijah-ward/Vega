@@ -632,11 +632,11 @@ std::string RecordsManager::analyze(StringTree sortedTree, const std::vector<int
         for (StringTree::iterator itr = uniqueValue.first; itr != uniqueValue.second; itr++) {
             // only create the tree if we're not at the deepest level
             if ((int) sortFields.size() - 1 > depth) {
-                newSorted.emplace(itr->second->at(sortFields[depth + 1]), itr->second);
+                newSorted.emplace(itr->second->at(sortFields[depth]), itr->second);
             } else {
                 // we're at the deepest level: find values for our accumulators
                 for (int i = 0; i < (int) accs.size(); i++) {
-                    accsTotal[i] += parseStringToDouble(itr->second->at(accs[i]));
+                    accsTotal[i] += parseStringToDouble(itr->second->at(accs[i-1]));
                 }
             }
 
