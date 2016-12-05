@@ -9,7 +9,8 @@ class TestSuite: public QObject
 
 private slots:
 
-
+    //These are old test cases from older deliverables
+    /*
     void readWriteState();
 
     void uploadTeachCSV();
@@ -82,7 +83,7 @@ private slots:
 
     void randomTwoLetterExtLoadFile();
     void randomOneLetterExtLoadFile();
-
+    */
 
     /*****************************
      * id: column-sort-test      *
