@@ -7,11 +7,11 @@
     <x>0</x>
     <y>0</y>
     <width>284</width>
-    <height>312</height>
+    <height>358</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Create New Sort Order</string>
+   <string>Create New Sort Order - Vega Galaxy</string>
   </property>
   <property name="windowIcon">
    <iconset resource="../images.qrc">
