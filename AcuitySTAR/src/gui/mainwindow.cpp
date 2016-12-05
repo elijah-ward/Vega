@@ -48,10 +48,10 @@
 #define PUBORDER_SAVE   "pubsortorder.dat"
 #define TEACHORDER_SAVE "teachsortorder.dat"
 
-std::vector<std::string> MainWindow::GRANTS_MANFIELDS = {"Member Name", "Funding Type", "Status", "Peer Reviewed?", "Role", "Title", "Start Date"};
-std::vector<std::string> MainWindow::PRES_MANFIELDS = {"Member Name", "Date", "Type", "Role", "Title"};
-std::vector<std::string> MainWindow::PUBS_MANFIELDS = {"Member Name", "Type", "Status Date", "Role", "Title"};
-std::vector<std::string> MainWindow::TEACH_MANFIELDS = {"Member Name", "Start Date", "Program", "Division", "Department"};
+std::vector<std::string> MainWindow::GRANTS_MANFIELDS = {"Member Name", "Funding Type", "Status", "Peer Reviewed?", "Role", "Start Date"};
+std::vector<std::string> MainWindow::PRES_MANFIELDS = {"Member Name", "Date", "Type", "Role"};
+std::vector<std::string> MainWindow::PUBS_MANFIELDS = {"Member Name", "Type", "Status Date", "Role"};
+std::vector<std::string> MainWindow::TEACH_MANFIELDS = {"Member Name", "Start Date", "Program", "Division", "Department", "Type of Course / Activity", "Total Hours" };
 
 MainWindow::MainWindow(QWidget *parent, bool saveState) :
     QMainWindow(parent), ui(new Ui::MainWindow),
@@ -607,6 +607,10 @@ int MainWindow::checkFile(int index, QString filePath) {
                         } else {
                             fundData[i][prIndex] = "Not Peer Reviewed";
                         }
+
+
+
+
                         funddb->addRecord(reader.parseDateString(fundData[i][sortHeaderIndex]), &fundData[i]);
                     }
                 }
@@ -1196,6 +1200,7 @@ bool MainWindow::load_teach(QString path, bool multi_file) {
         pProxyModel->setSourceModel(ui->teachTreeView->model());
         ui->teachTreeView->setModel(pProxyModel);
         ui->teachTreeView->setSortingEnabled(true);
+        ui->teachTreeView->header()->sortIndicatorChanged(0, Qt::AscendingOrder);
 
         for (int c = 0; c < ui->teachTreeView->header()->count(); ++c)
         {
