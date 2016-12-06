@@ -408,6 +408,7 @@ int MainWindow::checkFile(int index, QString filePath) {
                 // load in data into the manager, with the date as the key
                 sortHeaderIndex = teachdb->getHeaderIndex("Start Date");
                 teachData = reader.getData();
+                std::vector<std::vector<std::string>> rawTeachData = reader.getData();
                 std::vector<std::vector<std::string>*> f_errs;
                 unsigned int j;
                 for (int i = 0; i < (int) teachData.size(); i++) {
@@ -436,6 +437,7 @@ int MainWindow::checkFile(int index, QString filePath) {
                         for (unsigned int i = 0; i < f_errs.size(); i++) {
                             teachdb->addRecord(reader.parseDateString((*(f_errs[i]))[sortHeaderIndex]), f_errs[i]);
                         }
+                        writeCSV(header, rawTeachData, f_errs);
                     }
                 }
             } else {
@@ -465,6 +467,7 @@ int MainWindow::checkFile(int index, QString filePath) {
                 // load in data into the manager, with the date as the key
                 sortHeaderIndex = pubdb->getHeaderIndex("Status Date");
                 pubData = reader.getData();
+                std::vector<std::vector<std::string>> rawTeachData = reader.getData();
                 std::vector<std::vector<std::string>*> f_errs;
                 unsigned int j;
                 for (int i = 0; i < (int) pubData.size(); i++) {
@@ -493,6 +496,7 @@ int MainWindow::checkFile(int index, QString filePath) {
                         for (unsigned int i = 0; i < f_errs.size(); i++) {
                             pubdb->addRecord(reader.parseDateString((*(f_errs[i]))[sortHeaderIndex]), f_errs[i]);
                         }
+                        writeCSV(header, rawTeachData, f_errs);
                     }
                 }
             } else {
@@ -522,6 +526,7 @@ int MainWindow::checkFile(int index, QString filePath) {
                 // load in data into the manager, with the date as the key
                 sortHeaderIndex = presdb->getHeaderIndex("Date");
                 presData = reader.getData();
+                std::vector<std::vector<std::string>> rawTeachData = reader.getData();
                 std::vector<std::vector<std::string>*> f_errs;
                 unsigned int j = 0;
                 for (int i = 0; i < (int) presData.size(); i++) {
@@ -551,6 +556,7 @@ int MainWindow::checkFile(int index, QString filePath) {
                         for (unsigned int i = 0; i < f_errs.size(); i++) {
                             presdb->addRecord(reader.parseDateString((*(f_errs[i]))[sortHeaderIndex]), f_errs[i]);
                         }
+                        writeCSV(header, rawTeachData, f_errs);
                     }
                 }
             } else {
@@ -581,6 +587,7 @@ int MainWindow::checkFile(int index, QString filePath) {
                 // load in data into the manager, with the date as the key
                 sortHeaderIndex = funddb->getHeaderIndex("Start Date");
                 fundData = reader.getData();
+                std::vector<std::vector<std::string>> rawTeachData = reader.getData();
                 std::vector<std::vector<std::string>*> f_errs;
                 unsigned int j;
                 for (int i = 0; i < (int) fundData.size(); i++) {
@@ -619,6 +626,7 @@ int MainWindow::checkFile(int index, QString filePath) {
                         for (unsigned int i = 0; i < f_errs.size(); i++) {
                             funddb->addRecord(reader.parseDateString((*(f_errs[i]))[sortHeaderIndex]), f_errs[i]);
                         }
+                        writeCSV(header, rawTeachData, f_errs);
                     }
                 }
             } else {
@@ -2150,3 +2158,56 @@ bool MainWindow::checkPresColumnSortable(){
 bool MainWindow::checkFundColumnSortable(){
     return ui->fundTreeView->isSortingEnabled();
 }
+
+// writeCSV
+// Writes all the new info to the CSV
+void MainWindow::writeCSV(std::vector<std::string> headers, std::vector<std::vector<std::string>> data, std::vector<std::vector<std::string>*> errors){
+    // Initialize the test output file
+
+    QString fileName = QFileDialog::getSaveFileName(this, tr("Save New CSV"),
+                               "../Project Information/",
+                               tr("Comma Seperated Values (*.csv)"));
+    if (fileName == ""){
+        return;
+    }
+    std::string stdFileName = fileName.toUtf8().constData();
+    std::ofstream file(stdFileName);
+
+    // Iterate and print each header value
+    for (int i = 0; i < headers.size(); i++){
+        file << headers[i];
+        if (i < (headers.size() - 1)) {
+            file << ",";
+        }
+    }
+    file << std::endl;
+
+    // Checks between the data and error file
+    for (int i = 0; i < data.size(); i++){
+        std::vector<std::string> dataToWrite = data[i];
+        for (int j = 0; j < errors.size(); j++){
+            std::vector<std::string> errorLine = *errors[j];
+            // If the id numbers are the same, set the errorLine as the line to be written
+            // Break out of the for loop
+            if (dataToWrite[0] == errorLine[0]){
+                dataToWrite = errorLine;
+                break;
+            }
+        }
+        // This writes to the CSV
+        for (int index = 0; index < dataToWrite.size(); index++){
+            if (dataToWrite[index].find(", ") != std::string::npos){
+                file << "\"" << dataToWrite[index] << "\"" << ",";
+                continue;
+            }
+            else{
+                file << dataToWrite[index];
+                if (index < (dataToWrite.size() - 1)){
+                    file << ",";
+                }
+            }
+        }
+        file << std::endl;
+    }
+}
+

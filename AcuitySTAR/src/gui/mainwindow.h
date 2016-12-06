@@ -216,6 +216,9 @@ private:
     bool load_pub(QString path, bool multi_file = false);
     bool load_teach(QString path, bool multi_file = false);
     bool load_pres(QString path, bool multi_file = false);
+
+    // WriteCSV
+    void writeCSV(std::vector<std::string> headers, std::vector<std::vector<std::string>> data, std::vector<std::vector<std::string>*> errors);
 };
 
 #endif // MAINWINDOW_H

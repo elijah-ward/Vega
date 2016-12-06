@@ -27,3 +27,7 @@
 *.exe
 *.out
 *.app
+
+
+# OS Files
+*.DS_Store

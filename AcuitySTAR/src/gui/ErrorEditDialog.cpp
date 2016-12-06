@@ -56,13 +56,25 @@ ErrorEditDialog::ErrorEditDialog(QWidget *parent,
     QBrush brush(QColor(255, 0, 0, 30));
     QBrush brushFocus(QColor(255, 0, 0, 100));
     std::vector<std::vector<std::string>*>::iterator it;
-    int row = 0;
 
+    //VEGA CODE ADDED
+    //I added this for loop so all fields are now editable
+    for (int row = 0; row < ui->tableWidget->rowCount(); row++) {
+        for (int col = 0; col < ui->tableWidget->columnCount(); col++) {
+            item = new QTableWidgetItem();
+            Qt::ItemFlags flag = item->flags();
+            item->setFlags(Qt::ItemIsSelectable);
+            item->setFlags(Qt::ItemIsEditable);
+
+            ui->tableWidget->setItem(row, col, item);
+        }
+    }
+
+    int row = 0;
     for (it = errors.begin(); it != errors.end(); it++) {
         for (int col = 0; col < (int) headers.size() && col < (int) (*it)->size(); col++) {
             item = new QTableWidgetItem();
             Qt::ItemFlags flag = item->flags();
-            item->setFlags(Qt::ItemIsSelectable);
             item->setText((*it)->at(col).c_str());
             for (int i = 0; i < (int) mandatory.size(); i++) {
                 if (mandatory[i].compare(headers.at(col)) == 0
@@ -80,7 +92,7 @@ ErrorEditDialog::ErrorEditDialog(QWidget *parent,
 
     //shows original number of errors in file
     errorCount = errors.size();
-    QString labelText = "Erros remaining: " + QString::number(errorCount);
+    QString labelText = "Errors remaining: " + QString::number(errorCount);
     ui->errorLabel->setText(labelText);
 
     //This sets focus to the first error in the queue
@@ -104,16 +116,20 @@ ErrorEditDialog::~ErrorEditDialog()
 }
 
 //Save the new data entered by the user via the error reference var
+//Modified by Team Vega: Changed it so it compares ALL values instead of just the errorList values
 void ErrorEditDialog::saveData() {
+
     for (int row = 0; row < ui->tableWidget->rowCount(); row++) {
-        for (int col = 0; col < ui->tableWidget->columnCount() && col < (int) errorList[row]->size(); col++) {
+        //for (int col = 0; col < ui->tableWidget->columnCount() && col < (int) errorList[row]->size(); col++) {
+        for (int col = 0; col < ui->tableWidget->columnCount(); col++) {
             std::vector<std::string>::iterator it = errorList[row]->begin()+col;
-            if (errorList[row]->at(col).compare("") == 0) {
+            if (errorList[row]->at(col).compare(ui->tableWidget->item(row,col)->text().toStdString()) != 0) {
                 it = errorList[row]->erase(it);
                 errorList[row]->insert(it, ui->tableWidget->item(row, col)->text().toStdString());
             }
         }
     }
+
     accept();
 }
 
@@ -135,7 +151,6 @@ void ErrorEditDialog::on_next_clicked()
     if(!(currItemText.isEmpty()) && !(currItemText.isNull()))
     {
         errorCount--;
-        deFocus->setFlags(deFocus->flags() ^ Qt::ItemIsEditable);
     }
     QString labelText = "Errors remaining: " + QString::number(errorCount);
     ui->errorLabel->setText(labelText);
@@ -170,13 +185,6 @@ void ErrorEditDialog::on_prev_clicked(){
     QTableWidgetItem * fixed = ui->tableWidget->item(pointList[errorIndex].x(), pointList[errorIndex].y());
     fixed->setBackground(brush);
 
-    //for counting number of errors
-    QString currItemText = fixed->text();
-    if(!(currItemText.isEmpty()) && !(currItemText.isNull()))
-    {
-        errorCount--;
-        fixed->setFlags(fixed->flags() ^ Qt::ItemIsEditable);
-    }
     QString labelText = "Errors remaining: " + QString::number(errorCount);
     ui->errorLabel->setText(labelText);
 
@@ -214,6 +222,7 @@ void ErrorEditDialog::on_save_clicked()
             }
         }
     }
+
     if (search) {
         saveData();
     }
