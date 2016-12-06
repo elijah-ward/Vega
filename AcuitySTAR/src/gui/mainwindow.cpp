@@ -2170,7 +2170,7 @@ void MainWindow::writeCSV(std::vector<std::string> headers, std::vector<std::vec
     if (fileName == ""){
         return;
     }
-    std::string stdFileName = fileName.toUtf8();
+    std::string stdFileName = fileName.toUtf8().constData();
     std::ofstream file(stdFileName);
 
     // Iterate and print each header value
