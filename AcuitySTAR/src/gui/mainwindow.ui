@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1526</width>
+    <width>1744</width>
     <height>1200</height>
    </rect>
   </property>
@@ -78,7 +78,7 @@
           <enum>QTabWidget::Rounded</enum>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>3</number>
          </property>
          <property name="usesScrollButtons">
           <bool>false</bool>
@@ -437,6 +437,9 @@
              <property name="frameShadow">
               <enum>QFrame::Sunken</enum>
              </property>
+             <property name="selectionMode">
+              <enum>QAbstractItemView::ExtendedSelection</enum>
+             </property>
             </widget>
            </item>
            <item row="4" column="0" colspan="16">
@@ -751,6 +754,9 @@
              </property>
              <property name="frameShadow">
               <enum>QFrame::Sunken</enum>
+             </property>
+             <property name="selectionMode">
+              <enum>QAbstractItemView::ExtendedSelection</enum>
              </property>
             </widget>
            </item>
@@ -1668,6 +1674,9 @@
              <property name="frameShadow">
               <enum>QFrame::Sunken</enum>
              </property>
+             <property name="selectionMode">
+              <enum>QAbstractItemView::ExtendedSelection</enum>
+             </property>
             </widget>
            </item>
            <item row="4" column="3">
@@ -2049,6 +2058,9 @@
              </property>
              <property name="frameShadow">
               <enum>QFrame::Sunken</enum>
+             </property>
+             <property name="selectionMode">
+              <enum>QAbstractItemView::ExtendedSelection</enum>
              </property>
             </widget>
            </item>
@@ -2699,8 +2711,8 @@ QPushButton#load_file_button:pressed {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1526</width>
-     <height>26</height>
+     <width>1744</width>
+     <height>33</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
