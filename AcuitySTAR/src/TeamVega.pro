@@ -15,7 +15,7 @@ TARGET = TeamVega
 TEMPLATE = app
 
 DISTFILES += \
-    TeamPeach.pro.user
+    TeamVega.pro.user
 
 HEADERS += \
     gui/CustomSort.h \
