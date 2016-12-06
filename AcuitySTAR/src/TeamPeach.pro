@@ -3,19 +3,17 @@
 # Project created by QtCreator 2015-10-21T14:49:31
 #
 #-------------------------------------------------
-
+QT              += testlib
 QT              += core gui
 CONFIG          += c++11
-CONFIG          -= console
-CONFIG          += gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport
 
-TARGET = TeamVega
+TARGET = TeamPeach
 TEMPLATE = app
 
 DISTFILES += \
-    TeamVega.pro.user
+    TeamPeach.pro.user
 
 HEADERS += \
     gui/CustomSort.h \
