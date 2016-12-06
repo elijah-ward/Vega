@@ -7,6 +7,10 @@
 #include <string>
 #include <QQueue>
 #include <QTableWidgetItem>
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <string>
 
 class QAbstractButton;
 
@@ -40,6 +44,7 @@ private:
     std::vector<std::string> mandatoryList;
     Ui::ErrorEditDialog *ui;
     void saveData();
+    void writeCSV(std::vector<std::vector<std::string>> csvData);
 };
 
 #endif // ERROREDITDIALOG_H
