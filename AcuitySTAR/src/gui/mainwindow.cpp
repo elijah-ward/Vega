@@ -1330,12 +1330,6 @@ bool MainWindow::load_teach(QString path, bool multi_file) {
         makeTree(TEACH);
         ui->teach_file_label->setText(teachPath);
 
-        QSortFilterProxyModel* pProxyModel = new QSortFilterProxyModel(ui->teachTreeView);
-        pProxyModel->setSourceModel(ui->teachTreeView->model());
-        ui->teachTreeView->setModel(pProxyModel);
-        ui->teachTreeView->setSortingEnabled(true);
-        ui->teachTreeView->header()->sortIndicatorChanged(0, Qt::AscendingOrder);
-
         for (int c = 0; c < ui->teachTreeView->header()->count(); ++c)
         {
             ui->teachTreeView->header()->setSectionResizeMode(
@@ -1396,12 +1390,6 @@ bool MainWindow::load_pub(QString path, bool multi_file) {
         pubPath = path;
         makeTree(PUBLICATIONS);
         ui->pub_file_label->setText(pubPath);
-
-        // needed for sort via proxyModel
-        QSortFilterProxyModel* pProxyModel = new QSortFilterProxyModel(ui->pubTreeView);
-        pProxyModel->setSourceModel(ui->pubTreeView->model());
-        ui->pubTreeView->setModel(pProxyModel);
-        ui->pubTreeView->setSortingEnabled(true);
 
         // make all columns default to expanded so they look nice
         for (int c = 0; c < ui->pubTreeView->header()->count(); ++c)
@@ -1465,11 +1453,6 @@ bool MainWindow::load_pres(QString path, bool multi_file) {
         makeTree(PRESENTATIONS);
         ui->pres_file_label->setText(presPath);
 
-        QSortFilterProxyModel* pProxyModel = new QSortFilterProxyModel(ui->presTreeView);
-        pProxyModel->setSourceModel(ui->presTreeView->model());
-        ui->presTreeView->setModel(pProxyModel);
-        ui->presTreeView->setSortingEnabled(true);
-
         // make all columns default to expanded so they look nice
         for (int c = 0; c < ui->presTreeView->header()->count(); ++c)
         {
@@ -1531,11 +1514,6 @@ bool MainWindow::load_fund(QString path, bool multi_file) {
         fundPath = path;
         makeTree(FUNDING);
         ui->fund_file_label->setText(fundPath);
-
-        QSortFilterProxyModel* pProxyModel = new QSortFilterProxyModel(ui->fundTreeView);
-        pProxyModel->setSourceModel(ui->fundTreeView->model());
-        ui->fundTreeView->setModel(pProxyModel);
-        ui->fundTreeView->setSortingEnabled(true);
 
         // make all columns default to expanded so they look nice
         for (int c = 0; c < ui->fundTreeView->header()->count(); ++c)
