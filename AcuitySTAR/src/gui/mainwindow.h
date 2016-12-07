@@ -38,8 +38,6 @@ private slots:
      * Select Sort Update Functions*
      * ****************************/
     void hideSelectionTree(int);
-    void resetSelectionTree(int);
-
 
 
     /*******************************
