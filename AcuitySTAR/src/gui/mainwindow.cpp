@@ -61,6 +61,17 @@ MainWindow::MainWindow(QWidget *parent, bool saveState) :
 
     ui->setupUi(this);
 
+    //default print is disabled
+    ui->teachPrintButton->setEnabled(false);
+    ui->fundPrintButton->setEnabled(false);
+    ui->pubPrintButton->setEnabled(false);
+    ui->presPrintButton->setEnabled(false);
+
+    ui->teachExportButton->setEnabled(false);
+    ui->fundExportButton->setEnabled(false);
+    ui->pubExportButton->setEnabled(false);
+    ui->presExportButton->setEnabled(false);
+
     saveStateGlobal = saveState;
     appReady = false;
 
@@ -102,16 +113,7 @@ MainWindow::MainWindow(QWidget *parent, bool saveState) :
     ui->ToDate->setDateRange(startDate, QDate::currentDate());
 
 
-    //default print is disabled
-    ui->teachPrintButton->setEnabled(false);
-    ui->fundPrintButton->setEnabled(false);
-    ui->pubPrintButton->setEnabled(false);
-    ui->presPrintButton->setEnabled(false);
 
-    ui->teachExportButton->setEnabled(false);
-    ui->fundExportButton->setEnabled(false);
-    ui->pubExportButton->setEnabled(false);
-    ui->presExportButton->setEnabled(false);
 
     //Setup printer
     printer = new QPrinter();
@@ -1310,6 +1312,8 @@ bool MainWindow::load_teach(QString path, bool multi_file) {
         ui->teach_filter_label->setEnabled(true);
         ui->teachResetSelection->setEnabled(true);
         ui->updateTeachListButton->setEnabled(true);
+        ui->teachPrintButton->setEnabled(true);
+        ui->teachExportButton->setEnabled(true);
 
         // load save order
         QSortListIO teachSaveOrder(TEACHORDER_SAVE);
@@ -1371,6 +1375,8 @@ bool MainWindow::load_pub(QString path, bool multi_file) {
         ui->pub_filter_label->setEnabled(true);
         ui->pubResetSelection->setEnabled(true);
         ui->updatePubListButton->setEnabled(true);
+        ui->pubPrintButton->setEnabled(true);
+        ui->pubExportButton->setEnabled(true);
 
         // load save order
         QSortListIO pubSaveOrder(PUBORDER_SAVE);
@@ -1433,6 +1439,8 @@ bool MainWindow::load_pres(QString path, bool multi_file) {
         ui->pres_filter_label->setEnabled(true);
         ui->presUpdateListButton->setEnabled(true);
         ui->presResetSelection->setEnabled(true);
+        ui->presPrintButton->setEnabled(true);
+        ui->presExportButton->setEnabled(true);
 
         // load save order
         QSortListIO presSaveOrder(PRESORDER_SAVE);
@@ -1495,6 +1503,8 @@ bool MainWindow::load_fund(QString path, bool multi_file) {
         ui->fund_filter_label->setEnabled(true);
         ui->fundResetSelection->setEnabled(true);
         ui->fundUpdateListButton->setEnabled(true);
+        ui->fundPrintButton->setEnabled(true);
+        ui->fundExportButton->setEnabled(true);
 
         // load save order
         QSortListIO fundSaveOrder(FUNDORDER_SAVE);
