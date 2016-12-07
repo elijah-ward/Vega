@@ -1308,6 +1308,8 @@ bool MainWindow::load_teach(QString path, bool multi_file) {
         ui->teach_sort_label->setEnabled(true);
         ui->teach_filter->setEnabled(true);
         ui->teach_filter_label->setEnabled(true);
+        ui->teachResetSelection->setEnabled(true);
+        ui->updateTeachListButton->setEnabled(true);
 
         // load save order
         QSortListIO teachSaveOrder(TEACHORDER_SAVE);
@@ -1373,6 +1375,8 @@ bool MainWindow::load_pub(QString path, bool multi_file) {
         ui->pub_sort_label->setEnabled(true);
         ui->pub_filter->setEnabled(true);
         ui->pub_filter_label->setEnabled(true);
+        ui->pubResetSelection->setEnabled(true);
+        ui->updatePubListButton->setEnabled(true);
 
         // load save order
         QSortListIO pubSaveOrder(PUBORDER_SAVE);
@@ -1439,6 +1443,8 @@ bool MainWindow::load_pres(QString path, bool multi_file) {
         ui->pres_sort_label->setEnabled(true);
         ui->pres_filter->setEnabled(true);
         ui->pres_filter_label->setEnabled(true);
+        ui->presUpdateListButton->setEnabled(true);
+        ui->presResetSelection->setEnabled(true);
 
         // load save order
         QSortListIO presSaveOrder(PRESORDER_SAVE);
@@ -1504,6 +1510,8 @@ bool MainWindow::load_fund(QString path, bool multi_file) {
         ui->fund_sort_label->setEnabled(true);
         ui->fund_filter->setEnabled(true);
         ui->fund_filter_label->setEnabled(true);
+        ui->fundResetSelection->setEnabled(true);
+        ui->fundUpdateListButton->setEnabled(true);
 
         // load save order
         QSortListIO fundSaveOrder(FUNDORDER_SAVE);

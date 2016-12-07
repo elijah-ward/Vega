@@ -78,7 +78,7 @@
           <enum>QTabWidget::Rounded</enum>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>3</number>
          </property>
          <property name="usesScrollButtons">
           <bool>false</bool>
@@ -91,7 +91,7 @@
            <string>Teaching</string>
           </attribute>
           <layout class="QGridLayout" name="gridLayout_7">
-           <item row="7" column="7" colspan="9">
+           <item row="8" column="7" colspan="9">
             <widget class="QFrame" name="teachChartFrame">
              <property name="frameShape">
               <enum>QFrame::Box</enum>
@@ -304,107 +304,241 @@
              </layout>
             </widget>
            </item>
-           <item row="3" column="9">
-            <spacer name="horizontalSpacer_26">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="5" column="9">
-            <widget class="QRadioButton" name="teach_bar_button">
+           <item row="5" column="13">
+            <widget class="QRadioButton" name="teach_scatter_button">
              <property name="enabled">
               <bool>false</bool>
              </property>
              <property name="text">
-              <string>Bar Chart</string>
+              <string>Scatter Chart</string>
              </property>
             </widget>
            </item>
-           <item row="5" column="11">
-            <widget class="QRadioButton" name="teach_line_button">
+           <item row="1" column="0" colspan="16">
+            <widget class="Line" name="line_8">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0" colspan="7">
+            <widget class="QTreeView" name="teachTreeView">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Sunken</enum>
+             </property>
+             <property name="selectionMode">
+              <enum>QAbstractItemView::ExtendedSelection</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="8">
+            <spacer name="horizontalSpacer_21">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="5" column="7">
+            <widget class="QRadioButton" name="teach_pie_button">
              <property name="enabled">
               <bool>false</bool>
              </property>
              <property name="text">
-              <string>Line Chart</string>
+              <string>Pie Chart</string>
              </property>
             </widget>
            </item>
-           <item row="0" column="0">
-            <widget class="QLabel" name="teach_file_label">
+           <item row="4" column="0" colspan="16">
+            <widget class="Line" name="line_7">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="5">
+            <widget class="QLineEdit" name="teach_filter_to">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>60</width>
+               <height>16777215</height>
+              </size>
              </property>
              <property name="text">
-              <string>No file chosen.</string>
+              <string>Z</string>
+             </property>
+             <property name="maxLength">
+              <number>1</number>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
              </property>
             </widget>
            </item>
-           <item row="3" column="10">
-            <spacer name="horizontalSpacer_19">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="3" column="11">
-            <spacer name="horizontalSpacer_11">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="0" column="15">
-            <widget class="QToolButton" name="teachPrintButton">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Print&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="layoutDirection">
-              <enum>Qt::LeftToRight</enum>
+           <item row="3" column="2">
+            <widget class="QPushButton" name="teach_delete_sort">
+             <property name="enabled">
+              <bool>false</bool>
              </property>
              <property name="styleSheet">
               <string notr="true">background-color: rgb(204, 204, 204);</string>
              </property>
              <property name="text">
-              <string>Print</string>
-             </property>
-             <property name="icon">
-              <iconset>
-               <normalon>:/printer.png</normalon>
-              </iconset>
-             </property>
-             <property name="toolButtonStyle">
-              <enum>Qt::ToolButtonTextBesideIcon</enum>
+              <string>Delete</string>
              </property>
             </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QComboBox" name="teach_sort">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>120</width>
+               <height>0</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="7">
+            <spacer name="horizontalSpacer_8">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="5" column="4">
+            <widget class="QLabel" name="teach_to_label">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>to</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1" colspan="2">
+            <widget class="QLabel" name="teach_filter">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="teach_filter_label">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Filter by:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="3">
+            <widget class="QLineEdit" name="teach_filter_from">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>60</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>*</string>
+             </property>
+             <property name="maxLength">
+              <number>1</number>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="12">
+            <spacer name="horizontalSpacer_27">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="teach_sort_label">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Select Sort Order:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="6">
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
            </item>
            <item row="3" column="3" colspan="3">
             <widget class="QPushButton" name="teach_new_sort">
@@ -443,192 +577,38 @@
              </property>
             </widget>
            </item>
-           <item row="3" column="6">
-            <spacer name="horizontalSpacer">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="3" column="0">
-            <widget class="QLabel" name="teach_sort_label">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="text">
-              <string>Select Sort Order:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="12">
-            <spacer name="horizontalSpacer_27">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="5" column="3">
-            <widget class="QLineEdit" name="teach_filter_from">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
+           <item row="0" column="15">
+            <widget class="QToolButton" name="teachPrintButton">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
              </property>
-             <property name="maximumSize">
-              <size>
-               <width>60</width>
-               <height>16777215</height>
-              </size>
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Print&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
-             <property name="text">
-              <string>*</string>
-             </property>
-             <property name="maxLength">
-              <number>1</number>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="0">
-            <widget class="QLabel" name="teach_filter_label">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="text">
-              <string>Filter by:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="1" colspan="2">
-            <widget class="QLabel" name="teach_filter">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="4">
-            <widget class="QLabel" name="teach_to_label">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="text">
-              <string>to</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="7">
-            <spacer name="horizontalSpacer_8">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="3" column="1">
-            <widget class="QComboBox" name="teach_sort">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>120</width>
-               <height>0</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="2">
-            <widget class="QPushButton" name="teach_delete_sort">
-             <property name="enabled">
-              <bool>false</bool>
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
              </property>
              <property name="styleSheet">
               <string notr="true">background-color: rgb(204, 204, 204);</string>
              </property>
              <property name="text">
-              <string>Delete</string>
+              <string>Print</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normalon>:/printer.png</normalon>
+              </iconset>
+             </property>
+             <property name="toolButtonStyle">
+              <enum>Qt::ToolButtonTextBesideIcon</enum>
              </property>
             </widget>
            </item>
-           <item row="5" column="5">
-            <widget class="QLineEdit" name="teach_filter_to">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>60</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>Z</string>
-             </property>
-             <property name="maxLength">
-              <number>1</number>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="0" colspan="16">
-            <widget class="Line" name="line_7">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="7">
-            <widget class="QRadioButton" name="teach_pie_button">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="text">
-              <string>Pie Chart</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="8">
-            <spacer name="horizontalSpacer_21">
+           <item row="3" column="11">
+            <spacer name="horizontalSpacer_11">
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
              </property>
@@ -640,44 +620,64 @@
              </property>
             </spacer>
            </item>
-           <item row="7" column="0" colspan="7">
-            <widget class="QTreeView" name="teachTreeView">
+           <item row="3" column="10">
+            <spacer name="horizontalSpacer_19">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="teach_file_label">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
              </property>
-             <property name="styleSheet">
-              <string notr="true"/>
-             </property>
-             <property name="frameShape">
-              <enum>QFrame::NoFrame</enum>
-             </property>
-             <property name="frameShadow">
-              <enum>QFrame::Sunken</enum>
-             </property>
-             <property name="selectionMode">
-              <enum>QAbstractItemView::ExtendedSelection</enum>
+             <property name="text">
+              <string>No file chosen.</string>
              </property>
             </widget>
            </item>
-           <item row="1" column="0" colspan="16">
-            <widget class="Line" name="line_8">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="13">
-            <widget class="QRadioButton" name="teach_scatter_button">
+           <item row="5" column="11">
+            <widget class="QRadioButton" name="teach_line_button">
              <property name="enabled">
               <bool>false</bool>
              </property>
              <property name="text">
-              <string>Scatter Chart</string>
+              <string>Line Chart</string>
              </property>
             </widget>
+           </item>
+           <item row="5" column="9">
+            <widget class="QRadioButton" name="teach_bar_button">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Bar Chart</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="9">
+            <spacer name="horizontalSpacer_26">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
            </item>
            <item row="0" column="14">
             <widget class="QToolButton" name="teachExportButton">
@@ -710,6 +710,9 @@
            </item>
            <item row="6" column="0">
             <widget class="QPushButton" name="updateTeachListButton">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="maximumSize">
               <size>
                <width>100</width>
@@ -731,6 +734,10 @@
 QPushButton#updateTeachListButton:pressed {
     background-color: #0288D1;
     border-style: inset;
+}
+QPushButton#updateTeachListButton:disabled {
+    background-color: #9E9E9E;
+    border-style: inset;
 }</string>
              </property>
              <property name="text">
@@ -738,8 +745,17 @@ QPushButton#updateTeachListButton:pressed {
              </property>
             </widget>
            </item>
-           <item row="6" column="1">
+           <item row="7" column="0">
             <widget class="QPushButton" name="teachResetSelection">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
              <property name="styleSheet">
               <string notr="true">QPushButton#teachResetSelection{
    background-color: #03A9F4;
@@ -755,6 +771,10 @@ QPushButton#updateTeachListButton:pressed {
 QPushButton#teachResetSelection:pressed {
     background-color: #0288D1;
     border-style: inset;
+}
+QPushButton#teachResetSelection:disabled {
+    background-color: #9E9E9E;
+    border-style: inset;
 }</string>
              </property>
              <property name="text">
@@ -769,315 +789,7 @@ QPushButton#teachResetSelection:pressed {
            <string>Publications</string>
           </attribute>
           <layout class="QGridLayout" name="gridLayout_3">
-           <item row="4" column="13">
-            <widget class="QRadioButton" name="pub_scatter_button">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="text">
-              <string>Scatter Chart</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="8">
-            <spacer name="horizontalSpacer_35">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="6" column="0" colspan="7">
-            <widget class="QTreeView" name="pubTreeView">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="styleSheet">
-              <string notr="true"/>
-             </property>
-             <property name="frameShape">
-              <enum>QFrame::NoFrame</enum>
-             </property>
-             <property name="frameShadow">
-              <enum>QFrame::Sunken</enum>
-             </property>
-             <property name="selectionMode">
-              <enum>QAbstractItemView::ExtendedSelection</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="3" colspan="3">
-            <widget class="QPushButton" name="pub_new_sort">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(204, 204, 204);</string>
-             </property>
-             <property name="text">
-              <string>Create New Sort Order</string>
-             </property>
-             <property name="checkable">
-              <bool>false</bool>
-             </property>
-             <property name="checked">
-              <bool>false</bool>
-             </property>
-             <property name="autoDefault">
-              <bool>false</bool>
-             </property>
-             <property name="default">
-              <bool>false</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="0">
-            <widget class="QLabel" name="pub_filter_label">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="text">
-              <string>Filter by:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="10">
-            <spacer name="horizontalSpacer_28">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="4" column="5">
-            <widget class="QLineEdit" name="pub_filter_to">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>60</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>Z</string>
-             </property>
-             <property name="maxLength">
-              <number>1</number>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="3">
-            <widget class="QLineEdit" name="pub_filter_from">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>60</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>*</string>
-             </property>
-             <property name="maxLength">
-              <number>1</number>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="4">
-            <widget class="QLabel" name="pub_to_label">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="text">
-              <string>to</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0" colspan="16">
-            <widget class="Line" name="line_6">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="6">
-            <spacer name="horizontalSpacer_22">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="pub_sort_label">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="text">
-              <string>Select Sort Order:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="9">
-            <spacer name="horizontalSpacer_29">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="2" column="7">
-            <spacer name="horizontalSpacer_7">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="2" column="12">
-            <spacer name="horizontalSpacer_13">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="3" column="0" colspan="16">
-            <widget class="Line" name="line_5">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="7">
-            <widget class="QRadioButton" name="pub_pie_button">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="text">
-              <string>Pie Chart</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QComboBox" name="pub_sort">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>120</width>
-               <height>0</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="11">
-            <spacer name="horizontalSpacer_4">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="0" column="15" alignment="Qt::AlignRight">
-            <widget class="QToolButton" name="pubPrintButton">
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Print&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(204, 204, 204);</string>
-             </property>
-             <property name="text">
-              <string>Print</string>
-             </property>
-             <property name="icon">
-              <iconset>
-               <normalon>:/printer.png</normalon>
-              </iconset>
-             </property>
-             <property name="toolButtonStyle">
-              <enum>Qt::ToolButtonTextBesideIcon</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="9">
-            <widget class="QRadioButton" name="pub_bar_button">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="text">
-              <string>Bar Chart</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="7" colspan="9">
+           <item row="7" column="7" colspan="9">
             <widget class="QFrame" name="pubChartFrame">
              <property name="frameShape">
               <enum>QFrame::Box</enum>
@@ -1290,6 +1002,61 @@ QPushButton#teachResetSelection:pressed {
              </layout>
             </widget>
            </item>
+           <item row="5" column="0">
+            <widget class="QPushButton" name="updatePubListButton">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton#updatePubListButton {
+   background-color: #03A9F4;
+    border-style: outset;
+    border-width: 1px;
+    border-radius: 1px;
+    border-color: #FFFFFF;
+    min-width: 120px;
+    padding: 8px;
+	color: #FFFFFF;
+	font: 14px;
+}
+QPushButton#updatePubListButton:pressed {
+    background-color: #0288D1;
+    border-style: inset;
+}
+
+QPushButton#updatePubListButton:disabled {
+    background-color: #9E9E9E;
+    border-style: inset;
+}</string>
+             </property>
+             <property name="text">
+              <string>Update Selection</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="14">
+            <widget class="QToolButton" name="pubExportButton">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(204, 204, 204);</string>
+             </property>
+             <property name="text">
+              <string>Export</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../images.qrc">
+               <normaloff>:/Pdf.svg</normaloff>:/Pdf.svg</iconset>
+             </property>
+             <property name="toolButtonStyle">
+              <enum>Qt::ToolButtonTextBesideIcon</enum>
+             </property>
+            </widget>
+           </item>
            <item row="2" column="2">
             <widget class="QPushButton" name="pub_delete_sort">
              <property name="enabled">
@@ -1313,16 +1080,6 @@ QPushButton#teachResetSelection:pressed {
              </property>
             </widget>
            </item>
-           <item row="4" column="11">
-            <widget class="QRadioButton" name="pub_line_button">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="text">
-              <string>Line Chart</string>
-             </property>
-            </widget>
-           </item>
            <item row="0" column="0">
             <widget class="QLabel" name="pub_file_label">
              <property name="sizePolicy">
@@ -1336,55 +1093,335 @@ QPushButton#teachResetSelection:pressed {
              </property>
             </widget>
            </item>
-           <item row="0" column="14">
-            <widget class="QToolButton" name="pubExportButton">
+           <item row="4" column="11">
+            <widget class="QRadioButton" name="pub_line_button">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Line Chart</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0" colspan="7">
+            <widget class="QTreeView" name="pubTreeView">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Sunken</enum>
+             </property>
+             <property name="selectionMode">
+              <enum>QAbstractItemView::ExtendedSelection</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="9">
+            <widget class="QRadioButton" name="pub_bar_button">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Bar Chart</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="15" alignment="Qt::AlignRight">
+            <widget class="QToolButton" name="pubPrintButton">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Print&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
              <property name="styleSheet">
               <string notr="true">background-color: rgb(204, 204, 204);</string>
              </property>
              <property name="text">
-              <string>Export</string>
+              <string>Print</string>
              </property>
              <property name="icon">
-              <iconset resource="../images.qrc">
-               <normaloff>:/Pdf.svg</normaloff>:/Pdf.svg</iconset>
+              <iconset>
+               <normalon>:/printer.png</normalon>
+              </iconset>
              </property>
              <property name="toolButtonStyle">
               <enum>Qt::ToolButtonTextBesideIcon</enum>
              </property>
             </widget>
            </item>
-           <item row="5" column="0">
-            <widget class="QPushButton" name="updatePubListButton">
+           <item row="2" column="11">
+            <spacer name="horizontalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="1">
+            <widget class="QComboBox" name="pub_sort">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>120</width>
+               <height>0</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="7">
+            <widget class="QRadioButton" name="pub_pie_button">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Pie Chart</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0" colspan="16">
+            <widget class="Line" name="line_5">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="12">
+            <spacer name="horizontalSpacer_13">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="7">
+            <spacer name="horizontalSpacer_7">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="9">
+            <spacer name="horizontalSpacer_29">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="pub_sort_label">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Select Sort Order:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="6">
+            <spacer name="horizontalSpacer_22">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="0" colspan="16">
+            <widget class="Line" name="line_6">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="4">
+            <widget class="QLabel" name="pub_to_label">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>to</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="3">
+            <widget class="QLineEdit" name="pub_filter_from">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>60</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>*</string>
+             </property>
+             <property name="maxLength">
+              <number>1</number>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="5">
+            <widget class="QLineEdit" name="pub_filter_to">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>60</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Z</string>
+             </property>
+             <property name="maxLength">
+              <number>1</number>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="10">
+            <spacer name="horizontalSpacer_28">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="pub_filter_label">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Filter by:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3" colspan="3">
+            <widget class="QPushButton" name="pub_new_sort">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>150</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(204, 204, 204);</string>
+             </property>
+             <property name="text">
+              <string>Create New Sort Order</string>
+             </property>
+             <property name="checkable">
+              <bool>false</bool>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+             <property name="autoDefault">
+              <bool>false</bool>
+             </property>
+             <property name="default">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="8">
+            <spacer name="horizontalSpacer_35">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="4" column="13">
+            <widget class="QRadioButton" name="pub_scatter_button">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Scatter Chart</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QPushButton" name="pubResetSelection">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="maximumSize">
               <size>
                <width>100</width>
                <height>16777215</height>
               </size>
              </property>
-             <property name="styleSheet">
-              <string notr="true">QPushButton#updatePubListButton {
-   background-color: #03A9F4;
-    border-style: outset;
-    border-width: 1px;
-    border-radius: 1px;
-    border-color: #FFFFFF;
-    min-width: 120px;
-    padding: 8px;
-	color: #FFFFFF;
-	font: 14px;
-}
-QPushButton#updatePubListButton:pressed {
-    background-color: #0288D1;
-    border-style: inset;
-}</string>
-             </property>
-             <property name="text">
-              <string>Update Selection</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="1">
-            <widget class="QPushButton" name="pubResetSelection">
              <property name="styleSheet">
               <string notr="true">QPushButton#pubResetSelection {
    background-color: #03A9F4;
@@ -1399,6 +1436,11 @@ QPushButton#updatePubListButton:pressed {
 }
 QPushButton#pubResetSelection:pressed {
     background-color: #0288D1;
+    border-style: inset;
+}
+
+QPushButton#pubResetSelection:disabled {
+    background-color: #9E9E9E;
     border-style: inset;
 }</string>
              </property>
@@ -1417,6 +1459,243 @@ QPushButton#pubResetSelection:pressed {
            <string>Presentations</string>
           </attribute>
           <layout class="QGridLayout" name="gridLayout_2">
+           <item row="5" column="0">
+            <widget class="QPushButton" name="presUpdateListButton">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton#presUpdateListButton {
+   background-color: #03A9F4;
+    border-style: outset;
+    border-width: 1px;
+    border-radius: 1px;
+    border-color: #FFFFFF;
+    min-width: 120px;
+    padding: 8px;
+	color: #FFFFFF;
+	font: 14px;
+}
+QPushButton#presUpdateListButton:pressed {
+    background-color: #0288D1;
+    border-style: inset;
+}
+
+QPushButton#presUpdateListButton:disabled {
+    background-color: #9E9E9E;
+    border-style: inset;
+}</string>
+             </property>
+             <property name="text">
+              <string>Update Selection</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="14">
+            <widget class="QToolButton" name="presExportButton">
+             <property name="toolTip">
+              <string>Export to pdf</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(204, 204, 204);</string>
+             </property>
+             <property name="text">
+              <string>Export</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../images.qrc">
+               <normaloff>:/Pdf.svg</normaloff>:/Pdf.svg</iconset>
+             </property>
+             <property name="toolButtonStyle">
+              <enum>Qt::ToolButtonTextBesideIcon</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="15" alignment="Qt::AlignRight">
+            <widget class="QToolButton" name="presPrintButton">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Print&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(204, 204, 204);</string>
+             </property>
+             <property name="text">
+              <string>Print</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normalon>:/printer.png</normalon>
+              </iconset>
+             </property>
+             <property name="toolButtonStyle">
+              <enum>Qt::ToolButtonTextBesideIcon</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="16">
+            <widget class="Line" name="line_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QComboBox" name="pres_sort">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>120</width>
+               <height>0</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0" colspan="16">
+            <widget class="Line" name="line_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="9">
+            <spacer name="horizontalSpacer_25">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Expanding</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="7">
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="pres_sort_label">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Select Sort Order:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="9">
+            <widget class="QRadioButton" name="pres_bar_button">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Bar Chart</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="7">
+            <widget class="QRadioButton" name="pres_pie_button">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Pie Chart</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="pres_file_label">
+             <property name="text">
+              <string>No file chosen.</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="11">
+            <widget class="QRadioButton" name="pres_line_button">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Line Chart</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QPushButton" name="pres_delete_sort">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(204, 204, 204);</string>
+             </property>
+             <property name="text">
+              <string>Delete</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1" colspan="2">
+            <widget class="QLabel" name="pres_filter">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="6">
+            <spacer name="horizontalSpacer_23">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="10">
+            <spacer name="horizontalSpacer_31">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
            <item row="2" column="3" colspan="3">
             <widget class="QPushButton" name="pres_new_sort">
              <property name="enabled">
@@ -1454,73 +1733,7 @@ QPushButton#pubResetSelection:pressed {
              </property>
             </widget>
            </item>
-           <item row="2" column="10">
-            <spacer name="horizontalSpacer_31">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="2" column="6">
-            <spacer name="horizontalSpacer_23">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="4" column="1" colspan="2">
-            <widget class="QLabel" name="pres_filter">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="2">
-            <widget class="QPushButton" name="pres_delete_sort">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(204, 204, 204);</string>
-             </property>
-             <property name="text">
-              <string>Delete</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="11">
-            <widget class="QRadioButton" name="pres_line_button">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="text">
-              <string>Line Chart</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="0">
-            <widget class="QLabel" name="pres_file_label">
-             <property name="text">
-              <string>No file chosen.</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="7" colspan="9">
+           <item row="7" column="7" colspan="9">
             <widget class="QFrame" name="presChartFrame">
              <property name="frameShape">
               <enum>QFrame::Box</enum>
@@ -1733,16 +1946,6 @@ QPushButton#pubResetSelection:pressed {
              </layout>
             </widget>
            </item>
-           <item row="4" column="13">
-            <widget class="QRadioButton" name="pres_scatter_button">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="text">
-              <string>Scatter Chart</string>
-             </property>
-            </widget>
-           </item>
            <item row="4" column="5">
             <widget class="QLineEdit" name="pres_filter_to">
              <property name="enabled">
@@ -1765,27 +1968,64 @@ QPushButton#pubResetSelection:pressed {
              </property>
             </widget>
            </item>
-           <item row="6" column="0" colspan="7">
-            <widget class="QTreeView" name="presTreeView">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
+           <item row="4" column="0">
+            <widget class="QLabel" name="pres_filter_label">
+             <property name="enabled">
+              <bool>false</bool>
              </property>
-             <property name="styleSheet">
-              <string notr="true"/>
-             </property>
-             <property name="frameShape">
-              <enum>QFrame::NoFrame</enum>
-             </property>
-             <property name="frameShadow">
-              <enum>QFrame::Sunken</enum>
-             </property>
-             <property name="selectionMode">
-              <enum>QAbstractItemView::ExtendedSelection</enum>
+             <property name="text">
+              <string>Filter by:</string>
              </property>
             </widget>
+           </item>
+           <item row="2" column="11">
+            <spacer name="horizontalSpacer_16">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="8">
+            <spacer name="horizontalSpacer_30">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="4" column="4">
+            <widget class="QLabel" name="pres_to_label">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>to</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="12">
+            <spacer name="horizontalSpacer_9">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+            </spacer>
            </item>
            <item row="4" column="3">
             <widget class="QLineEdit" name="pres_filter_from">
@@ -1809,230 +2049,49 @@ QPushButton#pubResetSelection:pressed {
              </property>
             </widget>
            </item>
-           <item row="2" column="12">
-            <spacer name="horizontalSpacer_9">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="4" column="4">
-            <widget class="QLabel" name="pres_to_label">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="text">
-              <string>to</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="8">
-            <spacer name="horizontalSpacer_30">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="2" column="11">
-            <spacer name="horizontalSpacer_16">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="4" column="0">
-            <widget class="QLabel" name="pres_filter_label">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="text">
-              <string>Filter by:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="7">
-            <widget class="QRadioButton" name="pres_pie_button">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="text">
-              <string>Pie Chart</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="9">
-            <widget class="QRadioButton" name="pres_bar_button">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="text">
-              <string>Bar Chart</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="pres_sort_label">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="text">
-              <string>Select Sort Order:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="7">
-            <spacer name="horizontalSpacer_2">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="2" column="9">
-            <spacer name="horizontalSpacer_25">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeType">
-              <enum>QSizePolicy::Expanding</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="3" column="0" colspan="16">
-            <widget class="Line" name="line_3">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QComboBox" name="pres_sort">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
+           <item row="7" column="0" colspan="7">
+            <widget class="QTreeView" name="presTreeView">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
              </property>
-             <property name="minimumSize">
-              <size>
-               <width>120</width>
-               <height>0</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0" colspan="16">
-            <widget class="Line" name="line_4">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="15" alignment="Qt::AlignRight">
-            <widget class="QToolButton" name="presPrintButton">
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Print&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
              <property name="styleSheet">
-              <string notr="true">background-color: rgb(204, 204, 204);</string>
+              <string notr="true"/>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Sunken</enum>
+             </property>
+             <property name="selectionMode">
+              <enum>QAbstractItemView::ExtendedSelection</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="13">
+            <widget class="QRadioButton" name="pres_scatter_button">
+             <property name="enabled">
+              <bool>false</bool>
              </property>
              <property name="text">
-              <string>Print</string>
-             </property>
-             <property name="icon">
-              <iconset>
-               <normalon>:/printer.png</normalon>
-              </iconset>
-             </property>
-             <property name="toolButtonStyle">
-              <enum>Qt::ToolButtonTextBesideIcon</enum>
+              <string>Scatter Chart</string>
              </property>
             </widget>
            </item>
-           <item row="0" column="14">
-            <widget class="QToolButton" name="presExportButton">
-             <property name="toolTip">
-              <string>Export to pdf</string>
+           <item row="6" column="0">
+            <widget class="QPushButton" name="presResetSelection">
+             <property name="enabled">
+              <bool>false</bool>
              </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(204, 204, 204);</string>
-             </property>
-             <property name="text">
-              <string>Export</string>
-             </property>
-             <property name="icon">
-              <iconset resource="../images.qrc">
-               <normaloff>:/Pdf.svg</normaloff>:/Pdf.svg</iconset>
-             </property>
-             <property name="toolButtonStyle">
-              <enum>Qt::ToolButtonTextBesideIcon</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="0">
-            <widget class="QPushButton" name="presUpdateListButton">
              <property name="maximumSize">
               <size>
                <width>100</width>
                <height>16777215</height>
               </size>
              </property>
-             <property name="styleSheet">
-              <string notr="true">QPushButton#presUpdateListButton {
-   background-color: #03A9F4;
-    border-style: outset;
-    border-width: 1px;
-    border-radius: 1px;
-    border-color: #FFFFFF;
-    min-width: 120px;
-    padding: 8px;
-	color: #FFFFFF;
-	font: 14px;
-}
-QPushButton#presUpdateListButton:pressed {
-    background-color: #0288D1;
-    border-style: inset;
-}</string>
-             </property>
-             <property name="text">
-              <string>Update Selection</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="1">
-            <widget class="QPushButton" name="presResetSelection">
              <property name="styleSheet">
               <string notr="true">QPushButton#presResetSelection {
    background-color: #03A9F4;
@@ -2047,6 +2106,11 @@ QPushButton#presUpdateListButton:pressed {
 }
 QPushButton#presResetSelection:pressed {
     background-color: #0288D1;
+    border-style: inset;
+}
+
+QPushButton#presResetSelection:disabled {
+    background-color: #9E9E9E;
     border-style: inset;
 }</string>
              </property>
@@ -2654,6 +2718,9 @@ QPushButton#presResetSelection:pressed {
            </item>
            <item row="5" column="0">
             <widget class="QPushButton" name="fundUpdateListButton">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="sizePolicy">
               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                <horstretch>0</horstretch>
@@ -2681,6 +2748,11 @@ QPushButton#presResetSelection:pressed {
 QPushButton#lfundUpdateListButton:pressed {
     background-color: #0288D1;
     border-style: inset;
+}
+
+QPushButton#fundUpdateListButton:disabled {
+    background-color: #9E9E9E;
+    border-style: inset;
 }</string>
              </property>
              <property name="text">
@@ -2688,13 +2760,22 @@ QPushButton#lfundUpdateListButton:pressed {
              </property>
             </widget>
            </item>
-           <item row="5" column="1">
+           <item row="6" column="0">
             <widget class="QPushButton" name="fundResetSelection">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="sizePolicy">
               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
              </property>
              <property name="styleSheet">
               <string notr="true">QPushButton#fundResetSelection {
@@ -2710,6 +2791,11 @@ QPushButton#lfundUpdateListButton:pressed {
 }
 QPushButton#fundResetSelection:pressed {
     background-color: #0288D1;
+    border-style: inset;
+}
+
+QPushButton#fundResetSelection:disabled {
+    background-color: #9E9E9E;
     border-style: inset;
 }</string>
              </property>
