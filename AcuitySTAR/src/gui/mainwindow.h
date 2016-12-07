@@ -34,6 +34,14 @@ public:
 
 private slots:
 
+    /******************************
+     * Select Sort Update Functions*
+     * ****************************/
+    void hideSelectionTree(int);
+    void resetSelectionTree(int);
+
+
+
     /*******************************
      * Save Session State Functions*
      *******************************/
@@ -160,6 +168,24 @@ private slots:
     bool checkPubColumnSortable();
     bool checkPresColumnSortable();
     bool checkFundColumnSortable();
+
+
+
+    void on_updateTeachListButton_clicked();
+
+    void on_teachResetSelection_clicked();
+
+    void on_updatePubListButton_clicked();
+
+    void on_pubResetSelection_clicked();
+
+    void on_presUpdateListButton_clicked();
+
+    void on_presResetSelection_clicked();
+
+    void on_fundUpdateListButton_clicked();
+
+    void on_fundResetSelection_clicked();
 
 private:
 

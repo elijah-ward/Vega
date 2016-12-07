@@ -227,9 +227,6 @@ void MainWindow::readSettings(){
     yearStart = settings.value("yearStarts",1950).toInt();
     yearEnd = settings.value("yearEnds",2016).toInt();
 
-    printf("yearStart: %d", yearStart);
-    printf("yearEnd: %d", yearEnd);
-
 
     QDate startDate(yearStart,1,1);
     QDate endDate(yearEnd,1,1);
@@ -843,6 +840,203 @@ void MainWindow::makeTree(int tabIndex) {
 
     // set resize property to stretch
     currentView->header()->resizeSections(QHeaderView::Stretch);
+}
+
+void MainWindow::hideSelectionTree(int tabIndex){
+
+    switch(tabIndex){
+    case TEACH: {
+        currentdb = teachdb;
+        currentTree = teachTree;
+
+        currentView = ui->teachTreeView;
+
+        //Here we adjust the treeview to only display the selected children
+        QModelIndexList selectedIndices = currentView->selectionModel()->selectedRows();
+        currentView->selectAll();
+        QModelIndexList allIndices = currentView->selectionModel()->selectedRows();
+
+        int row;
+
+
+
+        foreach(QModelIndex index, allIndices){
+            row = index.row();
+
+            if(selectedIndices.contains(index)){
+                currentView->setRowHidden(row,index.parent(),false);
+            }
+            else{
+                currentView->setRowHidden(row,index.parent(),true);
+            }
+
+
+
+        }
+
+
+
+    }
+        break;
+
+    case PUBLICATIONS: {
+
+        currentdb = pubdb;
+        currentTree = pubTree;
+
+        currentView = ui->pubTreeView;
+
+        //Here we adjust the treeview to only display the selected children
+        QModelIndexList selectedIndices = currentView->selectionModel()->selectedRows();
+        currentView->selectAll();
+        QModelIndexList allIndices = currentView->selectionModel()->selectedRows();
+
+        int row;
+        foreach(QModelIndex index, allIndices){
+            row = index.row();
+
+            if(selectedIndices.contains(index)){
+                currentView->setRowHidden(row,index.parent(),false);
+            }
+            else{
+                currentView->setRowHidden(row,index.parent(),true);
+            }
+
+
+
+        }
+    }
+        break;
+
+    case PRESENTATIONS: {
+        currentdb = presdb;
+        currentTree = presTree;
+
+        currentView = ui->presTreeView;
+
+        //Here we adjust the treeview to only display the selected children
+        QModelIndexList selectedIndices = currentView->selectionModel()->selectedRows();
+        currentView->selectAll();
+        QModelIndexList allIndices = currentView->selectionModel()->selectedRows();
+
+        int row;
+
+        foreach(QModelIndex index, allIndices){
+            row = index.row();
+
+            if(selectedIndices.contains(index)){
+                currentView->setRowHidden(row,index.parent(),false);
+            }
+            else{
+                currentView->setRowHidden(row,index.parent(),true);
+            }
+
+
+
+        }
+    }
+        break;
+
+    case FUNDING: {
+        currentdb = funddb;
+        currentTree = fundTree;
+
+        currentView = ui->fundTreeView;
+
+        //Here we adjust the treeview to only display the selected children
+        QModelIndexList selectedIndices = currentView->selectionModel()->selectedRows();
+        currentView->selectAll();
+        QModelIndexList allIndices = currentView->selectionModel()->selectedRows();
+
+        int row;
+
+        foreach(QModelIndex index, allIndices){
+            row = index.row();
+
+            if(selectedIndices.contains(index)){
+                currentView->setRowHidden(row,index.parent(),false);
+            }
+            else{
+                currentView->setRowHidden(row,index.parent(),true);
+            }
+
+        }
+    }
+        break;
+
+    }
+
+}
+
+
+void MainWindow::resetSelectionTree(int tabIndex){
+    switch(tabIndex){
+
+    case TEACH: {
+        currentdb = teachdb;
+        currentTree = teachTree;
+
+        currentView = ui->teachTreeView;
+
+        //Here we adjust the treeview to only display the selected children
+        QModelIndexList indexList = currentView->selectionModel()->selectedIndexes();
+        int row;
+        foreach (QModelIndex index, indexList) {
+            row = index.row();
+            currentView->setRowHidden(row, index, false);
+        }
+
+
+        break;
+    }
+    case PUBLICATIONS: {
+        currentdb = pubdb;
+        currentTree = pubTree;
+
+        currentView = ui->pubTreeView;
+
+        //Here we adjust the treeview to only display the selected children
+        QModelIndexList indexList = currentView->selectionModel()->selectedIndexes();
+        int row;
+        foreach (QModelIndex index, indexList) {
+            row = index.row();
+            currentView->setRowHidden(row, index, false);
+        }
+
+        break;
+    }
+    case PRESENTATIONS: {
+        currentdb = presdb;
+        currentTree = presTree;
+
+        currentView = ui->presTreeView;
+
+        //Here we adjust the treeview to only display the selected children
+        QModelIndexList indexList = currentView->selectionModel()->selectedIndexes();
+        int row;
+        foreach (QModelIndex index, indexList) {
+            row = index.row();
+            currentView->setRowHidden(row, index, false);
+        }
+
+        break;
+    }
+    case FUNDING: {
+        currentdb = funddb;
+        currentTree = fundTree;
+
+        currentView = ui->fundTreeView;
+
+        //Here we adjust the treeview to only display the selected children
+        QModelIndexList indexList = currentView->selectionModel()->selectedIndexes();
+        int row;
+        foreach (QModelIndex index, indexList) {
+            row = index.row();
+            currentView->setRowHidden(row, index, false);
+        }
+        break;
+    }
+    }
 }
 
 void MainWindow::setupPieChart(PieChartWidget* pieChart, QListWidget *pieListWidget, std::vector<std::pair <std::string, double>> pieChartList) {
@@ -2211,3 +2405,46 @@ void MainWindow::writeCSV(std::vector<std::string> headers, std::vector<std::vec
     }
 }
 
+
+
+
+
+void MainWindow::on_updateTeachListButton_clicked()
+{
+    hideSelectionTree(TEACH);
+}
+
+void MainWindow::on_teachResetSelection_clicked()
+{
+    refresh(TEACH);
+}
+
+void MainWindow::on_updatePubListButton_clicked()
+{
+    hideSelectionTree(PUBLICATIONS);
+}
+
+void MainWindow::on_pubResetSelection_clicked()
+{
+    refresh(PUBLICATIONS);
+}
+
+void MainWindow::on_presUpdateListButton_clicked()
+{
+    hideSelectionTree(PRESENTATIONS);
+}
+
+void MainWindow::on_presResetSelection_clicked()
+{
+    refresh(PRESENTATIONS);
+}
+
+void MainWindow::on_fundUpdateListButton_clicked()
+{
+    hideSelectionTree(FUNDING);
+}
+
+void MainWindow::on_fundResetSelection_clicked()
+{
+    refresh(FUNDING);
+}
