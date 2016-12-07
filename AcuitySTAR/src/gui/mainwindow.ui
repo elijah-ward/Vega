@@ -78,7 +78,7 @@
           <enum>QTabWidget::Rounded</enum>
          </property>
          <property name="currentIndex">
-          <number>3</number>
+          <number>0</number>
          </property>
          <property name="usesScrollButtons">
           <bool>false</bool>
@@ -710,6 +710,29 @@
            </item>
            <item row="6" column="0">
             <widget class="QPushButton" name="updateTeachListButton">
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton#updateTeachListButton{
+   background-color: #03A9F4;
+    border-style: outset;
+    border-width: 1px;
+    border-radius: 1px;
+    border-color: #FFFFFF;
+    min-width: 120px;
+    padding: 8px;
+	color: #FFFFFF;
+	font: 14px;
+}
+QPushButton#updateTeachListButton:pressed {
+    background-color: #0288D1;
+    border-style: inset;
+}</string>
+             </property>
              <property name="text">
               <string>Update Selection</string>
              </property>
@@ -717,6 +740,23 @@
            </item>
            <item row="6" column="1">
             <widget class="QPushButton" name="teachResetSelection">
+             <property name="styleSheet">
+              <string notr="true">QPushButton#teachResetSelection{
+   background-color: #03A9F4;
+    border-style: outset;
+    border-width: 1px;
+    border-radius: 1px;
+    border-color: #FFFFFF;
+    min-width: 120px;
+    padding: 8px;
+	color: #FFFFFF;
+	font: 14px;
+}
+QPushButton#teachResetSelection:pressed {
+    background-color: #0288D1;
+    border-style: inset;
+}</string>
+             </property>
              <property name="text">
               <string>Reset Selection</string>
              </property>
@@ -1315,6 +1355,29 @@
            </item>
            <item row="5" column="0">
             <widget class="QPushButton" name="updatePubListButton">
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton#updatePubListButton {
+   background-color: #03A9F4;
+    border-style: outset;
+    border-width: 1px;
+    border-radius: 1px;
+    border-color: #FFFFFF;
+    min-width: 120px;
+    padding: 8px;
+	color: #FFFFFF;
+	font: 14px;
+}
+QPushButton#updatePubListButton:pressed {
+    background-color: #0288D1;
+    border-style: inset;
+}</string>
+             </property>
              <property name="text">
               <string>Update Selection</string>
              </property>
@@ -1322,6 +1385,23 @@
            </item>
            <item row="5" column="1">
             <widget class="QPushButton" name="pubResetSelection">
+             <property name="styleSheet">
+              <string notr="true">QPushButton#pubResetSelection {
+   background-color: #03A9F4;
+    border-style: outset;
+    border-width: 1px;
+    border-radius: 1px;
+    border-color: #FFFFFF;
+    min-width: 120px;
+    padding: 8px;
+	color: #FFFFFF;
+	font: 14px;
+}
+QPushButton#pubResetSelection:pressed {
+    background-color: #0288D1;
+    border-style: inset;
+}</string>
+             </property>
              <property name="text">
               <string>Reset Selection</string>
              </property>
@@ -1923,6 +2003,29 @@
            </item>
            <item row="5" column="0">
             <widget class="QPushButton" name="presUpdateListButton">
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton#presUpdateListButton {
+   background-color: #03A9F4;
+    border-style: outset;
+    border-width: 1px;
+    border-radius: 1px;
+    border-color: #FFFFFF;
+    min-width: 120px;
+    padding: 8px;
+	color: #FFFFFF;
+	font: 14px;
+}
+QPushButton#presUpdateListButton:pressed {
+    background-color: #0288D1;
+    border-style: inset;
+}</string>
+             </property>
              <property name="text">
               <string>Update Selection</string>
              </property>
@@ -1930,6 +2033,23 @@
            </item>
            <item row="5" column="1">
             <widget class="QPushButton" name="presResetSelection">
+             <property name="styleSheet">
+              <string notr="true">QPushButton#presResetSelection {
+   background-color: #03A9F4;
+    border-style: outset;
+    border-width: 1px;
+    border-radius: 1px;
+    border-color: #FFFFFF;
+    min-width: 120px;
+    padding: 8px;
+	color: #FFFFFF;
+	font: 14px;
+}
+QPushButton#presResetSelection:pressed {
+    background-color: #0288D1;
+    border-style: inset;
+}</string>
+             </property>
              <property name="text">
               <string>Reset Selection</string>
              </property>
@@ -1945,259 +2065,7 @@
            <string>Grants and Clinical Funding</string>
           </attribute>
           <layout class="QGridLayout" name="gridLayout_6">
-           <item row="4" column="13">
-            <widget class="QRadioButton" name="fund_scatter_button">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="text">
-              <string>Scatter Chart</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="9">
-            <widget class="QRadioButton" name="fund_bar_button">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="text">
-              <string>Bar Chart</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="fund_sort_label">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="text">
-              <string>Select Sort Order:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0" colspan="16">
-            <widget class="Line" name="line">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="12">
-            <spacer name="horizontalSpacer_14">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="2" column="7">
-            <spacer name="horizontalSpacer_5">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="2" column="9">
-            <spacer name="horizontalSpacer_17">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="4" column="7">
-            <widget class="QRadioButton" name="fund_pie_button">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="text">
-              <string>Pie Chart</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QComboBox" name="fund_sort">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>120</width>
-               <height>0</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="10">
-            <spacer name="horizontalSpacer_33">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="0" column="15" alignment="Qt::AlignRight">
-            <widget class="QToolButton" name="fundPrintButton">
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Print&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(204, 204, 204);</string>
-             </property>
-             <property name="text">
-              <string>Print</string>
-             </property>
-             <property name="icon">
-              <iconset>
-               <normalon>:/printer.png</normalon>
-              </iconset>
-             </property>
-             <property name="toolButtonStyle">
-              <enum>Qt::ToolButtonTextBesideIcon</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="0" colspan="7">
-            <widget class="QTreeView" name="fundTreeView">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="styleSheet">
-              <string notr="true"/>
-             </property>
-             <property name="frameShape">
-              <enum>QFrame::NoFrame</enum>
-             </property>
-             <property name="frameShadow">
-              <enum>QFrame::Sunken</enum>
-             </property>
-             <property name="selectionMode">
-              <enum>QAbstractItemView::ExtendedSelection</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="3" colspan="3">
-            <widget class="QPushButton" name="fund_new_sort">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(204, 204, 204);</string>
-             </property>
-             <property name="text">
-              <string>Create New Sort Order</string>
-             </property>
-             <property name="checkable">
-              <bool>false</bool>
-             </property>
-             <property name="checked">
-              <bool>false</bool>
-             </property>
-             <property name="autoDefault">
-              <bool>false</bool>
-             </property>
-             <property name="default">
-              <bool>false</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="5">
-            <widget class="QLineEdit" name="fund_filter_to">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>60</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>Z</string>
-             </property>
-             <property name="maxLength">
-              <number>1</number>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="3">
-            <widget class="QLineEdit" name="fund_filter_from">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>60</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>*</string>
-             </property>
-             <property name="maxLength">
-              <number>1</number>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="0">
-            <widget class="QLabel" name="fund_filter_label">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="text">
-              <string>Filter by:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="7" colspan="9">
+           <item row="7" column="7" colspan="9">
             <widget class="QFrame" name="fundChartFrame">
              <property name="frameShape">
               <enum>QFrame::Box</enum>
@@ -2416,102 +2284,6 @@
              </layout>
             </widget>
            </item>
-           <item row="4" column="4">
-            <widget class="QLabel" name="fund_to_label">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="text">
-              <string>to</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="8">
-            <spacer name="horizontalSpacer_32">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="2" column="6">
-            <spacer name="horizontalSpacer_24">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="2" column="2">
-            <widget class="QPushButton" name="fund_delete_sort">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(204, 204, 204);</string>
-             </property>
-             <property name="text">
-              <string>Delete</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0" colspan="16">
-            <widget class="Line" name="line_2">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="11">
-            <spacer name="horizontalSpacer_15">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="4" column="1" colspan="2">
-            <widget class="QLabel" name="fund_filter">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="11">
-            <widget class="QRadioButton" name="fund_line_button">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="text">
-              <string>Line Chart</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="0">
-            <widget class="QLabel" name="fund_file_label">
-             <property name="text">
-              <string>No file chosen.</string>
-             </property>
-            </widget>
-           </item>
            <item row="0" column="14">
             <widget class="QToolButton" name="fundExportButton">
              <property name="toolTip">
@@ -2532,8 +2304,385 @@
              </property>
             </widget>
            </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="fund_file_label">
+             <property name="text">
+              <string>No file chosen.</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="11">
+            <widget class="QRadioButton" name="fund_line_button">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Line Chart</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1" colspan="2">
+            <widget class="QLabel" name="fund_filter">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="11">
+            <spacer name="horizontalSpacer_15">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="0" colspan="16">
+            <widget class="Line" name="line_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QPushButton" name="fund_delete_sort">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(204, 204, 204);</string>
+             </property>
+             <property name="text">
+              <string>Delete</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="6">
+            <spacer name="horizontalSpacer_24">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="8">
+            <spacer name="horizontalSpacer_32">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="4" column="4">
+            <widget class="QLabel" name="fund_to_label">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>to</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="fund_filter_label">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Filter by:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="3">
+            <widget class="QLineEdit" name="fund_filter_from">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>60</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>*</string>
+             </property>
+             <property name="maxLength">
+              <number>1</number>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="5">
+            <widget class="QLineEdit" name="fund_filter_to">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>60</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Z</string>
+             </property>
+             <property name="maxLength">
+              <number>1</number>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3" colspan="3">
+            <widget class="QPushButton" name="fund_new_sort">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>150</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(204, 204, 204);</string>
+             </property>
+             <property name="text">
+              <string>Create New Sort Order</string>
+             </property>
+             <property name="checkable">
+              <bool>false</bool>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+             <property name="autoDefault">
+              <bool>false</bool>
+             </property>
+             <property name="default">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0" colspan="7">
+            <widget class="QTreeView" name="fundTreeView">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Sunken</enum>
+             </property>
+             <property name="selectionMode">
+              <enum>QAbstractItemView::ExtendedSelection</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="15" alignment="Qt::AlignRight">
+            <widget class="QToolButton" name="fundPrintButton">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Print&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(204, 204, 204);</string>
+             </property>
+             <property name="text">
+              <string>Print</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normalon>:/printer.png</normalon>
+              </iconset>
+             </property>
+             <property name="toolButtonStyle">
+              <enum>Qt::ToolButtonTextBesideIcon</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="10">
+            <spacer name="horizontalSpacer_33">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="1">
+            <widget class="QComboBox" name="fund_sort">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>120</width>
+               <height>0</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="7">
+            <widget class="QRadioButton" name="fund_pie_button">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Pie Chart</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="9">
+            <spacer name="horizontalSpacer_17">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="7">
+            <spacer name="horizontalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="12">
+            <spacer name="horizontalSpacer_14">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="3" column="0" colspan="16">
+            <widget class="Line" name="line">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="fund_sort_label">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Select Sort Order:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="9">
+            <widget class="QRadioButton" name="fund_bar_button">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Bar Chart</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="13">
+            <widget class="QRadioButton" name="fund_scatter_button">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Scatter Chart</string>
+             </property>
+            </widget>
+           </item>
            <item row="5" column="0">
             <widget class="QPushButton" name="fundUpdateListButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton#fundUpdateListButton {
+   background-color: #03A9F4;
+    border-style: outset;
+    border-width: 1px;
+    border-radius: 1px;
+    border-color: #FFFFFF;
+    min-width: 120px;
+    padding: 8px;
+	color: #FFFFFF;
+	font: 14px;
+}
+QPushButton#lfundUpdateListButton:pressed {
+    background-color: #0288D1;
+    border-style: inset;
+}</string>
+             </property>
              <property name="text">
               <string>Update Selection</string>
              </property>
@@ -2541,6 +2690,29 @@
            </item>
            <item row="5" column="1">
             <widget class="QPushButton" name="fundResetSelection">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton#fundResetSelection {
+   background-color: #03A9F4;
+    border-style: outset;
+    border-width: 1px;
+    border-radius: 1px;
+    border-color: #FFFFFF;
+    min-width: 120px;
+    padding: 8px;
+	color: #FFFFFF;
+	font: 14px;
+}
+QPushButton#fundResetSelection:pressed {
+    background-color: #0288D1;
+    border-style: inset;
+}</string>
+             </property>
              <property name="text">
               <string>Reset Selection</string>
              </property>
@@ -2768,7 +2940,7 @@ QPushButton#load_file_button:pressed {
      <x>0</x>
      <y>0</y>
      <width>1744</width>
-     <height>33</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
